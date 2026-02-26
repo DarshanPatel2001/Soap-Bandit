@@ -1,13 +1,7 @@
 # 🧼 BarSoapInfo.com / SoapStandle Knowledge Hub
 
 A scientifically grounded, consumer-accessible knowledge platform for bar soap research, sustainability insights, public health impact, and retail intelligence.
-Team Members —
-• Chassidy Wright
-• Darshan Patel
-• Meet Chaudhari
-• Thang Hua
-• Christabel Obi-Nwosu
-• Sayuri Shrestha
+Team Members — Chassidy Wright, Darshan Patel, Meet Chaudhari, Thang Hua, Christabel Obi-Nwosu, Sayuri Shrestha.
 
 Prepared for MTSU Development Class — Dr. Sarkar  
 Technical Consultant: JD Graffam
@@ -181,6 +175,7 @@ JD Graffam provides:
 - Consumer summary + technical deep-dive layers
 
 ---
+
 
 
 
