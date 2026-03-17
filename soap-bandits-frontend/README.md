@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Soap Bandit Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You shouldn't need to run npx create-react-app, the project is already initialized. Just switch to the frontend folder:
 
-## Available Scripts
+cd soap-bandits-frontend
 
-In the project directory, you can run:
+and install all dependencies:
 
-### `npm start`
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If you have trouble with the formatting and linting syncing correctly with React 19, run this instead:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install --legacy-peer-deps
 
-### `npm test`
+If you are on Windows, there might be some line-endings and Tailwind classes that aren't formatting correctly, so you can standardize that so no errors from prettier or ESLint show up during compilation:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm run format
 
-### `npm run build`
+I would run this before comitting code, it uses prettier to ensure the style guide is consistent across all environments.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you haven't ran the app in development mode, here's the command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The frontend is located on http://localhost:3000.
 
-### `npm run eject`
+for production, run this:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm run build
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will optimize the build for best performance.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Architexture and Organization:
+Localization (i18n): All English text is managed in src/\_locales/en.json. This allows us to scale to other languages in the future without touching the UI code.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+it is found here: src/\_locales/en.json
 
-## Learn More
+For building reusable UI elements, please put those here: src/\_components/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For styling, we are currently using the SoapStandle Brand Palette defined here: tailwind.config.js.

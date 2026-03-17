@@ -1,17 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* SoapStandle Brand Palette - Central Variables */
+:root {
+  --soap-deep: #00234b;
+  --soap-gold: #d4af37;
+  --soap-steel: #717171;
+  --soap-white: #ffffff;
+  --soap-steel-trans: rgba(113, 113, 113, 0.2);
+}
 
-@layer base {
-  /* This replaces the 'body' block and applies the SoapStandle palette */
-  body {
-    @apply bg-soap-deep text-white antialiased m-0;
-    font-family:
-      -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  }
+/* Global Reset & Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--soap-deep);
+  color: var(--soap-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
 
-  /* Tailwind utility classes */
-  code {
-    @apply font-mono;
-  }
+/* Typography for code elements */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Utility Class for Brand Gold (optional but handy) */
+.text-gold {
+  color: var(--soap-gold);
 }
