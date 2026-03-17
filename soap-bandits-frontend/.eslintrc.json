@@ -1,6 +1,19 @@
 {
-  "extends": ["react-app", "plugin:prettier/recommended"],
-  "rules": {
-    "prettier/prettier": "error"
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "prettier"],
+ "rules": {
+  "prettier/prettier": "error",
+  "react/react-in-jsx-scope": "off",
+  "react/jsx-uses-react": "off"
+},
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
