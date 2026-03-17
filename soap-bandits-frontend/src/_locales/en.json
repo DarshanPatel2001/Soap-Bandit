@@ -1,0 +1,21 @@
+{
+  "header": {
+    "title": "SOAPSTANDLE HUB",
+    "science": "Science",
+    "sustainability": "Sustainability",
+    "artisans": "Artisans"
+  },
+  "hero": {
+    "headline": "The Wikipedia of Bar Soap",
+    "subheadline": "A technically grounded authority integrating science, sustainability, and retail intelligence.",
+    "searchPlaceholder": "Search ingredients, pH, or artisans..."
+  },
+  "pillars": {
+    "scienceTitle": "Formulation Science",
+    "scienceDesc": "Deep dives into ingredients, skin pH, and dermatological safety.",
+    "sustainTitle": "Sustainability",
+    "sustainDesc": "Tracking plastic-averse efforts and global sustainability metrics.",
+    "healthTitle": "Public Health",
+    "healthDesc": "Evidence-based handwashing initiatives and global health data."
+  }
+}
