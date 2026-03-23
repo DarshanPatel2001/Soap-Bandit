@@ -15,9 +15,12 @@ const LandingPage = () => {
 
         {/* Nav Links - clean and simple with direct link names */}
         <div className="nav-links u-flex">
-          <a href="#science">Science</a>
-          <a href="#sustainability">Sustainability</a>
-          <a href="#directory">Artisans</a>
+          <a href="#HomePage" className="cta-button2">
+            HomePage
+          </a>
+          <a href="#brandForm" className="cta-button">
+            Get Featured
+          </a>
         </div>
       </nav>
 
