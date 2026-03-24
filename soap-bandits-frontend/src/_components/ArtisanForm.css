@@ -1,0 +1,54 @@
+/* --- Artisan Form Component Styling --- */
+
+.form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Adds vertical spacing between the pillar-cards in the form */
+.form-card {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Uses your soap-steel for a professional label look */
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--soap-steel);
+  letter-spacing: 0.05em;
+}
+
+/* Styled inputs to fit the "Wikipedia" aesthetic */
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  color: #1f3447; /* Dark text to match your card p tags */
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Gold ring effect on focus to match your search bar */
+.input-field:focus {
+  border-color: var(--soap-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+/* Specific styling for the large ingredient box */
+textarea.input-field {
+  resize: vertical;
+  min-height: 80px;
+}
