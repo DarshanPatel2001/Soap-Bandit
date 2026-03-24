@@ -1,8 +1,8 @@
 /* SoapStandle Brand Palette as CSS Variables */
 :root {
-  --soap-deep: #213346; /* The deep blue background color from image_1.png */
-  --soap-gold: #d4af37; /* The brand's gold accent color from image_1.png */
-  --soap-steel: #717171; /* A standard grey color from image_1.png for borders and text */
+  --soap-deep: #213346;
+  --soap-gold: #d4af37;
+  --soap-steel: #717171;
 }
 
 /* Base Body Styles */
@@ -10,17 +10,15 @@ body {
   margin: 0;
   padding: 0;
   font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* A standard, professional, framework-like font stack */
-  background-color: var(
-    --soap-deep
-  ); /* Sets the deep blue background from image_1.png */
-  color: white; /* Sets the default text color to white */
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--soap-deep);
+  color: white;
 }
 
 /* Global Reset for links */
 a {
-  text-decoration: none; /* Removes underlines from all links */
-  transition: color 0.2s; /* Creates a smooth transition effect on hover */
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 /* --- Layout Utility Classes --- */
@@ -39,8 +37,8 @@ a {
 /* Grid layout for the content pillars */
 .u-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Stacked by default on mobile */
-  gap: 2rem; /* The spacing between the cards from image_1.png */
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 /* Grid will become a 3-column layout at 768px (standard md breakpoint) to match image_1.png */
@@ -54,8 +52,8 @@ a {
 
 /* Navigation Bar from image_1.png */
 .nav-bar {
-  border-bottom: 1px solid var(--soap-steel); /* The top grey border from image_1.png */
-  padding: 1.5rem; /* Spacing for the navbar from image_1.png */
+  border-bottom: 1px solid var(--soap-steel);
+  padding: 1.5rem;
 }
 
 /* Navigation Link Styling from image_1.png */
@@ -99,7 +97,6 @@ a {
   background-color: #bc9938;
 }
 
-
 /* Changes links to gold when hovered over, replicating the Tailwind effect */
 .nav-links a:hover {
   color: var(--soap-gold);
@@ -107,34 +104,34 @@ a {
 
 /* The primary "The Wikipedia of Bar Soap" header section */
 .hero-header {
-  max-width: 1152px; /* Set max-width to 6xl for optimal readability */
-  margin: 0 auto; /* Center the header on the page */
-  padding: 6rem 2rem; /* Top/bottom and left/right spacing from image_1.png */
-  text-align: center; /* Center-aligns all text */
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
 }
 
 /* Sets the styles for the "The Wikipedia..." heading */
 .hero-title {
-  font-size: 4.5rem; /* Sets font size to 7xl, matching image_1.png */
-  font-weight: bold; /* Makes the title bold */
-  margin-bottom: 1.5rem; /* Adds bottom spacing for the heading */
-  line-height: 1.1; /* Improves the line spacing of the title */
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
 
 /* Sets the styles for the primary subtitle text */
 .hero-subtitle {
-  max-width: 42rem; /* Set max-width to 2xl for readability */
-  margin: 0 auto 2.5rem; /* Centers the paragraph with bottom spacing */
-  font-size: 1.25rem; /* Sets the font size to xl */
-  color: #d1d5db; /* The slightly lighter grey color for subtitle text from image_1.png */
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+  font-size: 1.25rem;
+  color: #d1d5db;
 }
 
 /* --- Search Component --- */
 
 /* Sets the overall styles for the search bar component */
 .search-form {
-  max-width: 28rem; /* Limits the search bar width to md */
-  margin: 0 auto; /* Centers the search bar on the page */
+  max-width: 28rem;
+  margin: 0 auto;
 }
 
 /* Sets the styles for the search input field */
@@ -151,25 +148,25 @@ a {
 
 /* A helper class to replicate Tailwind's placeholder-grey-400 function */
 .search-input::placeholder {
-  color: #9ca3af; /* The grey color for placeholder text from image_1.png */
+  color: #9ca3af;
 }
 
 /* Adds a gold ring effect when the search input is focused */
 .search-input:focus {
-  box-shadow: 0 0 0 2px var(--soap-gold); /* Replicates Tailwind's focus-ring-2 class */
+  box-shadow: 0 0 0 2px var(--soap-gold);
 }
 
 /* Sets the styles for the "SEARCH" button from image_1.png */
 .search-button {
-  padding: 1rem 2rem; /* Spacing for the button from image_1.png */
-  border: none; /* Removes standard border */
-  border-radius: 0 4px 4px 0; /* Rounds the right corners only */
-  background-color: var(--soap-gold); /* The brand's gold background color */
-  color: var(--soap-deep); /* Deep blue text color for optimal contrast */
-  font-weight: bold; /* Makes the button text bold */
-  cursor: pointer; /* Changes the cursor to a pointer on hover */
-  transition: opacity 0.2s; /* For a smooth hover effect */
-  letter-spacing: 0.1em; /* The wider spacing of button text from image_1.png */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: var(--soap-gold);
+  color: var(--soap-deep);
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  letter-spacing: 0.1em;
 }
 
 /* Reduces opacity slightly on hover to give user feedback, matching image_1.png */
@@ -181,44 +178,43 @@ a {
 
 /* Sets the container styles for the content pillars section */
 .pillars-container {
-  max-width: 1152px; /* Set max-width to 6xl for readability */
-  margin: 0 auto; /* Centers the content on the page */
-  padding: 5rem 2rem; /* Top/bottom and left/right spacing from image_1.png */
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
 }
 
 /* Sets the base styles for each individual pillar card */
 .pillar-card {
-  background-color: white; /* The steel grey card background color */
-  padding: 2rem; /* Padding for the card from image_1.png */
-  border-radius: 0.5rem; /* Standard rounded corner style */
-  border-top: 4px solid var(--soap-gold); /* The gold top border accent from image_1.png */
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border-top: 4px solid var(--soap-gold);
 }
 
 /* Sets the styles for the gold title text in each card */
 .pillar-card h3 {
   color: #1f3447;
-  ; /* The brand's gold color accent text */
-  text-transform: uppercase; /* Sets text to uppercase, matching image_1.png */
-  letter-spacing: 0.1em; /* Standard wide letter spacing style */
-  font-size: 1.3rem; /* A slightly smaller font for card titles */
-  font-weight: bold; /* Makes card titles bold */
-  margin: 0 0 1rem 0; /* Sets bottom spacing only */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
 }
 
 /* Sets the styles for descriptive text within each card */
 .pillar-card p {
   color: #1f3447;
-  font-size: 0.976rem; /* Sets a standard font size of 14px */
-  margin: 0; /* Removes all standard margin spacing */
-  line-height: 1.6; /* Standard readable line spacing style */
+  font-size: 0.976rem;
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* footer styles for the technical oversight text from image_1.png */
 .technical-footer {
-  text-align: center; /* Center aligns the technical text */
-  padding: 2rem 0 4rem; /* Top/bottom padding from image_1.png */
-  color: #d1d5db; /* The slightly lighter gray text from image_1.png */
-  font-size: 0.75rem; /* A small font size for technical notes */
-  text-transform: uppercase; /* Sets the text to all caps */
-  letter-spacing: 0.2em; /* Extra wide letter spacing from image_1.png */
+  text-align: center;
+  padding: 2rem 0 4rem;
+  color: #d1d5db;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
