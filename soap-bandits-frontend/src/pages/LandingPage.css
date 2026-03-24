@@ -59,13 +59,13 @@ a {
 /* Navigation Link Styling from image_1.png */
 .nav-links {
   display: flex;
-  gap: 2rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  gap: 2rem; /* Spacing between science, sustainability, and artisan links */
+  font-size: 0.8rem; /* Sets a small font size for navigation */
+  font-weight: 500; /* Sets medium weight for navigation links */
+  text-transform: uppercase; /* Makes navigation links uppercase, matching image_1.png */
+  letter-spacing: 0.1em; /* Adds extra spacing between navigation link letters */
 }
-.cta-button {
+.cta-button{
   margin-left: 0.5rem;
   padding: 5px 12px;
   background-color: #d4af37;
@@ -76,10 +76,10 @@ a {
   text-decoration: none;
   transition: 0.2s ease;
   position: relative;
-  top: -4px;
+  top: -4px
 }
 
-.cta-button2 {
+.cta-button2{
   margin-left: 0.5rem;
   padding: 5px 12px;
   background-color: #f6f4f0;
@@ -90,7 +90,7 @@ a {
   text-decoration: none;
   transition: 0.2s ease;
   position: relative;
-  top: -4px;
+  top: -4px
 }
 
 .cta-button:hover {
@@ -136,14 +136,14 @@ a {
 
 /* Sets the styles for the search input field */
 .search-input {
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  background-color: white;
-  color: white;
-  font-size: 1rem;
-  outline: none;
+  width: 100%; /* The input takes up all available space in its container */
+  padding: 1rem; /* The padding inside the input field from image_1.png */
+  border: none; /* Removes the standard browser border */
+  border-radius: 4px 0 0 4px; /* Rounds the left corners only */
+  background-color: white;/* The standard steel grey background color */
+  color: white; /* Sets input text to white */
+  font-size: 1rem; /* Standard font size for input */
+  outline: none; /* Removes the default outline when selected */
 }
 
 /* A helper class to replicate Tailwind's placeholder-grey-400 function */
