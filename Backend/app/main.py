@@ -1,7 +1,6 @@
 from fastapi import FastAPI
+from app.routes.packaging import router as packaging_router
 
 app = FastAPI()
 
-@app.get("/")
-def home():
-    return {"message": "Soap Knowledge API running"}
+app.include_router(packaging_router)
