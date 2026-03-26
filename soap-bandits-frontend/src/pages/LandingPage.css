@@ -1,0 +1,220 @@
+/* SoapStandle Brand Palette as CSS Variables */
+:root {
+  --soap-deep: #213346;
+  --soap-gold: #d4af37;
+  --soap-steel: #717171;
+}
+
+/* Base Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--soap-deep);
+  color: white;
+}
+
+/* Global Reset for links */
+a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* --- Layout Utility Classes --- */
+
+/* Basic flex layout to replicate Tailwind's functionality */
+.u-flex {
+  display: flex;
+}
+.u-items-center {
+  align-items: center;
+}
+.u-justify-between {
+  justify-content: space-between;
+}
+
+/* Grid layout for the content pillars */
+.u-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Grid will become a 3-column layout at 768px (standard md breakpoint) to match image_1.png */
+@media (min-width: 768px) {
+  .u-grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Component Specific Styling --- */
+
+/* Navigation Bar from image_1.png */
+.nav-bar {
+  border-bottom: 1px solid var(--soap-steel);
+  padding: 1.5rem;
+}
+
+/* Navigation Link Styling from image_1.png */
+.nav-links {
+  display: flex;
+  gap: 2rem; /* Spacing between science, sustainability, and artisan links */
+  font-size: 0.8rem; /* Sets a small font size for navigation */
+  font-weight: 500; /* Sets medium weight for navigation links */
+  text-transform: uppercase; /* Makes navigation links uppercase, matching image_1.png */
+  letter-spacing: 0.1em; /* Adds extra spacing between navigation link letters */
+}
+.cta-button{
+  margin-left: 0.5rem;
+  padding: 5px 12px;
+  background-color: #d4af37;
+  color: #1f3447;
+  border-radius: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.2s ease;
+  position: relative;
+  top: -4px
+}
+
+.cta-button2{
+  margin-left: 0.5rem;
+  padding: 5px 12px;
+  background-color: #f6f4f0;
+  color: #192836;
+  border-radius: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.2s ease;
+  position: relative;
+  top: -4px
+}
+
+.cta-button:hover {
+  background-color: #bc9938;
+}
+
+/* Changes links to gold when hovered over, replicating the Tailwind effect */
+.nav-links a:hover {
+  color: var(--soap-gold);
+}
+
+/* The primary "The Wikipedia of Bar Soap" header section */
+.hero-header {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+/* Sets the styles for the "The Wikipedia..." heading */
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+/* Sets the styles for the primary subtitle text */
+.hero-subtitle {
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+  font-size: 1.25rem;
+  color: #d1d5db;
+}
+
+/* --- Search Component --- */
+
+/* Sets the overall styles for the search bar component */
+.search-form {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+/* Sets the styles for the search input field */
+.search-input {
+  width: 100%; /* The input takes up all available space in its container */
+  padding: 1rem; /* The padding inside the input field from image_1.png */
+  border: none; /* Removes the standard browser border */
+  border-radius: 4px 0 0 4px; /* Rounds the left corners only */
+  background-color: white;/* The standard steel grey background color */
+  color: white; /* Sets input text to white */
+  font-size: 1rem; /* Standard font size for input */
+  outline: none; /* Removes the default outline when selected */
+}
+
+/* A helper class to replicate Tailwind's placeholder-grey-400 function */
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Adds a gold ring effect when the search input is focused */
+.search-input:focus {
+  box-shadow: 0 0 0 2px var(--soap-gold);
+}
+
+/* Sets the styles for the "SEARCH" button from image_1.png */
+.search-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: var(--soap-gold);
+  color: var(--soap-deep);
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  letter-spacing: 0.1em;
+}
+
+/* Reduces opacity slightly on hover to give user feedback, matching image_1.png */
+.search-button:hover {
+  opacity: 0.9;
+}
+
+/* --- Content Pillars Section --- */
+
+/* Sets the container styles for the content pillars section */
+.pillars-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* Sets the base styles for each individual pillar card */
+.pillar-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border-top: 4px solid var(--soap-gold);
+}
+
+/* Sets the styles for the gold title text in each card */
+.pillar-card h3 {
+  color: #1f3447;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+}
+
+/* Sets the styles for descriptive text within each card */
+.pillar-card p {
+  color: #1f3447;
+  font-size: 0.976rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* footer styles for the technical oversight text from image_1.png */
+.technical-footer {
+  text-align: center;
+  padding: 2rem 0 4rem;
+  color: #d1d5db;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
