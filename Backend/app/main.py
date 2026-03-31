@@ -2,7 +2,9 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 from SERVICES.ingredient_combined_service import get_full_ingredient_profile
+from fastapi import FastAPI, HTTPException
 from SERVICES.soap_rating_service import rate_soap_by_zip
+from Backend.SERVICES.scraper import get_ingredient_safety
 
 app = FastAPI()
 

@@ -3,18 +3,15 @@ import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 const LandingPage = () => {
-  // --- INGREDIENT SEARCH STATE ---
   const [query, setQuery] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // --- WATER RATING STATE ---
   const [zipQuery, setZipQuery] = useState('');
   const [ratingResult, setRatingResult] = useState(null);
   const [manualHardness, setManualHardness] = useState('');
 
-  // 1. Ingredient Search Logic
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!query) return;
@@ -39,7 +36,6 @@ const LandingPage = () => {
     }
   };
 
-  // 2. Water Rating Logic
   const handleRatingSearch = async (e) => {
     e.preventDefault();
     if (!zipQuery && !manualHardness) return;
@@ -58,7 +54,6 @@ const LandingPage = () => {
 
   return (
     <div className="landing-container">
-      {/* --- NAVIGATION BAR --- */}
       <nav className="nav-bar u-flex u-items-center u-justify-between">
         <div className="logo-text">
           SOAP<span style={{ color: 'var(--ss-gold)' }}>STANDLE</span> HUB
@@ -73,9 +68,7 @@ const LandingPage = () => {
         </div>
       </nav>
 
-      {/* --- HERO HEADER SECTION (CENTERED) --- */}
       <header className="hero-header">
-        {/* Centered Breadcrumbs */}
         <div className="breadcrumb-container">
           <Link to="/" className="breadcrumb-parent">
             Soap Search
@@ -89,7 +82,6 @@ const LandingPage = () => {
         <h1 className="h1">Super Soap Search</h1>
         <p className="hero-subtitle">Brought to you by SoapStandle®</p>
 
-        {/* Search form (Centered block) */}
         <form className="search-form" onSubmit={handleSearch}>
           <input
             type="text"
@@ -105,7 +97,6 @@ const LandingPage = () => {
 
         {error && <p className="error-text">{error}</p>}
 
-        {/* Search Result Card (Centered) */}
         {result && (
           <div className="pillar-card search-result-card">
             <h2 className="result-title">{result.ingredient.toUpperCase()}</h2>
@@ -139,11 +130,9 @@ const LandingPage = () => {
         )}
       </header>
 
-      {/* --- PILLARS SECTION (3-COLUMN HORIZONTAL GRID) --- */}
       <section className="pillars-container">
         <div className="pillars-inner">
           <div className="pillars-grid">
-            {/* Pillar 1: Water Compatibility Tool */}
             <div className="pillar-card">
               <p className="card-tag">Analytics</p>
               <h3 className="h4">Water Compatibility</h3>
@@ -209,7 +198,6 @@ const LandingPage = () => {
               )}
             </div>
 
-            {/* Pillar 2: Sustainability */}
             <div className="pillar-card">
               <p className="card-tag">Metrics</p>
               <h3 className="h4">Sustainability</h3>
@@ -219,7 +207,6 @@ const LandingPage = () => {
               </p>
             </div>
 
-            {/* Pillar 3: Public Health */}
             <div className="pillar-card">
               <p className="card-tag">Impact</p>
               <h3 className="h4">Public Health</h3>
@@ -231,7 +218,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* --- FOOTER --- */}
       <footer className="technical-footer">
         <p className="footer-oversight">
           Technical Oversight provided by JD Graffam

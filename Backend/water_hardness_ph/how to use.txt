@@ -1,0 +1,3 @@
+the main .csv file is water_quality_by_zip.csv
+the lookup.py will go thru water_quality_by_zip.csv and by taking users zipcode it will give water hardness and PH.
+to scrape data there are multiple files 

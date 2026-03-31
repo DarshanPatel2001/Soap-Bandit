@@ -1,6 +1,7 @@
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.12.1
+beautifulsoup4
 certifi==2026.2.25
 charset-normalizer==3.4.4
 click==8.3.1
@@ -8,6 +9,7 @@ colorama==0.4.6
 fastapi==0.135.1
 h11==0.16.0
 idna==3.11
+lxml
 numpy==2.4.3
 pandas==3.0.1
 pgeocode==0.5.0
