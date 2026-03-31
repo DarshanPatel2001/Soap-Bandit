@@ -1,6 +1,7 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from SERVICES.pubchem_service import fetch_ingredient_data
+from typing import Optional
+from SERVICES.ingredient_combined_service import get_full_ingredient_profile
 from SERVICES.soap_rating_service import rate_soap_by_zip
 
 app = FastAPI()
@@ -14,20 +15,44 @@ app.add_middleware(
 
 @app.get("/")
 def home():
-    return {"message": "Soap Knowledge API is Live and Rating Service is Active"}
+    return {"message": "SoapStandle Hub API: Science & Rating Services Active"}
 
-# Route 1: The "Wikipedia" Ingredient Search
-@app.get("/api/ingredient/{name}")
-async def get_ingredient(name: str):
-    data = fetch_ingredient_data(name)
-    
-    if "error" in data:
-        raise HTTPException(status_code=404, detail=data["error"])
+@app.get("/api/ingredient/full/{name}")
+async def get_full_ingredient(name: str):
+    profile = get_full_ingredient_profile(name)
+
+    if "error" in profile["basic_info"] and "error" in profile["cosmetic_info"]:
+        raise HTTPException(status_code=404, detail="Ingredient data could not be retrieved from scientific sources.")
         
-    return data
+    return profile
 
-# Route 2: The Soap Rating Service
-@app.get("/soap-rating")
-def soap_rating(zip_code: str, soap_name: str = "Generic Soap Bar"):
-    # This likely uses your environmental data logic
-    return rate_soap_by_zip(zip_code, soap_name)
+@app.get("/api/soap-rating")
+def soap_rating(
+    zip_code: str, 
+    soap_name: str = "Generic Soap Bar",
+    manual_hardness: Optional[str] = Query(None, description="Optional manual override: Soft, Moderately Hard, Hard, Very Hard")
+):
+    if manual_hardness:
+        # A simple helper to map manual categories to ratings
+        ratings_map = {
+            "Soft": "Excellent",
+            "Moderately Hard": "Good",
+            "Hard": "Fair",
+            "Very Hard": "Poor"
+        }
+        
+        return {
+            "soap_name": soap_name,
+            "zip_code": zip_code,
+            "hardness_category": manual_hardness,
+            "soap_rating": ratings_map.get(manual_hardness, "Unknown"),
+            "reason": f"Manual Override: Rating based on user-defined {manual_hardness} water profile.",
+            "is_manual": True
+        }
+
+    result = rate_soap_by_zip(zip_code, soap_name)
+    
+    if "error" in result:
+        raise HTTPException(status_code=404, detail=result["error"])
+        
+    return result
