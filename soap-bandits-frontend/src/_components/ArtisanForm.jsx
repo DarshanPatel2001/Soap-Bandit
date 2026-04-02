@@ -55,17 +55,8 @@ const ArtisanForm = () => {
 
   return (
     <section className="form-wrapper" id="brandForm">
-      <header className="hero-header" style={{ padding: '2rem 0' }}>
-        <h2 className="hero-title" style={{ fontSize: '3rem' }}>
-          Artisan Spotlight
-        </h2>
-        <p className="hero-subtitle">
-          Capture your brand identity and technical specifications.
-        </p>
-      </header>
-
       <form className="artisan-form" onSubmit={handleMockSubmit}>
-        {/* Section 1: Contact Information (NEW) */}
+        {/* Section 1: Contact Information */}
         <div className="pillar-card form-card">
           <h3>Maker Contact Details</h3>
           <div className="form-group">

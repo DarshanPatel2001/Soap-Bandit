@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from SERVICES.soap_rating_service import rate_soap_by_zip
-from Backend.SERVICES.scraper import get_ingredient_safety
+from SERVICES.scraper import get_ingredient_safety
 
 app = FastAPI()
 
