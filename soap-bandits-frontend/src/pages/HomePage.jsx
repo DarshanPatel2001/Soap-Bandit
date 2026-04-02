@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './HomePage.css';
 
@@ -145,47 +145,6 @@ const soaps = [
   },
 ];
 
-// ── MODAL COMPONENT ───────────────────────────────────────────────────────────
-const SoapModal = ({ soap, onClose }) => {
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) onClose();
-  };
-
-  return (
-    <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal">
-        <div className="modal-img">
-          <img src={soap.img} alt={soap.name} />
-        </div>
-        <button className="modal-close" onClick={onClose}>
-          ✕
-        </button>
-        <div className="modal-body">
-          <p className="modal-company">{soap.company}</p>
-          <h2 className="modal-name">{soap.name}</h2>
-          <p className="modal-desc">{soap.desc}</p>
-          <div className="modal-grid">
-            <div className="modal-stat">
-              <span className="stat-label">pH Level</span>
-              <span className="stat-value">{soap.ph}</span>
-            </div>
-            <div className="modal-stat">
-              <span className="stat-label">Weight</span>
-              <span className="stat-value">{soap.weight}</span>
-            </div>
-            <div className="modal-stat">
-              <span className="stat-label">Skin Type</span>
-              <span className="stat-value">{soap.skin}</span>
-            </div>
-          </div>
-          <p className="modal-ing-label">Full Ingredient List</p>
-          <p className="modal-ing-list">{soap.ingredients.join(', ')}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 // ── CARD COMPONENT ────────────────────────────────────────────────────────────
 const SoapCard = ({ soap, onCardClick }) => {
   const shortDesc =
@@ -231,7 +190,15 @@ const SoapCard = ({ soap, onCardClick }) => {
       </div>
       <div className="card-footer">
         <span className="card-price">{soap.price}</span>
-        <button className="btn-add">View Details</button>
+        <button
+          className="btn-add"
+          onClick={(e) => {
+            e.stopPropagation();
+            onCardClick(soap);
+          }}
+        >
+          View Info
+        </button>
       </div>
     </div>
   );
@@ -240,7 +207,7 @@ const SoapCard = ({ soap, onCardClick }) => {
 // ── HOMEPAGE COMPONENT ────────────────────────────────────────────────────────
 const HomePage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [selectedSoap, setSelectedSoap] = useState(null);
+  const navigate = useNavigate();
 
   const filters = ['all', 'vegan', 'organic', 'charcoal', 'artisan'];
 
@@ -248,6 +215,10 @@ const HomePage = () => {
     activeFilter === 'all'
       ? soaps
       : soaps.filter((soap) => soap.category === activeFilter);
+
+  const handleCardClick = (soap) => {
+    navigate('/product', { state: { soap } });
+  };
 
   return (
     <div className="homepage-wrapper">
@@ -295,14 +266,9 @@ const HomePage = () => {
       {/* Card grid */}
       <div className="grid">
         {filteredSoaps.map((soap) => (
-          <SoapCard key={soap.name} soap={soap} onCardClick={setSelectedSoap} />
+          <SoapCard key={soap.name} soap={soap} onCardClick={handleCardClick} />
         ))}
       </div>
-
-      {/* Modal */}
-      {selectedSoap && (
-        <SoapModal soap={selectedSoap} onClose={() => setSelectedSoap(null)} />
-      )}
 
       {/* Footer */}
       <footer className="technical-footer">
@@ -314,21 +280,7 @@ const HomePage = () => {
   );
 };
 
-// PropTypes (Identical to previous)
-SoapModal.propTypes = {
-  soap: PropTypes.shape({
-    img: PropTypes.string,
-    name: PropTypes.string,
-    company: PropTypes.string,
-    desc: PropTypes.string,
-    ph: PropTypes.string,
-    weight: PropTypes.string,
-    skin: PropTypes.string,
-    ingredients: PropTypes.arrayOf(PropTypes.string),
-  }),
-  onClose: PropTypes.func,
-};
-
+// PropTypes
 SoapCard.propTypes = {
   soap: PropTypes.shape({
     img: PropTypes.string,
