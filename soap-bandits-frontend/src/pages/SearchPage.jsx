@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './LandingPage.css';
+import './SearchPage.css';
 
 const LandingPage = () => {
   const [query, setQuery] = useState('');

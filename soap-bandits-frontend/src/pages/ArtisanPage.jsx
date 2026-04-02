@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import ArtisanForm from '../_components/ArtisanForm';
-import './LandingPage.css';
+import './SearchPage.css';
 
 const ArtisanPage = () => {
   return (
