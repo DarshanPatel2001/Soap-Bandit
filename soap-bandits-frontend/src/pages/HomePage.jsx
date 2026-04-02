@@ -197,7 +197,6 @@ const SoapModal = ({ soap, onClose }) => {
 const SoapCard = ({ soap, onCardClick }) => {
   const shortDesc =
     soap.desc.length > 100 ? soap.desc.slice(0, 100) + '…' : soap.desc;
-
   return (
     <div className="card" onClick={() => onCardClick(soap)}>
       {/* Image + badges */}
