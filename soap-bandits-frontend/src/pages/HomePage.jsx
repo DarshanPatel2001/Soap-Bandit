@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './HomePage.css';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './HomePage.css';
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
-// NOTE: This will be replaced with a real API/backend call later.
-// For now, swap out this array with your fetched data.
 const soaps = [
   {
     name: 'Lavender Fields',
@@ -149,7 +147,6 @@ const soaps = [
 
 // ── MODAL COMPONENT ───────────────────────────────────────────────────────────
 const SoapModal = ({ soap, onClose }) => {
-  // Clicking the dark overlay (not the card itself) closes the modal
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) onClose();
   };
@@ -160,16 +157,13 @@ const SoapModal = ({ soap, onClose }) => {
         <div className="modal-img">
           <img src={soap.img} alt={soap.name} />
         </div>
-
         <button className="modal-close" onClick={onClose}>
           ✕
         </button>
-
         <div className="modal-body">
           <p className="modal-company">{soap.company}</p>
           <h2 className="modal-name">{soap.name}</h2>
           <p className="modal-desc">{soap.desc}</p>
-
           <div className="modal-grid">
             <div className="modal-stat">
               <span className="stat-label">pH Level</span>
@@ -184,7 +178,6 @@ const SoapModal = ({ soap, onClose }) => {
               <span className="stat-value">{soap.skin}</span>
             </div>
           </div>
-
           <p className="modal-ing-label">Full Ingredient List</p>
           <p className="modal-ing-list">{soap.ingredients.join(', ')}</p>
         </div>
@@ -200,7 +193,6 @@ const SoapCard = ({ soap, onCardClick }) => {
 
   return (
     <div className="card" onClick={() => onCardClick(soap)}>
-      {/* Image + badges */}
       <div className="card-img">
         <img src={soap.img} alt={soap.name} loading="lazy" />
         <span className={`card-tag ${soap.tagClass}`}>{soap.tag}</span>
@@ -209,15 +201,11 @@ const SoapCard = ({ soap, onCardClick }) => {
           <span className="ph-value">{soap.ph}</span>
         </div>
       </div>
-
-      {/* Text info */}
       <div className="card-body">
         <p className="card-company">{soap.company}</p>
         <h2 className="card-name">{soap.name}</h2>
         <p className="card-desc">{shortDesc}</p>
       </div>
-
-      {/* Stats row */}
       <div className="stats">
         <div className="stat">
           <span className="stat-label">Weight</span>
@@ -232,8 +220,6 @@ const SoapCard = ({ soap, onCardClick }) => {
           <span className="stat-value">{soap.scent}</span>
         </div>
       </div>
-
-      {/* Ingredient pills — first 4 only */}
       <div className="ingredients-section">
         <p className="ing-label">Key Ingredients</p>
         <div className="ing-pills">
@@ -244,8 +230,6 @@ const SoapCard = ({ soap, onCardClick }) => {
           ))}
         </div>
       </div>
-
-      {/* Footer */}
       <div className="card-footer">
         <span className="card-price">{soap.price}</span>
         <button className="btn-add">View Details</button>
@@ -255,11 +239,7 @@ const SoapCard = ({ soap, onCardClick }) => {
 };
 
 // ── HOMEPAGE COMPONENT ────────────────────────────────────────────────────────
-// Props:
-//   onBack — callback passed in from LandingPage to navigate back
-//            (wire this up once you add routing)
-const HomePage = ({ onBack }) => {
-  const navigate = useNavigate();
+const HomePage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedSoap, setSelectedSoap] = useState(null);
 
@@ -271,11 +251,34 @@ const HomePage = ({ onBack }) => {
       : soaps.filter((soap) => soap.category === activeFilter);
 
   return (
-    <div>
-      {/* Back button — calls onBack prop from LandingPage */}
-      <button className="back-button" onClick={() => navigate('/')}>
-        ← Back to Landing
-      </button>
+    <div className="homepage-wrapper">
+      {/* ── TOP NAVIGATION (SCREENSHOT MATCH) ── */}
+      <nav className="nav-bar u-flex u-items-center u-justify-between header-border">
+        <div className="logo-text u-flex u-items-center">
+          Super Soap Search
+          <span className="logo-attribution">
+            Brought to you by SoapStandle®
+          </span>
+        </div>
+
+        <div className="breadcrumb-container" style={{ margin: 0 }}>
+          <span className="breadcrumb-active">Home</span>
+          <span className="breadcrumb-separator">›</span>
+          <Link to="/search" className="breadcrumb-parent">
+            Soap Search
+          </Link>
+          <span className="breadcrumb-separator">›</span>
+          <Link to="/submit" className="breadcrumb-parent">
+            Artisan Page
+          </Link>
+        </div>
+      </nav>
+
+      {/* ── HERO (SCREENSHOT MATCH) ── */}
+      <header className="hero-header hero-centered">
+        <p className="hero-eyebrow">NO MORE GOOEY, SLIPPERY BAR SOAP</p>
+        <h1 className="h1-large">Find the Best Soap for You</h1>
+      </header>
 
       {/* Category filter controls */}
       <div className="filters">
@@ -297,13 +300,22 @@ const HomePage = ({ onBack }) => {
         ))}
       </div>
 
-      {/* Modal — only renders when a soap is selected */}
+      {/* Modal */}
       {selectedSoap && (
         <SoapModal soap={selectedSoap} onClose={() => setSelectedSoap(null)} />
       )}
+
+      {/* Footer */}
+      <footer className="technical-footer">
+        <p className="footer-oversight">
+          Technical Oversight provided by JD Graffam
+        </p>
+      </footer>
     </div>
   );
 };
+
+// PropTypes (Identical to previous)
 SoapModal.propTypes = {
   soap: PropTypes.shape({
     img: PropTypes.string,
@@ -334,10 +346,6 @@ SoapCard.propTypes = {
     ingredients: PropTypes.arrayOf(PropTypes.string),
   }),
   onCardClick: PropTypes.func,
-};
-
-HomePage.propTypes = {
-  onBack: PropTypes.func,
 };
 
 export default HomePage;

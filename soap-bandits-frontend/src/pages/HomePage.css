@@ -5,9 +5,87 @@
    to update the variables in LandingPage.css to retheme.
    ============================================================ */
 
+/* ── NEW HEADER & HERO (MATCHING SCREENSHOT) ───────────────── */
+.screenshot-header {
+  padding: 1.5rem 2.5rem;
+  background-color: var(--ss-white);
+  border-bottom: 2px dotted #8b5cf6; /* Purple dotted border from screenshot */
+}
+
+.logo-main {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--ss-navy);
+  margin: 0;
+}
+
+.logo-attribution {
+  font-size: 0.75rem;
+  color: var(--ss-slate);
+  margin-left: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.hero-section-centered {
+  text-align: center;
+  padding: 5rem 2rem 3.5rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ss-slate);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-main-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--ss-navy);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+.hero-main-desc {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ── BREADCRUMBS (INTEGRATED INTO NAV) ────────────────────── */
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb-link {
+  color: var(--ss-slate);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.breadcrumb-item.active {
+  color: var(--ss-navy);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.breadcrumb-separator {
+  color: var(--ss-gold);
+  font-weight: 900;
+}
+
 /* ── BACK BUTTON ─────────────────────────────────────────────
    Sits above the filter row. Styled to feel like a ghost/outline
-   button so it doesn't compete with the filter controls.        */
+   button so it doesn't compete with the filter controls.         */
 .back-button {
   display: inline-flex;
   align-items: center;
@@ -284,7 +362,7 @@
 }
 
 /* ── MODAL ───────────────────────────────────────────────────
-     Full-screen dark overlay + centred white modal card.        */
+     Full-screen dark overlay + centred white modal card.         */
 .modal-overlay {
   position: fixed;
   inset: 0; /* covers entire viewport */
@@ -423,4 +501,24 @@
   color: #374151;
   line-height: 1.6;
   margin: 0;
+}
+
+/* --- UTILITIES --- */
+.u-flex {
+  display: flex !important;
+}
+.u-items-center {
+  align-items: center;
+}
+.u-justify-between {
+  justify-content: space-between;
+}
+
+/* TECHNICAL FOOTER SYNC */
+.technical-footer {
+  background: #283745; /* ss-navy */
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: 5rem;
 }
