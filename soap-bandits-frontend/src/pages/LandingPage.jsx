@@ -134,7 +134,6 @@ const LandingPage = () => {
         <div className="pillars-inner">
           <div className="pillars-grid">
             <div className="pillar-card">
-              <p className="card-tag">Analytics</p>
               <h3 className="h4">Water Compatibility</h3>
               <p className="card-description">
                 Check your region&apos;s hardness to see how your soap will
@@ -199,7 +198,6 @@ const LandingPage = () => {
             </div>
 
             <div className="pillar-card">
-              <p className="card-tag">Metrics</p>
               <h3 className="h4">Sustainability</h3>
               <p className="card-description">
                 Tracking plastic-averse efforts and global sustainability
@@ -208,7 +206,6 @@ const LandingPage = () => {
             </div>
 
             <div className="pillar-card">
-              <p className="card-tag">Impact</p>
               <h3 className="h4">Public Health</h3>
               <p className="card-description">
                 Evidence-based handwashing initiatives and global health data.
