@@ -14,7 +14,7 @@ const LandingPage = () => {
 
         <div className="nav-links u-flex">
           {/* 2. Replace <a> with <Link> and href with to */}
-          <Link to="/" className="cta-button2">
+          <Link to="/home" className="cta-button2">
             HomePage
           </Link>
           <Link to="/submit" className="cta-button">

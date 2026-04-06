@@ -2,8 +2,9 @@
 __pycache__/
 *.pyc
 
-# Virtual environment
-/Backend/venv
+node_modules/
 
-# Environment variables
-/Backend/.env
+Backend/venv/
+Backend/.env
+
+Backend/data/scraper_cache/
