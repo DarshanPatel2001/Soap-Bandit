@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/SearchPage';
 import ArtisanPage from './pages/ArtisanPage';
 import HomePage from './pages/HomePage';
+import InfoPage from './pages/InfoPage';
 import './App.css';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
 
           {/* THE ARTISAN PORTAL */}
           <Route path="/submit" element={<ArtisanPage />} />
+
+          {/* PRODUCT INFO PAGE */}
+          <Route path="/product" element={<InfoPage />} />
         </Routes>
       </div>
     </Router>
