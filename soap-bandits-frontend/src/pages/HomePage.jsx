@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // Added useEffect for auto-open logic
 import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import PreferencesModal from '../_modals/PreferencesModal'; // Importing the specific modal name
 import './HomePage.css';
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
@@ -207,9 +208,25 @@ const SoapCard = ({ soap, onCardClick }) => {
 // ── HOMEPAGE COMPONENT ────────────────────────────────────────────────────────
 const HomePage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [showPreferences, setShowPreferences] = useState(false); // Modal visibility state
+  const [userPrefs, setUserPrefs] = useState(null); // Saved preference state
   const navigate = useNavigate();
 
   const filters = ['all', 'vegan', 'organic', 'charcoal', 'artisan'];
+
+  // Trigger modal on land if not seen this session
+  useEffect(() => {
+    const hasSeenModal = sessionStorage.getItem('soapPreferencesSeen');
+    if (!hasSeenModal) {
+      setShowPreferences(true);
+      sessionStorage.setItem('soapPreferencesSeen', 'true');
+    }
+  }, []);
+
+  const handleSavePrefs = (prefs) => {
+    setUserPrefs(prefs);
+    console.log('Preferences saved:', prefs);
+  };
 
   const filteredSoaps =
     activeFilter === 'all'
@@ -231,16 +248,27 @@ const HomePage = () => {
           </span>
         </div>
 
-        <div className="breadcrumb-container" style={{ margin: 0 }}>
-          <span className="breadcrumb-active">Home</span>
-          <span className="breadcrumb-separator">›</span>
-          <Link to="/search" className="breadcrumb-parent">
-            Soap Search
-          </Link>
-          <span className="breadcrumb-separator">›</span>
-          <Link to="/submit" className="breadcrumb-parent">
-            Artisan Page
-          </Link>
+        <div className="u-flex u-items-center" style={{ gap: '1.5rem' }}>
+          {/* Personalization Button */}
+          <button
+            className="filter-btn"
+            onClick={() => setShowPreferences(true)}
+            style={{ fontSize: '0.7rem', padding: '0.3rem 0.8rem', margin: 0 }}
+          >
+            {userPrefs ? `Profile: ${userPrefs.skinType}` : 'Personalize Hub'}
+          </button>
+
+          <div className="breadcrumb-container" style={{ margin: 0 }}>
+            <span className="breadcrumb-active">Home</span>
+            <span className="breadcrumb-separator">›</span>
+            <Link to="/search" className="breadcrumb-parent">
+              Soap Search
+            </Link>
+            <span className="breadcrumb-separator">›</span>
+            <Link to="/submit" className="breadcrumb-parent">
+              Artisan Page
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -269,6 +297,13 @@ const HomePage = () => {
           <SoapCard key={soap.name} soap={soap} onCardClick={handleCardClick} />
         ))}
       </div>
+
+      {/* Preferences Modal Component */}
+      <PreferencesModal
+        isOpen={showPreferences}
+        onClose={() => setShowPreferences(false)}
+        onSave={handleSavePrefs}
+      />
 
       {/* Footer */}
       <footer className="technical-footer">
