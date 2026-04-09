@@ -425,11 +425,19 @@ const HomePage = () => {
         </div>
 
         <div className="u-flex u-items-center" style={{ gap: '1.5rem' }}>
-          {/* Personalization Button from Modal Logic */}
           <button
             className="filter-btn"
             onClick={() => setShowPreferences(true)}
-            style={{ fontSize: '0.7rem', padding: '0.3rem 0.8rem', margin: 0 }}
+            style={{
+              fontSize: '0.7rem',
+              padding: '0.3rem 0.8rem',
+              margin: 0,
+              backgroundColor: '#ffffff',
+              color: '#e7b45c',
+              border: '1px solid #e7b45c',
+              fontWeight: '700',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+            }}
           >
             {userPrefs ? `Profile: ${userPrefs.skinType}` : 'Personalize Hub'}
           </button>
