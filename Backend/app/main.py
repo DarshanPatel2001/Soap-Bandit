@@ -1,8 +1,10 @@
 from fastapi import FastAPI, HTTPException
 from SERVICES.soap_rating_service import rate_soap_by_zip
 from SERVICES.scraper import get_ingredient_safety
+from app.Routes.soap import router as soap_router
 
 app = FastAPI()
+app.include_router(soap_router, prefix="/soap")
 
 @app.get("/")
 def home():
