@@ -1,3 +1,11 @@
+/* ============================================================
+   HomePage.css — SoapStandle Hub
+   Brand palette is inherited from SearchPage.css via :root
+   All color values reference CSS variables so you only need
+   to update the variables in SearchPage.css to retheme.
+   ============================================================ */
+
+/* ── NEW HEADER & HERO (MATCHING SCREENSHOT) ───────────────── */
 .screenshot-header {
   padding: 1.5rem 2.5rem;
   background-color: var(--ss-white);
@@ -432,7 +440,7 @@
 
 /* ── SOAP CARD ───────────────────────────────────────────────
      White card on the dark navy background. Gold top accent
-     matches the pillar cards in LandingPage.css.                 */
+     matches the pillar cards in SearchPage.css.                 */
 .card {
   background: #ffffff;
   border-radius: 0.5rem;

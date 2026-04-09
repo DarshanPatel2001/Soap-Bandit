@@ -3,57 +3,32 @@ import { Link } from 'react-router-dom';
 import './SearchPage.css';
 
 const LandingPage = () => {
+  // --- STATE ---
   const [query, setQuery] = useState('');
-  const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [result] = useState(null);
+  const [loading] = useState(false);
+  const [error] = useState(null);
 
   const [zipQuery, setZipQuery] = useState('');
-  const [ratingResult, setRatingResult] = useState(null);
+  const [ratingResult] = useState(null);
   const [manualHardness, setManualHardness] = useState('');
 
-  const handleSearch = async (e) => {
+  // 1. Ingredient Search (Logic Disabled until backend ready)
+  // will be updated
+  const handleSearch = (e) => {
     e.preventDefault();
-    if (!query) return;
-
-    setLoading(true);
-    setError(null);
-    setResult(null);
-
-    try {
-      const response = await fetch(
-        `http://localhost:8000/api/ingredient/full/${query}`
-      );
-      if (!response.ok)
-        throw new Error('Ingredient not found in scientific archives');
-
-      const data = await response.json();
-      setResult(data);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+    console.log('Search triggered for:', query);
   };
 
-  const handleRatingSearch = async (e) => {
+  // 2. Water Rating (Logic Disabled)
+  const handleRatingSearch = (e) => {
     e.preventDefault();
-    if (!zipQuery && !manualHardness) return;
-
-    try {
-      let url = `http://localhost:8000/api/soap-rating?zip_code=${zipQuery}`;
-      if (manualHardness) url += `&manual_hardness=${manualHardness}`;
-
-      const response = await fetch(url);
-      const data = await response.json();
-      setRatingResult(data);
-    } catch (err) {
-      console.error('Rating lookup failed:', err);
-    }
+    console.log('Rating check triggered for:', zipQuery, manualHardness);
   };
 
   return (
     <div className="landing-container">
+      {/* --- NAVIGATION BAR --- */}
       <nav className="nav-bar u-flex u-items-center u-justify-between">
         <div className="logo-text">
           SOAP<span style={{ color: 'var(--ss-gold)' }}>STANDLE</span> HUB
@@ -68,6 +43,7 @@ const LandingPage = () => {
         </div>
       </nav>
 
+      {/* --- HERO HEADER SECTION --- */}
       <header className="hero-header">
         <div className="breadcrumb-container">
           <Link to="/" className="breadcrumb-parent">
@@ -97,6 +73,7 @@ const LandingPage = () => {
 
         {error && <p className="error-text">{error}</p>}
 
+        {/* Result UI (Hidden until 'result' state is populated) */}
         {result && (
           <div className="pillar-card search-result-card">
             <h2 className="result-title">{result.ingredient.toUpperCase()}</h2>
@@ -121,18 +98,17 @@ const LandingPage = () => {
               <div>
                 <h4 className="card-sub-header">Product Source</h4>
                 <p className="result-text">{result.cosmetic_info.source}</p>
-                <p className="inci-label">
-                  INCI: {result.cosmetic_info.inci_name}
-                </p>
               </div>
             </div>
           </div>
         )}
       </header>
 
+      {/* --- PILLARS SECTION --- */}
       <section className="pillars-container">
         <div className="pillars-inner">
           <div className="pillars-grid">
+            {/* Pillar 1: Water Compatibility Tool */}
             <div className="pillar-card">
               <h3 className="h4">Water Compatibility</h3>
               <p className="card-description">
@@ -197,6 +173,7 @@ const LandingPage = () => {
               )}
             </div>
 
+            {/* Pillar 2: Sustainability */}
             <div className="pillar-card">
               <h3 className="h4">Sustainability</h3>
               <p className="card-description">
@@ -205,6 +182,7 @@ const LandingPage = () => {
               </p>
             </div>
 
+            {/* Pillar 3: Public Health */}
             <div className="pillar-card">
               <h3 className="h4">Public Health</h3>
               <p className="card-description">

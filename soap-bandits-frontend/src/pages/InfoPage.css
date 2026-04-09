@@ -438,7 +438,9 @@
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.2s, transform 0.15s;
+  transition:
+    background 0.2s,
+    transform 0.15s;
 }
 .amazon-purchase-btn:hover {
   background: #e68a00;

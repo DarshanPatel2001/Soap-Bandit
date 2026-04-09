@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import PreferencesModal from '../_modals/PreferencesModal';
 import './HomePage.css';
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
@@ -315,6 +316,9 @@ const DropdownFilter = ({ label, options, selected, onToggle }) => {
 
 // ── HOMEPAGE COMPONENT ────────────────────────────────────────────────────────
 const HomePage = () => {
+  // --- COMBINED STATE ---
+  const [showPreferences, setShowPreferences] = useState(false);
+  const [userPrefs, setUserPrefs] = useState(null);
   const [locationInput, setLocationInput] = useState('');
   const [sortBy, setSortBy] = useState('default');
   const [activeFilters, setActiveFilters] = useState({
@@ -323,8 +327,25 @@ const HomePage = () => {
     phLevel: [],
     gooFactor: [],
   });
+
   const navigate = useNavigate();
 
+  // --- MODAL LOGIC (Auto-open on land) ---
+  useEffect(() => {
+    const hasSeenModal = sessionStorage.getItem('soapPreferencesSeen');
+    if (!hasSeenModal) {
+      setShowPreferences(true);
+      sessionStorage.setItem('soapPreferencesSeen', 'true');
+    }
+  }, []);
+
+  const handleSavePrefs = (prefs) => {
+    setUserPrefs(prefs);
+    // Logic can be added here to pre-set activeFilters.skin based on prefs.skinType
+    console.log('Preferences saved:', prefs);
+  };
+
+  // --- FILTER HANDLERS ---
   const toggleFilter = (group, value) => {
     setActiveFilters((prev) => ({
       ...prev,
@@ -349,6 +370,7 @@ const HomePage = () => {
     0
   );
 
+  // --- FILTERING & SORTING LOGIC ---
   const filteredSoaps = soaps.filter((soap) => {
     if (
       locationInput.trim() &&
@@ -401,16 +423,28 @@ const HomePage = () => {
             Brought to you by SoapStandle®
           </span>
         </div>
-        <div className="breadcrumb-container" style={{ margin: 0 }}>
-          <span className="breadcrumb-active">Home</span>
-          <span className="breadcrumb-separator">›</span>
-          <Link to="/search" className="breadcrumb-parent">
-            Soap Search
-          </Link>
-          <span className="breadcrumb-separator">›</span>
-          <Link to="/submit" className="breadcrumb-parent">
-            Artisan Page
-          </Link>
+
+        <div className="u-flex u-items-center" style={{ gap: '1.5rem' }}>
+          {/* Personalization Button from Modal Logic */}
+          <button
+            className="filter-btn"
+            onClick={() => setShowPreferences(true)}
+            style={{ fontSize: '0.7rem', padding: '0.3rem 0.8rem', margin: 0 }}
+          >
+            {userPrefs ? `Profile: ${userPrefs.skinType}` : 'Personalize Hub'}
+          </button>
+
+          <div className="breadcrumb-container" style={{ margin: 0 }}>
+            <span className="breadcrumb-active">Home</span>
+            <span className="breadcrumb-separator">›</span>
+            <Link to="/search" className="breadcrumb-parent">
+              Soap Search
+            </Link>
+            <span className="breadcrumb-separator">›</span>
+            <Link to="/submit" className="breadcrumb-parent">
+              Artisan Page
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -422,19 +456,17 @@ const HomePage = () => {
 
       {/* ── FILTER BAR ── */}
       <div className="top-filter-bar">
-        {/* Location input */}
         <div className="location-input-wrap">
           <span className="location-icon">🔆</span>
           <input
             className="location-input"
             type="text"
-            placeholder="Filter by Location"
+            placeholder="Filter by Name or Brand"
             value={locationInput}
             onChange={(e) => setLocationInput(e.target.value)}
           />
         </div>
 
-        {/* All Filters + Dropdowns pushed to the right (space-between handles gap) */}
         <div className="top-filter-bar-right">
           <button
             className={`all-filters-btn ${totalActive > 0 ? 'has-active' : ''}`}
@@ -462,7 +494,7 @@ const HomePage = () => {
       {/* ── RESULTS / SORT BAR ── */}
       <div className="results-sort-bar">
         <span className="results-label">
-          {filteredSoaps.length} result{filteredSoaps.length !== 1 ? 's' : ''}
+          {sortedSoaps.length} result{sortedSoaps.length !== 1 ? 's' : ''}
         </span>
         <div className="sort-wrap">
           <span className="sort-label">Sort by:</span>
@@ -500,7 +532,13 @@ const HomePage = () => {
         )}
       </div>
 
-      {/* Footer */}
+      {/* Preferences Modal Component */}
+      <PreferencesModal
+        isOpen={showPreferences}
+        onClose={() => setShowPreferences(false)}
+        onSave={handleSavePrefs}
+      />
+
       <footer className="technical-footer">
         <p className="footer-oversight">
           Technical Oversight provided by JD Graffam
@@ -510,7 +548,7 @@ const HomePage = () => {
   );
 };
 
-// PropTypes
+// --- PROPTYPES ---
 SoapCard.propTypes = {
   soap: PropTypes.shape({
     img: PropTypes.string,
