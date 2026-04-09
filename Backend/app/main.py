@@ -1,19 +1,15 @@
-from fastapi import FastAPI, HTTPException
-from SERVICES.soap_rating_service import rate_soap_by_zip
-from SERVICES.scraper import get_ingredient_safety
+from fastapi import FastAPI
 from app.Routes.soap import router as soap_router
+from app.Routes.ingredients import router as ingredients_router
+from app.Routes.water import router as water_router
 
 app = FastAPI()
+
 app.include_router(soap_router, prefix="/soap")
+app.include_router(ingredients_router, prefix="/ingredients")
+app.include_router(water_router, prefix="/water")
+
 
 @app.get("/")
 def home():
     return {"message": "Soap Knowledge API running"}
-
-@app.get("/soap-rating")
-def soap_rating(zip_code: str, soap_name: str = "Generic Soap Bar"):
-    return rate_soap_by_zip(zip_code, soap_name)
-
-@app.get("/ingredients/{name}/safety")
-def ingredient_safety(name: str):
-    return get_ingredient_safety(name)
