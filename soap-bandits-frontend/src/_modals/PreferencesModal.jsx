@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const UserOnboardingModal = ({ isOpen, onClose, onSave }) => {
+const PreferencesModal = ({ isOpen, onClose, onSave }) => {
   const [zip, setZip] = useState('');
   const [skinType, setSkinType] = useState('');
 
@@ -58,10 +58,11 @@ const UserOnboardingModal = ({ isOpen, onClose, onSave }) => {
                 <option value="" disabled>
                   Select skin type...
                 </option>
-                <option value="Dry">Dry / Sensitive</option>
-                <option value="Oily">Oily / Acne-Prone</option>
-                <option value="Normal">Normal / Balanced</option>
-                <option value="Combination">Combination</option>
+                <option value="All Types">All Types</option>
+                <option value="Oily / Acne">Oily / Acne</option>
+                <option value="Sensitive">Sensitive</option>
+                <option value="Dry / Normal">Dry / Normal</option>
+                <option value="Dry / Mature">Dry / Mature</option>
               </select>
             </div>
 
@@ -112,10 +113,10 @@ const UserOnboardingModal = ({ isOpen, onClose, onSave }) => {
   );
 };
 
-UserOnboardingModal.propTypes = {
+PreferencesModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   onSave: PropTypes.func.isRequired,
 };
 
-export default UserOnboardingModal;
+export default PreferencesModal;
