@@ -1,36 +1,6 @@
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import './InfoPage.css';
 
-// Mock retailers — in a real app these would come from an API
-const MOCK_RETAILERS = [
-  {
-    type: 'Online',
-    name: 'NaturalSoaps.com',
-    price: '$22.80',
-    featured: false,
-  },
-  {
-    type: 'Retailer Type',
-    name: 'GreenLeaf Market',
-    price: '$22.80',
-    featured: true,
-  },
-  { type: 'Retailer Type', name: 'EcoStore', price: '$22.80', featured: false },
-  {
-    type: 'Retailer Type',
-    name: 'Whole Foods',
-    price: '$22.80',
-    featured: false,
-  },
-  { type: 'Retailer Type', name: 'Target', price: '$22.80', featured: false },
-  {
-    type: 'Retailer Type',
-    name: 'Sprouts Market',
-    price: '$22.80',
-    featured: false,
-  },
-];
-
 const InfoPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -52,17 +22,6 @@ const InfoPage = () => {
 
   return (
     <div className="info-page">
-      {/* ── ANNOUNCEMENT BAR ── */}
-      <div className="info-announce-bar">
-        <p className="info-announce-text">
-          Announcement bar paragraph small text. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </p>
-        <button className="info-announce-close" aria-label="Close">
-          ✕
-        </button>
-      </div>
-
       {/* ── NAV ── */}
       <nav className="info-nav">
         <div className="info-nav-logo">
@@ -107,25 +66,32 @@ const InfoPage = () => {
         </div>
       </section>
 
-      {/* ── RETAILERS SECTION ── */}
+      {/* ── WHERE TO BUY ── */}
       <section className="info-retailers-section">
-        <h2 className="info-retailers-title">
-          Available at these online &amp; in-store retailers
-        </h2>
-        <div className="info-retailers-grid">
-          {MOCK_RETAILERS.map((r, i) => (
-            <div key={i} className="info-retailer-card">
-              <p className="info-retailer-type">{r.type}</p>
-              <p className="info-retailer-name">{r.name}</p>
-              <p className="info-retailer-price">Published prices from</p>
-              <p className="info-retailer-amount">{r.price}</p>
-              <button
-                className={`info-purchase-btn ${r.featured ? 'info-purchase-btn--featured' : ''}`}
-              >
-                PURCHASE ↗
-              </button>
-            </div>
-          ))}
+        <h2 className="info-retailers-title">Available Online</h2>
+        <div className="amazon-banner">
+          <div className="amazon-banner-left">
+            <span className="amazon-badge">ONLINE RETAILER</span>
+            <h3 className="amazon-name">amazon</h3>
+            <p className="amazon-sub">
+              Fast &amp; reliable delivery straight to your door
+            </p>
+          </div>
+          <div className="amazon-banner-divider" />
+          <div className="amazon-banner-right">
+            <p className="amazon-price-label">Published prices from</p>
+            <p className="amazon-price-amount">{soap.price}</p>
+            <a
+              className="amazon-purchase-btn"
+              href={`https://www.amazon.com/s?k=${encodeURIComponent(
+                soap.name + ' ' + soap.company
+              )}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Purchase on Amazon ↗
+            </a>
+          </div>
         </div>
       </section>
 
