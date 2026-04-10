@@ -1,0 +1,18 @@
+{
+  "exported_at": "2026-04-09T19:56:48.861684+00:00",
+  "ingredient": {
+    "inci_name": "BENZALKONIUM CHLORIDE",
+    "source_db": "ewg",
+    "safety_score": 5,
+    "safety_concerns": [
+      "irritation",
+      "allergy"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T19:56:45.411109+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=benzalkonium chloride"
+  }
+}

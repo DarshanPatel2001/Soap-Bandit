@@ -1,0 +1,4424 @@
+{
+  "enriched_at": "2026-04-20T12:00:00+00:00",
+  "soaps": [
+    {
+      "id": "dial-gold-liquid-hand-soap",
+      "name": "Dial Gold Liquid Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+Gold+Liquid+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, lauramidopropylamine oxide, sodium chloride, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, fragrance, myristamidopropylamine oxide, trisodium ethylenediamine disuccinate, zinc sulfate, dimethyl lauramine, alcohol, yellow 5, red 4",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "peg-120 methyl glucose dioleate",
+          "function": "emulsifying",
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "myristamidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "yellow 5",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy",
+            "organ toxicity"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 4",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.0,
+        "gooeyness_label": "Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "dial-spring-water-liquid-hand-soap",
+      "name": "Dial Spring Water Liquid Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+Spring+Water+Liquid+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, sodium chloride, lauramidopropylamine oxide, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, fragrance, myristamidopropylamine oxide, aloe barbadensis leaf juice, zinc sulfate, trisodium ethylenediamine disuccinate, dimethyl lauramine, alcohol, blue 1, red 33, hexyl cinnamal",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "peg-120 methyl glucose dioleate",
+          "function": "emulsifying",
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "myristamidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis leaf juice",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "blue 1",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 33",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "hexyl cinnamal",
+          "function": "perfuming",
+          "safety_score": 6,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.0,
+        "gooeyness_label": "Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "dial-white-tea-liquid-hand-soap",
+      "name": "Dial White Tea Liquid Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+White+Tea+Liquid+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, sodium chloride, lauramidopropylamine oxide, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, myristamidopropylamine oxide, fragrance, aloe barbadensis leaf juice, zinc sulfate, trisodium ethylenediamine disuccinate, dimethyl lauramine, alcohol, camellia sinensis leaf extract, blue 1, red 33, benzyl alcohol",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "peg-120 methyl glucose dioleate",
+          "function": "emulsifying",
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "myristamidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis leaf juice",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "camellia sinensis leaf extract",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "blue 1",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 33",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "benzyl alcohol",
+          "function": "preservative",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.0,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.0,
+        "gooeyness_label": "Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "dial-aloe-sensitive-liquid-hand-soap",
+      "name": "Dial Aloe Sensitive Liquid Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+Aloe+Sensitive+Liquid+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, lauramidopropylamine oxide, sodium chloride, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, myristamidopropylamine oxide, fragrance, aloe barbadensis leaf juice, zinc sulfate, trisodium ethylenediamine disuccinate, dimethyl lauramine, alcohol",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "peg-120 methyl glucose dioleate",
+          "function": "emulsifying",
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "myristamidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis leaf juice",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.0,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.0,
+        "gooeyness_label": "Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "dial-spring-water-foaming-hand-soap",
+      "name": "Dial Spring Water Foaming Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+Spring+Water+Foaming+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine, blue 1, red 33",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis leaf juice",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "blue 1",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 33",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "dial-aloe-sensitive-foaming-hand-soap",
+      "name": "Dial Aloe Sensitive Foaming Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+Aloe+Sensitive+Foaming+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis leaf juice",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "dial-coconut-water-foaming-hand-soap",
+      "name": "Dial Coconut Water Foaming Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+Coconut+Water+Foaming+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine, blue 1, red 33",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis leaf juice",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "blue 1",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 33",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "dial-white-tea-foaming-hand-soap",
+      "name": "Dial White Tea Foaming Hand Soap",
+      "brand": "Dial",
+      "buy_link": "https://www.amazon.com/s?k=Dial+White+Tea+Foaming+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "zinc sulfate",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis leaf juice",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "trisodium ethylenediamine disuccinate",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "alcohol",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "dimethyl lauramine",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-soothing-clean-aloe-vera-hand-soap",
+      "name": "Softsoap Soothing Clean Aloe Vera Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Soothing+Clean+Aloe+Vera+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycol stearate, citric acid, sodium benzoate",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycol stearate",
+          "function": "emollient",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.6,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "both",
+        "gooeyness_score": 6.8,
+        "gooeyness_label": "Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-antibacterial-crisp-clean-hand-soap",
+      "name": "Softsoap Antibacterial Crisp Clean Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Antibacterial+Crisp+Clean+Liquid+Hand+Soap",
+      "ingredients_raw": "benzalkonium chloride, water, cetrimonium chloride, glycerin, lauramidopropylamine oxide, lauramine oxide, peg-120 methyl glucose dioleate, myristamidopropylamine oxide, citric acid, sodium benzoate, fragrance, tetrasodium edta, green 5, yellow 5, red 33",
+      "ingredients": [
+        {
+          "name": "benzalkonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cetrimonium chloride",
+          "function": "antimicrobial/antibacterial",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauramine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "peg-120 methyl glucose dioleate",
+          "function": "emulsifying",
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "myristamidopropylamine oxide",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tetrasodium edta",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "green 5",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "yellow 5",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy",
+            "organ toxicity"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 33",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.0,
+        "gooeyness_label": "Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-caramelized-coconut-vanilla-hand-soap",
+      "name": "Softsoap Caramelized Coconut and Vanilla Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Caramelized+Coconut+Vanilla+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate, triethyl citrate",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "triethyl citrate",
+          "function": "perfuming",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "dry",
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-fresh-breeze-hand-soap",
+      "name": "Softsoap Fresh Breeze Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Fresh+Breeze+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, citric acid, sodium benzoate, sodium chloride",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "both",
+        "gooeyness_score": 6.8,
+        "gooeyness_label": "Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-milk-and-honey-hand-soap",
+      "name": "Softsoap Milk and Honey Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Milk+Honey+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate, milk protein, honey extract",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "milk protein",
+          "function": null,
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "honey extract",
+          "function": "moisturizer/humectant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.1,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "dry",
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 10.0,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-kitchen-fresh-hands-hand-soap",
+      "name": "Softsoap Kitchen Fresh Hands Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Kitchen+Fresh+Hands+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "dry",
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-black-orchid-jasmine-hand-soap",
+      "name": "Softsoap Black Orchid and Jasmine Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Black+Orchid+Jasmine+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "dry",
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-lavender-chamomile-hand-soap",
+      "name": "Softsoap Lavender and Chamomile Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Lavender+Chamomile+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "dry",
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "softsoap-juicy-pomegranate-mango-hand-soap",
+      "name": "Softsoap Juicy Pomegranate and Mango Liquid Hand Soap",
+      "brand": "Softsoap",
+      "buy_link": "https://www.amazon.com/s?k=Softsoap+Juicy+Pomegranate+Mango+Liquid+Hand+Soap",
+      "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium c12-13 alketh sulfate",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium laureth sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": false,
+        "concern_ingredients": [],
+        "skin_suitability": [
+          "dry",
+          "normal",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-foaming-sea-minerals-hand-soap",
+      "name": "method Foaming Hand Wash Sea Minerals",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+sea+minerals",
+      "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, blue 1, external violet 2",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "blue 1",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "external violet 2",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.6,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-foaming-pink-grapefruit-hand-soap",
+      "name": "method Foaming Hand Wash Pink Grapefruit",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+pink+grapefruit",
+      "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, red 33, red 4",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 33",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 4",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.6,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-foaming-french-lavender-hand-soap",
+      "name": "method Foaming Hand Wash French Lavender",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+french+lavender",
+      "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, external violet 2",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "external violet 2",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-foaming-sweet-water-hand-soap",
+      "name": "method Foaming Hand Wash Sweet Water",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+sweet+water",
+      "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-gel-sweet-water-hand-soap",
+      "name": "method Gel Hand Wash Sweet Water",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+sweet+water",
+      "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "decyl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauryl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl hydroxysultaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.3,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-gel-pink-grapefruit-hand-soap",
+      "name": "method Gel Hand Wash Pink Grapefruit",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+pink+grapefruit",
+      "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, red 4, red 33",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "decyl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauryl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl hydroxysultaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 4",
+          "function": "colorant",
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "red 33",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-gel-french-lavender-hand-soap",
+      "name": "method Gel Hand Wash French Lavender",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+french+lavender",
+      "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, external violet 2",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "decyl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauryl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl hydroxysultaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "external violet 2",
+          "function": null,
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
+          "source": null,
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.4,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-gel-violet-lavender-hand-soap",
+      "name": "method Gel Hand Wash Violet and Lavender",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+violet+lavender",
+      "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "decyl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauryl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl hydroxysultaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.3,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "method-gel-vetiver-amber-hand-soap",
+      "name": "method Gel Hand Wash Vetiver and Amber",
+      "brand": "method",
+      "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+vetiver+amber",
+      "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauryl sulfate",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "decyl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "lauryl glucoside",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl hydroxysultaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium citrate",
+          "function": "chelating",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "aloe barbadensis extract",
+          "function": "soothing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "tocopheryl acetate",
+          "function": "antioxidant",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "potassium sorbate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.3,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 9.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "native-strawberry-matcha-liquid-hand-soap",
+      "name": "Native Liquid Hand Soap Strawberry Matcha",
+      "brand": "Native",
+      "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Strawberry+Matcha",
+      "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium cocoyl isethionate",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauroyl sarcosinate",
+          "function": "surfactant/cleansing",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium salicylate",
+          "function": "preservative",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "disodium edta",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "native-toasted-vanilla-honey-liquid-hand-soap",
+      "name": "Native Liquid Hand Soap Toasted Vanilla and Honey",
+      "brand": "Native",
+      "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Toasted+Vanilla+Honey",
+      "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium cocoyl isethionate",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauroyl sarcosinate",
+          "function": "surfactant/cleansing",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium salicylate",
+          "function": "preservative",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "disodium edta",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "native-coconut-vanilla-liquid-hand-soap",
+      "name": "Native Liquid Hand Soap Coconut and Vanilla",
+      "brand": "Native",
+      "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Coconut+Vanilla",
+      "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium cocoyl isethionate",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauroyl sarcosinate",
+          "function": "surfactant/cleansing",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium salicylate",
+          "function": "preservative",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "disodium edta",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "native-cucumber-mint-liquid-hand-soap",
+      "name": "Native Liquid Hand Soap Cucumber and Mint",
+      "brand": "Native",
+      "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Cucumber+Mint",
+      "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium cocoyl isethionate",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauroyl sarcosinate",
+          "function": "surfactant/cleansing",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium salicylate",
+          "function": "preservative",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "disodium edta",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    },
+    {
+      "id": "native-lavender-rose-liquid-hand-soap",
+      "name": "Native Liquid Hand Soap Lavender and Rose",
+      "brand": "Native",
+      "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Lavender+Rose",
+      "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+      "ingredients": [
+        {
+          "name": "water",
+          "function": "solvent",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "cocamidopropyl betaine",
+          "function": "surfactant/cleansing",
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium chloride",
+          "function": "viscosity controlling",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Synthetic",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "glycerin",
+          "function": "skin-identical ingredient",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Plant-based",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium cocoyl isethionate",
+          "function": "surfactant/cleansing",
+          "safety_score": 1,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium lauroyl sarcosinate",
+          "function": "surfactant/cleansing",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "fragrance",
+          "function": "perfuming",
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium salicylate",
+          "function": "preservative",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "sodium benzoate",
+          "function": "preservative",
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "citric acid",
+          "function": "buffering",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        },
+        {
+          "name": "disodium edta",
+          "function": "chelating",
+          "safety_score": 2,
+          "safety_concerns": [],
+          "source": "Unknown",
+          "regulatory_status": "unknown"
+        }
+      ],
+      "properties": {
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
+        "skin_suitability": [
+          "dry",
+          "sensitive"
+        ],
+        "water_compatibility": "soft",
+        "gooeyness_score": 8.8,
+        "gooeyness_label": "Very Gooey",
+        "longevity": "low"
+      }
+    }
+  ]
+}
