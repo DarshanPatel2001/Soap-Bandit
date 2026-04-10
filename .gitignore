@@ -9,4 +9,3 @@ Backend/.env
 
 Backend/data/scraper_cache/
 
-Backend/data/soaps_enriched.json

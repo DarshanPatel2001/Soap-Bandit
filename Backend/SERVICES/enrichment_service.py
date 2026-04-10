@@ -9,7 +9,7 @@ from SERVICES.soap_properties_service import get_soap_properties
 
 logger = logging.getLogger(__name__)
 
-_CACHE_MAX_AGE = timedelta(days=7)
+_CACHE_MAX_AGE = timedelta(days=30)
 
 _BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
 _SOAPS_FILE = os.path.join(_BASE_DIR, "soaps.json")
