@@ -1,3 +1,5 @@
+#Note running this takes 30 mins+ depending on soap datatset so its set to run every 30 days. soap doesnt change to much
+
 import json
 import logging
 import os
@@ -9,8 +11,10 @@ from SERVICES.soap_properties_service import get_soap_properties
 
 logger = logging.getLogger(__name__)
 
+#checks dataset life and reset at 30days
 _CACHE_MAX_AGE = timedelta(days=30)
 
+#
 _BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
 _SOAPS_FILE = os.path.join(_BASE_DIR, "soaps.json")
 _ENRICHED_FILE = os.path.join(_BASE_DIR, "soaps_enriched.json")
@@ -31,7 +35,7 @@ def needs_refresh() -> bool:
         logger.warning("Could not determine enrichment freshness: %s", e)
         return True
 
-
+#ductionary here, recode
 def _enrich_ingredient(name: str) -> dict:
     record = {
         "name": name,
@@ -58,7 +62,7 @@ def _enrich_ingredient(name: str) -> dict:
         c for c in record["safety_concerns"]
         if c not in SCRAPER_FALLBACK_CONCERNS
     ]
-
+    #fall back 
     try:
         profile = get_full_ingredient_profile(name)
         cosmetic_info = profile.get("cosmetic_info", {})
@@ -106,7 +110,7 @@ def _enrich_soap(soap: dict) -> dict | None:
         logger.error("Failed to enrich soap '%s': %s", soap.get("name", "unknown"), e)
         return None
 
-
+#refresh enrichment.json 
 def run_enrichment_if_stale() -> None:
     try:
         if not needs_refresh():
