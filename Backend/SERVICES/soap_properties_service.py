@@ -13,6 +13,10 @@ HUMECTANT_NAMES = {"glycerin", "sorbitol", "propylene glycol", "honey"}
 DRY_SKIN_KEYWORDS = {"glycerin", "sorbitol", "honey", "shea", "aloe"}
 OILY_SKIN_KEYWORDS = {"salicylic", "tea tree", "charcoal", "clay"}
 SCRAPER_FALLBACK_CONCERNS = {"scrape_failed", "not_found"}
+HIGH_CONCERN = {
+    "cancer", "developmental toxicity",
+    "endocrine disruption", "immunotoxicity",
+}
 
 
 def get_soap_properties(soap: dict) -> dict:
@@ -45,8 +49,11 @@ def get_soap_properties(soap: dict) -> dict:
         # --- has_concerns + concern_ingredients ---
         concern_ingredients = []
         for ing in ingredients:
-            real_concerns = [c for c in (ing.get("safety_concerns") or [])
-                            if c not in SCRAPER_FALLBACK_CONCERNS]
+            real_concerns = [
+                c for c in (ing.get("safety_concerns") or [])
+                if c not in SCRAPER_FALLBACK_CONCERNS
+                and c in HIGH_CONCERN
+            ]
             if real_concerns:
                 concern_ingredients.append(ing.get("name", ""))
         result["has_concerns"] = len(concern_ingredients) > 0

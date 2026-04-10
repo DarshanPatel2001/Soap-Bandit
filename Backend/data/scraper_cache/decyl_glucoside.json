@@ -1,0 +1,15 @@
+{
+  "exported_at": "2026-04-09T20:21:24.297962+00:00",
+  "ingredient": {
+    "inci_name": "DECYL GLUCOSIDE",
+    "source_db": "ewg",
+    "safety_score": 1,
+    "safety_concerns": [],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T20:21:22.088238+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=decyl glucoside"
+  }
+}

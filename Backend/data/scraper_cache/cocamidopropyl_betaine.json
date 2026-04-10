@@ -1,0 +1,18 @@
+{
+  "exported_at": "2026-04-09T18:54:30.570858+00:00",
+  "ingredient": {
+    "inci_name": "COCAMIDOPROPYL BETAINE",
+    "source_db": "ewg",
+    "safety_score": 4,
+    "safety_concerns": [
+      "allergy",
+      "irritation"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T18:54:28.531786+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=cocamidopropyl betaine"
+  }
+}

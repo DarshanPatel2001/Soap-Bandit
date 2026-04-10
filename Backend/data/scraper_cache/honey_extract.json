@@ -1,0 +1,15 @@
+{
+  "exported_at": "2026-04-09T18:55:47.460150+00:00",
+  "ingredient": {
+    "inci_name": "HONEY EXTRACT",
+    "source_db": "ewg",
+    "safety_score": 1,
+    "safety_concerns": [],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T18:55:45.420076+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=honey extract"
+  }
+}

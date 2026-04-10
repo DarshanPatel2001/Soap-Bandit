@@ -1,0 +1,15 @@
+{
+  "exported_at": "2026-04-09T18:55:41.124088+00:00",
+  "ingredient": {
+    "inci_name": "ALOE BARBADENSIS LEAF JUICE",
+    "source_db": "ewg",
+    "safety_score": 1,
+    "safety_concerns": [],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T18:55:39.080490+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=aloe barbadensis leaf juice"
+  }
+}

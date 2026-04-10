@@ -1,0 +1,17 @@
+{
+  "exported_at": "2026-04-09T19:58:58.682478+00:00",
+  "ingredient": {
+    "inci_name": "ALCOHOL",
+    "source_db": "ewg",
+    "safety_score": 4,
+    "safety_concerns": [
+      "irritation"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T19:58:56.445347+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=alcohol"
+  }
+}

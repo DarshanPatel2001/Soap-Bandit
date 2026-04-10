@@ -1,0 +1,18 @@
+{
+  "exported_at": "2026-04-09T20:02:34.544425+00:00",
+  "ingredient": {
+    "inci_name": "BENZYL ALCOHOL",
+    "source_db": "ewg",
+    "safety_score": 5,
+    "safety_concerns": [
+      "irritation",
+      "allergy"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T20:02:32.500067+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=benzyl alcohol"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "exported_at": "2026-04-09T19:57:44.439958+00:00",
+  "ingredient": {
+    "inci_name": "PEG-120 METHYL GLUCOSE DIOLEATE",
+    "source_db": "ewg",
+    "safety_score": 3,
+    "safety_concerns": [
+      "contamination"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T19:57:42.399890+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=peg-120 methyl glucose dioleate"
+  }
+}

@@ -11,15 +11,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -27,15 +30,17 @@
         {
           "name": "lauramidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -43,7 +48,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -51,31 +56,37 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "peg-120 methyl glucose dioleate",
           "function": "emulsifying",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -83,31 +94,38 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "myristamidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -115,51 +133,64 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "yellow 5",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy",
+            "organ toxicity"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 4",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -178,15 +209,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -194,7 +228,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -202,15 +236,17 @@
         {
           "name": "lauramidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -218,31 +254,37 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "peg-120 methyl glucose dioleate",
           "function": "emulsifying",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -250,31 +292,38 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "myristamidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "aloe barbadensis leaf juice",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -282,15 +331,18 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -298,51 +350,62 @@
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "blue 1",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 33",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "hexyl cinnamal",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 6,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -361,15 +424,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -377,7 +443,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -385,15 +451,17 @@
         {
           "name": "lauramidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -401,31 +469,37 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "peg-120 methyl glucose dioleate",
           "function": "emulsifying",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -433,31 +507,38 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "myristamidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "aloe barbadensis leaf juice",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -465,15 +546,18 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -481,23 +565,27 @@
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "camellia sinensis leaf extract",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -505,35 +593,43 @@
         {
           "name": "blue 1",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 33",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "benzyl alcohol",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Plant-based",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.0,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -552,15 +648,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -568,15 +667,17 @@
         {
           "name": "lauramidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -584,7 +685,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -592,31 +693,37 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "peg-120 methyl glucose dioleate",
           "function": "emulsifying",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -624,31 +731,38 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "myristamidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "aloe barbadensis leaf juice",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -656,15 +770,18 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -672,27 +789,32 @@
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.0,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -711,15 +833,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -727,7 +852,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -735,47 +860,59 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -783,15 +920,18 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "aloe barbadensis leaf juice",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -799,7 +939,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -807,7 +947,7 @@
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -815,43 +955,52 @@
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "blue 1",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 33",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -870,15 +1019,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -886,7 +1038,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -894,47 +1046,59 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -942,15 +1106,18 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "aloe barbadensis leaf juice",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -958,7 +1125,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -966,7 +1133,7 @@
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -974,27 +1141,32 @@
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -1013,15 +1185,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1029,7 +1204,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1037,47 +1212,59 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1085,15 +1272,18 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "aloe barbadensis leaf juice",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1101,7 +1291,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -1109,7 +1299,7 @@
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1117,43 +1307,52 @@
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "blue 1",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 33",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -1172,15 +1371,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1188,7 +1390,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1196,47 +1398,59 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1244,15 +1458,18 @@
         {
           "name": "zinc sulfate",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "aloe barbadensis leaf juice",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1260,7 +1477,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -1268,7 +1485,7 @@
         {
           "name": "trisodium ethylenediamine disuccinate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1276,27 +1493,32 @@
         {
           "name": "alcohol",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "dimethyl lauramine",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -1315,7 +1537,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1323,31 +1545,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycol stearate",
           "function": "emollient",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1355,7 +1584,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1363,14 +1592,16 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.6,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -1393,15 +1624,18 @@
         {
           "name": "benzalkonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 5,
+          "safety_concerns": [
+            "irritation",
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1409,15 +1643,17 @@
         {
           "name": "cetrimonium chloride",
           "function": "antimicrobial/antibacterial",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1425,39 +1661,47 @@
         {
           "name": "lauramidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "lauramine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "peg-120 methyl glucose dioleate",
           "function": "emulsifying",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "contamination"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "myristamidopropylamine oxide",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1465,23 +1709,28 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "tetrasodium edta",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1489,35 +1738,43 @@
         {
           "name": "green 5",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "yellow 5",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy",
+            "organ toxicity"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 33",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 3.1,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -1536,7 +1793,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1544,31 +1801,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1576,7 +1840,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1584,22 +1848,24 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "triethyl citrate",
           "function": "perfuming",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.4,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -1623,7 +1889,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1631,31 +1897,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1663,22 +1936,24 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.4,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -1701,7 +1976,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1709,31 +1984,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1741,7 +2023,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1749,15 +2031,17 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "milk protein",
           "function": null,
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1765,14 +2049,14 @@
         {
           "name": "honey extract",
           "function": "moisturizer/humectant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.1,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -1796,7 +2080,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1804,31 +2088,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1836,7 +2127,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1844,14 +2135,16 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.4,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -1875,7 +2168,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1883,31 +2176,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1915,7 +2215,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1923,14 +2223,16 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.4,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -1954,7 +2256,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -1962,31 +2264,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -1994,7 +2303,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2002,14 +2311,16 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.4,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -2033,7 +2344,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2041,31 +2352,38 @@
         {
           "name": "sodium c12-13 alketh sulfate",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium laureth sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2073,7 +2391,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2081,14 +2399,16 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
+        "overall_safety_score": 2.4,
         "has_concerns": false,
         "concern_ingredients": [],
         "skin_suitability": [
@@ -2112,7 +2432,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2120,23 +2440,29 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2144,7 +2470,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2152,7 +2478,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -2160,7 +2486,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2168,7 +2494,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2176,7 +2502,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2184,51 +2510,63 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "blue 1",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Synthetic",
           "regulatory_status": "unknown"
         },
         {
           "name": "external violet 2",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.6,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -2246,7 +2584,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2254,23 +2592,29 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2278,7 +2622,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2286,7 +2630,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -2294,7 +2638,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2302,7 +2646,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2310,7 +2654,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2318,51 +2662,63 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 33",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 4",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.6,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -2380,7 +2736,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2388,23 +2744,29 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2412,7 +2774,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2420,7 +2782,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -2428,7 +2790,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2436,7 +2798,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2444,7 +2806,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2452,43 +2814,53 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "external violet 2",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -2506,7 +2878,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2514,23 +2886,29 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2538,7 +2916,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2546,7 +2924,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -2554,7 +2932,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2562,7 +2940,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2570,7 +2948,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2578,35 +2956,43 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -2624,7 +3010,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2632,15 +3018,18 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "decyl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2648,7 +3037,7 @@
         {
           "name": "lauryl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2656,7 +3045,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -2664,7 +3053,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2672,23 +3061,28 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl hydroxysultaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2696,7 +3090,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2704,7 +3098,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2712,7 +3106,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2720,35 +3114,43 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.3,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -2766,7 +3168,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2774,15 +3176,18 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "decyl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2790,7 +3195,7 @@
         {
           "name": "lauryl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2798,7 +3203,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -2806,7 +3211,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2814,23 +3219,28 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl hydroxysultaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2838,7 +3248,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2846,7 +3256,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2854,7 +3264,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2862,51 +3272,63 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 4",
           "function": "colorant",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "red 33",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.4,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -2924,7 +3346,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2932,15 +3354,18 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "decyl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2948,7 +3373,7 @@
         {
           "name": "lauryl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2956,7 +3381,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -2964,7 +3389,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -2972,23 +3397,28 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl hydroxysultaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -2996,7 +3426,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3004,7 +3434,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3012,7 +3442,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3020,43 +3450,53 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "external violet 2",
           "function": null,
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "organ toxicity"
+          ],
           "source": null,
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.4,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -3074,7 +3514,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3082,15 +3522,18 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "decyl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3098,7 +3541,7 @@
         {
           "name": "lauryl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3106,7 +3549,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -3114,7 +3557,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3122,23 +3565,28 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl hydroxysultaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3146,7 +3594,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3154,7 +3602,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3162,7 +3610,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3170,35 +3618,43 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.3,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -3216,7 +3672,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3224,15 +3680,18 @@
         {
           "name": "sodium lauryl sulfate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "irritation",
+            "organ toxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "decyl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3240,7 +3699,7 @@
         {
           "name": "lauryl glucoside",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3248,7 +3707,7 @@
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -3256,7 +3715,7 @@
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3264,23 +3723,28 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "cocamidopropyl hydroxysultaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3288,7 +3752,7 @@
         {
           "name": "sodium citrate",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3296,7 +3760,7 @@
         {
           "name": "aloe barbadensis extract",
           "function": "soothing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3304,7 +3768,7 @@
         {
           "name": "tocopheryl acetate",
           "function": "antioxidant",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3312,35 +3776,43 @@
         {
           "name": "potassium sorbate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.3,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
-          "dry",
-          "normal"
+          "dry"
         ],
         "water_compatibility": "soft",
         "gooeyness_score": 9.8,
@@ -3358,7 +3830,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3366,15 +3838,18 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -3382,7 +3857,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3390,7 +3865,7 @@
         {
           "name": "sodium cocoyl isethionate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3398,7 +3873,7 @@
         {
           "name": "sodium lauroyl sarcosinate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3406,15 +3881,18 @@
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium salicylate",
           "function": "preservative",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3422,15 +3900,17 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3438,19 +3918,20 @@
         {
           "name": "disodium edta",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -3469,7 +3950,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3477,15 +3958,18 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -3493,7 +3977,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3501,7 +3985,7 @@
         {
           "name": "sodium cocoyl isethionate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3509,7 +3993,7 @@
         {
           "name": "sodium lauroyl sarcosinate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3517,15 +4001,18 @@
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium salicylate",
           "function": "preservative",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3533,15 +4020,17 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3549,19 +4038,20 @@
         {
           "name": "disodium edta",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -3580,7 +4070,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3588,15 +4078,18 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -3604,7 +4097,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3612,7 +4105,7 @@
         {
           "name": "sodium cocoyl isethionate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3620,7 +4113,7 @@
         {
           "name": "sodium lauroyl sarcosinate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3628,15 +4121,18 @@
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium salicylate",
           "function": "preservative",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3644,15 +4140,17 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3660,19 +4158,20 @@
         {
           "name": "disodium edta",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -3691,7 +4190,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3699,15 +4198,18 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -3715,7 +4217,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3723,7 +4225,7 @@
         {
           "name": "sodium cocoyl isethionate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3731,7 +4233,7 @@
         {
           "name": "sodium lauroyl sarcosinate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3739,15 +4241,18 @@
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium salicylate",
           "function": "preservative",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3755,15 +4260,17 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3771,19 +4278,20 @@
         {
           "name": "disodium edta",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",
@@ -3802,7 +4310,7 @@
         {
           "name": "water",
           "function": "solvent",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3810,15 +4318,18 @@
         {
           "name": "cocamidopropyl betaine",
           "function": "surfactant/cleansing",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 4,
+          "safety_concerns": [
+            "allergy",
+            "irritation"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium chloride",
           "function": "viscosity controlling",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Synthetic",
           "regulatory_status": "unknown"
@@ -3826,7 +4337,7 @@
         {
           "name": "glycerin",
           "function": "skin-identical ingredient",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Plant-based",
           "regulatory_status": "unknown"
@@ -3834,7 +4345,7 @@
         {
           "name": "sodium cocoyl isethionate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 1,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3842,7 +4353,7 @@
         {
           "name": "sodium lauroyl sarcosinate",
           "function": "surfactant/cleansing",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3850,15 +4361,18 @@
         {
           "name": "fragrance",
           "function": "perfuming",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 8,
+          "safety_concerns": [
+            "allergy",
+            "immunotoxicity"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "sodium salicylate",
           "function": "preservative",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3866,15 +4380,17 @@
         {
           "name": "sodium benzoate",
           "function": "preservative",
-          "safety_score": null,
-          "safety_concerns": [],
+          "safety_score": 3,
+          "safety_concerns": [
+            "allergy"
+          ],
           "source": "Unknown",
           "regulatory_status": "unknown"
         },
         {
           "name": "citric acid",
           "function": "buffering",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
@@ -3882,19 +4398,20 @@
         {
           "name": "disodium edta",
           "function": "chelating",
-          "safety_score": null,
+          "safety_score": 2,
           "safety_concerns": [],
           "source": "Unknown",
           "regulatory_status": "unknown"
         }
       ],
       "properties": {
-        "overall_safety_score": null,
-        "has_concerns": false,
-        "concern_ingredients": [],
+        "overall_safety_score": 2.5,
+        "has_concerns": true,
+        "concern_ingredients": [
+          "fragrance"
+        ],
         "skin_suitability": [
           "dry",
-          "normal",
           "sensitive"
         ],
         "water_compatibility": "soft",

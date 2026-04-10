@@ -1,0 +1,17 @@
+{
+  "exported_at": "2026-03-19T05:19:50.278660+00:00",
+  "ingredient": {
+    "inci_name": "GLYCERIN",
+    "source_db": "ewg",
+    "safety_score": null,
+    "safety_concerns": [
+      "not_found"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-03-19T05:19:47.298651+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=glycerin"
+  }
+}
