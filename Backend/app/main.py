@@ -12,4 +12,4 @@ app.include_router(water_router, prefix="/water")
 
 @app.get("/")
 def home():
-    return {"message": "Soap Knowledge API running"}
+    return {"message": "Soap Knowledge API currently running"}

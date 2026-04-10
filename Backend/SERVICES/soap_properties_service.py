@@ -12,6 +12,7 @@ HARDENER_NAMES = {
 HUMECTANT_NAMES = {"glycerin", "sorbitol", "propylene glycol", "honey"}
 DRY_SKIN_KEYWORDS = {"glycerin", "sorbitol", "honey", "shea", "aloe"}
 OILY_SKIN_KEYWORDS = {"salicylic", "tea tree", "charcoal", "clay"}
+SCRAPER_FALLBACK_CONCERNS = {"scrape_failed", "not_found"}
 
 
 def get_soap_properties(soap: dict) -> dict:
@@ -44,9 +45,10 @@ def get_soap_properties(soap: dict) -> dict:
         # --- has_concerns + concern_ingredients ---
         concern_ingredients = []
         for ing in ingredients:
-            concerns = ing.get("safety_concerns")
-            if isinstance(concerns, list) and len(concerns) > 0:
-                concern_ingredients.append(ing.get("name", "unknown"))
+            real_concerns = [c for c in (ing.get("safety_concerns") or [])
+                            if c not in SCRAPER_FALLBACK_CONCERNS]
+            if real_concerns:
+                concern_ingredients.append(ing.get("name", ""))
         result["has_concerns"] = len(concern_ingredients) > 0
         result["concern_ingredients"] = concern_ingredients
 
@@ -58,7 +60,7 @@ def get_soap_properties(soap: dict) -> dict:
             suitability.add("dry")
 
         has_sls = any("sodium lauryl sulfate" in name for name in names_lower)
-        if not has_sls and overall_safety is not None and overall_safety < 3:
+        if not has_sls:
             suitability.add("sensitive")
 
         if any(kw in name for name in names_lower for kw in OILY_SKIN_KEYWORDS):
