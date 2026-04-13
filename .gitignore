@@ -7,4 +7,5 @@ node_modules/
 Backend/venv/
 Backend/.env
 
-Backend/data/scraper_cache/
+
+

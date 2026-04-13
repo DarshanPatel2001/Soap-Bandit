@@ -1,0 +1,219 @@
+[
+  {
+    "id": "dial-gold-liquid-hand-soap",
+    "name": "Dial Gold Liquid Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, lauramidopropylamine oxide, sodium chloride, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, fragrance, myristamidopropylamine oxide, trisodium ethylenediamine disuccinate, zinc sulfate, dimethyl lauramine, alcohol, yellow 5, red 4",
+    "buy_link": "https://www.amazon.com/s?k=Dial+Gold+Liquid+Hand+Soap"
+  },
+  {
+    "id": "dial-spring-water-liquid-hand-soap",
+    "name": "Dial Spring Water Liquid Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, sodium chloride, lauramidopropylamine oxide, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, fragrance, myristamidopropylamine oxide, aloe barbadensis leaf juice, zinc sulfate, trisodium ethylenediamine disuccinate, dimethyl lauramine, alcohol, blue 1, red 33, hexyl cinnamal",
+    "buy_link": "https://www.amazon.com/s?k=Dial+Spring+Water+Liquid+Hand+Soap"
+  },
+  {
+    "id": "dial-white-tea-liquid-hand-soap",
+    "name": "Dial White Tea Liquid Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, sodium chloride, lauramidopropylamine oxide, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, myristamidopropylamine oxide, fragrance, aloe barbadensis leaf juice, zinc sulfate, trisodium ethylenediamine disuccinate, dimethyl lauramine, alcohol, camellia sinensis leaf extract, blue 1, red 33, benzyl alcohol",
+    "buy_link": "https://www.amazon.com/s?k=Dial+White+Tea+Liquid+Hand+Soap"
+  },
+  {
+    "id": "dial-aloe-sensitive-liquid-hand-soap",
+    "name": "Dial Aloe Sensitive Liquid Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, lauramidopropylamine oxide, sodium chloride, glycerin, cetrimonium chloride, lauramine oxide, peg-120 methyl glucose dioleate, citric acid, sodium benzoate, myristamidopropylamine oxide, fragrance, aloe barbadensis leaf juice, zinc sulfate, trisodium ethylenediamine disuccinate, dimethyl lauramine, alcohol",
+    "buy_link": "https://www.amazon.com/s?k=Dial+Aloe+Sensitive+Liquid+Hand+Soap"
+  },
+  {
+    "id": "dial-spring-water-foaming-hand-soap",
+    "name": "Dial Spring Water Foaming Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine, blue 1, red 33",
+    "buy_link": "https://www.amazon.com/s?k=Dial+Spring+Water+Foaming+Hand+Soap"
+  },
+  {
+    "id": "dial-aloe-sensitive-foaming-hand-soap",
+    "name": "Dial Aloe Sensitive Foaming Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine",
+    "buy_link": "https://www.amazon.com/s?k=Dial+Aloe+Sensitive+Foaming+Hand+Soap"
+  },
+  {
+    "id": "dial-coconut-water-foaming-hand-soap",
+    "name": "Dial Coconut Water Foaming Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine, blue 1, red 33",
+    "buy_link": "https://www.amazon.com/s?k=Dial+Coconut+Water+Foaming+Hand+Soap"
+  },
+  {
+    "id": "dial-white-tea-foaming-hand-soap",
+    "name": "Dial White Tea Foaming Hand Soap",
+    "brand": "Dial",
+    "ingredients_raw": "benzalkonium chloride, water, glycerin, cetrimonium chloride, lauramine oxide, cocamidopropyl betaine, sodium benzoate, fragrance, citric acid, zinc sulfate, aloe barbadensis leaf juice, sodium chloride, trisodium ethylenediamine disuccinate, alcohol, dimethyl lauramine",
+    "buy_link": "https://www.amazon.com/s?k=Dial+White+Tea+Foaming+Hand+Soap"
+  },
+  {
+    "id": "softsoap-soothing-clean-aloe-vera-hand-soap",
+    "name": "Softsoap Soothing Clean Aloe Vera Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycol stearate, citric acid, sodium benzoate",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Soothing+Clean+Aloe+Vera+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-antibacterial-crisp-clean-hand-soap",
+    "name": "Softsoap Antibacterial Crisp Clean Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "benzalkonium chloride, water, cetrimonium chloride, glycerin, lauramidopropylamine oxide, lauramine oxide, peg-120 methyl glucose dioleate, myristamidopropylamine oxide, citric acid, sodium benzoate, fragrance, tetrasodium edta, green 5, yellow 5, red 33",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Antibacterial+Crisp+Clean+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-caramelized-coconut-vanilla-hand-soap",
+    "name": "Softsoap Caramelized Coconut and Vanilla Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate, triethyl citrate",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Caramelized+Coconut+Vanilla+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-fresh-breeze-hand-soap",
+    "name": "Softsoap Fresh Breeze Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, citric acid, sodium benzoate, sodium chloride",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Fresh+Breeze+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-milk-and-honey-hand-soap",
+    "name": "Softsoap Milk and Honey Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate, milk protein, honey extract",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Milk+Honey+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-kitchen-fresh-hands-hand-soap",
+    "name": "Softsoap Kitchen Fresh Hands Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Kitchen+Fresh+Hands+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-black-orchid-jasmine-hand-soap",
+    "name": "Softsoap Black Orchid and Jasmine Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Black+Orchid+Jasmine+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-lavender-chamomile-hand-soap",
+    "name": "Softsoap Lavender and Chamomile Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Lavender+Chamomile+Liquid+Hand+Soap"
+  },
+  {
+    "id": "softsoap-juicy-pomegranate-mango-hand-soap",
+    "name": "Softsoap Juicy Pomegranate and Mango Liquid Hand Soap",
+    "brand": "Softsoap",
+    "ingredients_raw": "water, sodium c12-13 alketh sulfate, sodium laureth sulfate, cocamidopropyl betaine, glycerin, citric acid, sodium benzoate",
+    "buy_link": "https://www.amazon.com/s?k=Softsoap+Juicy+Pomegranate+Mango+Liquid+Hand+Soap"
+  },
+  {
+    "id": "method-foaming-sea-minerals-hand-soap",
+    "name": "method Foaming Hand Wash Sea Minerals",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, blue 1, external violet 2",
+    "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+sea+minerals"
+  },
+  {
+    "id": "method-foaming-pink-grapefruit-hand-soap",
+    "name": "method Foaming Hand Wash Pink Grapefruit",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, red 33, red 4",
+    "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+pink+grapefruit"
+  },
+  {
+    "id": "method-foaming-french-lavender-hand-soap",
+    "name": "method Foaming Hand Wash French Lavender",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, external violet 2",
+    "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+french+lavender"
+  },
+  {
+    "id": "method-foaming-sweet-water-hand-soap",
+    "name": "method Foaming Hand Wash Sweet Water",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, cocamidopropyl betaine, citric acid, glycerin, sodium chloride, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+    "buy_link": "https://www.amazon.com/s?k=method+foaming+hand+wash+sweet+water"
+  },
+  {
+    "id": "method-gel-sweet-water-hand-soap",
+    "name": "method Gel Hand Wash Sweet Water",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+    "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+sweet+water"
+  },
+  {
+    "id": "method-gel-pink-grapefruit-hand-soap",
+    "name": "method Gel Hand Wash Pink Grapefruit",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, red 4, red 33",
+    "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+pink+grapefruit"
+  },
+  {
+    "id": "method-gel-french-lavender-hand-soap",
+    "name": "method Gel Hand Wash French Lavender",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance, external violet 2",
+    "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+french+lavender"
+  },
+  {
+    "id": "method-gel-violet-lavender-hand-soap",
+    "name": "method Gel Hand Wash Violet and Lavender",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+    "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+violet+lavender"
+  },
+  {
+    "id": "method-gel-vetiver-amber-hand-soap",
+    "name": "method Gel Hand Wash Vetiver and Amber",
+    "brand": "method",
+    "ingredients_raw": "water, sodium lauryl sulfate, decyl glucoside, lauryl glucoside, sodium chloride, citric acid, cocamidopropyl betaine, cocamidopropyl hydroxysultaine, glycerin, sodium citrate, aloe barbadensis extract, tocopheryl acetate, potassium sorbate, sodium benzoate, fragrance",
+    "buy_link": "https://www.amazon.com/s?k=method+gel+hand+wash+vetiver+amber"
+  },
+  {
+    "id": "native-strawberry-matcha-liquid-hand-soap",
+    "name": "Native Liquid Hand Soap Strawberry Matcha",
+    "brand": "Native",
+    "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+    "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Strawberry+Matcha"
+  },
+  {
+    "id": "native-toasted-vanilla-honey-liquid-hand-soap",
+    "name": "Native Liquid Hand Soap Toasted Vanilla and Honey",
+    "brand": "Native",
+    "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+    "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Toasted+Vanilla+Honey"
+  },
+  {
+    "id": "native-coconut-vanilla-liquid-hand-soap",
+    "name": "Native Liquid Hand Soap Coconut and Vanilla",
+    "brand": "Native",
+    "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+    "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Coconut+Vanilla"
+  },
+  {
+    "id": "native-cucumber-mint-liquid-hand-soap",
+    "name": "Native Liquid Hand Soap Cucumber and Mint",
+    "brand": "Native",
+    "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+    "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Cucumber+Mint"
+  },
+  {
+    "id": "native-lavender-rose-liquid-hand-soap",
+    "name": "Native Liquid Hand Soap Lavender and Rose",
+    "brand": "Native",
+    "ingredients_raw": "water, cocamidopropyl betaine, sodium chloride, glycerin, sodium cocoyl isethionate, sodium lauroyl sarcosinate, fragrance, sodium salicylate, sodium benzoate, citric acid, disodium edta",
+    "buy_link": "https://www.amazon.com/s?k=Native+Liquid+Hand+Soap+Lavender+Rose"
+  }
+]

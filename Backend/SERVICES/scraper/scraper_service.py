@@ -14,6 +14,8 @@ _CACHE_DIR = os.path.abspath(
 )
 _CACHE_MAX_AGE = timedelta(days=7)
 
+
+#need fallback JIC
 _FALLBACK_SCHEMA = {
     "inci_name": None,
     "source_db": "ewg",
@@ -31,7 +33,7 @@ _FALLBACK_SCHEMA = {
 def _safe_name(ingredient_name: str) -> str:
     return ingredient_name.lower().replace(" ", "_")
 
-
+#function caching
 def _load_cache(ingredient_name: str) -> dict | None:
     filepath = os.path.join(_CACHE_DIR, f"{_safe_name(ingredient_name)}.json")
     if not os.path.exists(filepath):
@@ -51,7 +53,7 @@ def _load_cache(ingredient_name: str) -> dict | None:
         logger.warning("Cache read error for %s: %s", ingredient_name, e)
     return None
 
-
+#ewg bot detect fallback
 def _make_ewg_fallback(ingredient_name: str) -> dict:
     from datetime import datetime, timezone
     return {
@@ -61,7 +63,7 @@ def _make_ewg_fallback(ingredient_name: str) -> dict:
         "last_updated": datetime.now(timezone.utc).isoformat(),
     }
 
-
+#get info
 def get_ingredient_safety(ingredient_name: str) -> dict:
     from . import ewg_scraper, fda_scraper, data_normalizer, json_exporter
 

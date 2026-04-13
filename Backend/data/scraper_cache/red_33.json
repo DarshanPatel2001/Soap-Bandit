@@ -1,0 +1,17 @@
+{
+  "exported_at": "2026-04-09T20:01:08.508194+00:00",
+  "ingredient": {
+    "inci_name": "RED 33",
+    "source_db": "ewg",
+    "safety_score": 3,
+    "safety_concerns": [
+      "organ toxicity"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T20:01:06.454737+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=red 33"
+  }
+}

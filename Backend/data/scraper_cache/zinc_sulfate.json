@@ -1,0 +1,18 @@
+{
+  "exported_at": "2026-04-09T19:58:36.938820+00:00",
+  "ingredient": {
+    "inci_name": "ZINC SULFATE",
+    "source_db": "ewg",
+    "safety_score": 4,
+    "safety_concerns": [
+      "irritation",
+      "organ toxicity"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T19:58:34.881083+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=zinc sulfate"
+  }
+}

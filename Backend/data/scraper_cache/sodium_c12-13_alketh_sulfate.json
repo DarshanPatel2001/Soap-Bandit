@@ -1,0 +1,17 @@
+{
+  "exported_at": "2026-04-09T20:08:58.750366+00:00",
+  "ingredient": {
+    "inci_name": "SODIUM C12-13 ALKETH SULFATE",
+    "source_db": "ewg",
+    "safety_score": 3,
+    "safety_concerns": [
+      "irritation"
+    ],
+    "regulatory_status": "unknown",
+    "regulatory_region": "US",
+    "function": null,
+    "origin": null,
+    "last_updated": "2026-04-09T20:08:56.358585+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=sodium c12-13 alketh sulfate"
+  }
+}

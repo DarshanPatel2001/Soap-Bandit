@@ -4,6 +4,20 @@ import requests
 #url may need change but researched best opensrouce currently
 SEARCH_URL = "https://world.openbeautyfacts.org/cgi/search.pl"
 
+KNOWN_ANALYSIS_TAGS = {
+    "en:vegan", "en:non-vegan",
+    "en:palm-oil-free", "en:palm-oil",
+    "en:paraben-free", "en:contains-parabens",
+    "en:sulfate-free", "en:contains-sulfates",
+}
+
+NOVA_LABELS = {
+    1: "Unprocessed",
+    2: "Processed culinary ingredients",
+    3: "Processed",
+    4: "Ultra-processed",
+}
+
 
 def _clean_ingredients(raw_text: str) -> list[str]:
     """Parse raw ingredients text into a clean list of INCI name strings."""
@@ -57,11 +71,40 @@ def get_product_ingredients(product_name: str) -> dict:
         if not ingredients_text:
             return {"error": "Product not found", "query": product_name}
 
+        # Extract safety data from the matched product
+        try:
+            raw_nova = product.get("nova_group") or product.get("nova_groups")
+            nova_group = int(raw_nova) if raw_nova is not None else None
+            nova_label = NOVA_LABELS.get(nova_group)
+
+            raw_analysis = product.get("ingredients_analysis_tags", [])
+            safety_flags = [
+                tag.removeprefix("en:")
+                for tag in raw_analysis
+                if tag in KNOWN_ANALYSIS_TAGS
+            ]
+
+            if "en:vegan" in raw_analysis:
+                vegan = True
+            elif "en:non-vegan" in raw_analysis:
+                vegan = False
+            else:
+                vegan = None
+        except Exception:
+            nova_group = None
+            nova_label = None
+            safety_flags = []
+            vegan = None
+
         ingredients = _clean_ingredients(ingredients_text)
         return {
             "product": product_name,
             "ingredients": ingredients,
             "source": "open_beauty_facts",
+            "safety_flags": safety_flags,
+            "vegan": vegan,
+            "nova_group": nova_group,
+            "nova_label": nova_label,
         }
     #fallback errors JIC
     except requests.exceptions.Timeout:
