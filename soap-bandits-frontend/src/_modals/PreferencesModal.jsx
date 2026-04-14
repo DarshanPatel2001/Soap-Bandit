@@ -1,9 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const PreferencesModal = ({ isOpen, onClose, onSave }) => {
   const [zip, setZip] = useState('');
   const [skinType, setSkinType] = useState('');
+
+  useEffect(() => {
+    if (isOpen) {
+      const saved = sessionStorage.getItem('userPrefs');
+      if (saved && saved !== 'null') {
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed) {
+            setZip(parsed.zip || '');
+            setSkinType(parsed.skinType || '');
+          }
+        } catch (e) {
+          console.error('Failed to parse prefs', e);
+        }
+      } else {
+        setZip('');
+        setSkinType('');
+      }
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -13,10 +33,20 @@ const PreferencesModal = ({ isOpen, onClose, onSave }) => {
     onClose();
   };
 
+  const handleClear = () => {
+    setZip('');
+    setSkinType('');
+    sessionStorage.removeItem('userPrefs');
+    sessionStorage.removeItem('lastResults');
+    sessionStorage.removeItem('waterData');
+    onSave(null);
+    onClose();
+  };
+
   return (
     <div className="modal-overlay">
       <div className="modal onboarding-modal">
-        <button className="modal-close" onClick={onClose}>
+        <button type="button" className="modal-close" onClick={onClose}>
           ✕
         </button>
 
@@ -33,11 +63,8 @@ const PreferencesModal = ({ isOpen, onClose, onSave }) => {
 
           <p className="modal-desc">
             Water hardness and skin chemistry are the two biggest factors in how
-            soap performs.
-            <strong> Hard water</strong> can strip oils, while{' '}
-            <strong>Soft water</strong> can leave a film. We use your location
-            and skin type to calculate the best moisture-to-cleansing ratio for
-            you.
+            soap performs. We use your location and skin type to calculate the
+            best moisture-to-cleansing ratio for you.
           </p>
 
           <form onSubmit={handleSubmit} className="onboarding-form">
@@ -53,6 +80,7 @@ const PreferencesModal = ({ isOpen, onClose, onSave }) => {
                   borderRadius: '4px',
                   width: '100%',
                   marginBottom: '1.5rem',
+                  padding: '0.8rem',
                 }}
               >
                 <option value="" disabled>
@@ -70,7 +98,7 @@ const PreferencesModal = ({ isOpen, onClose, onSave }) => {
               <label className="modal-ing-label">Your Zip Code</label>
               <input
                 type="text"
-                placeholder="e.g. 37774"
+                placeholder="e.g. 37201"
                 className="search-input"
                 required
                 value={zip}
@@ -80,6 +108,7 @@ const PreferencesModal = ({ isOpen, onClose, onSave }) => {
                   borderRadius: '4px',
                   width: '100%',
                   marginBottom: '2rem',
+                  padding: '0.8rem',
                 }}
               />
             </div>
@@ -92,20 +121,39 @@ const PreferencesModal = ({ isOpen, onClose, onSave }) => {
               Personalize My Hub
             </button>
 
-            <button
-              type="button"
-              className="breadcrumb-link"
-              onClick={onClose}
-              style={{
-                display: 'block',
-                margin: '1rem auto',
-                border: 'none',
-                background: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              I&apos;ll explore on my own first
-            </button>
+            <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+              <button
+                type="button"
+                className="breadcrumb-link"
+                onClick={handleClear}
+                style={{
+                  border: 'none',
+                  background: 'none',
+                  color: '#e53e3e',
+                  cursor: 'pointer',
+                  fontWeight: '700',
+                  fontSize: '0.85rem',
+                  textDecoration: 'underline',
+                }}
+              >
+                Reset & Clear Preferences
+              </button>
+              <span style={{ margin: '0 10px', color: '#ccc' }}>|</span>
+              <button
+                type="button"
+                className="breadcrumb-link"
+                onClick={onClose}
+                style={{
+                  border: 'none',
+                  background: 'none',
+                  cursor: 'pointer',
+                  fontWeight: '700',
+                  fontSize: '0.85rem',
+                }}
+              >
+                Keep Exploring
+              </button>
+            </div>
           </form>
         </div>
       </div>
