@@ -43,6 +43,31 @@ def recommendations(request: RecommendationRequest):
     }
 
 
+@router.get("/soaps/all")
+def all_soaps():
+    if not os.path.exists(_ENRICHED_FILE):
+        return JSONResponse(
+            status_code=404,
+            content={"error": "Enriched soap data not available"},
+        )
+
+    with open(_ENRICHED_FILE, encoding="utf-8") as f:
+        data = json.load(f)
+
+    soaps = data.get("soaps", [])
+    return [
+        {
+            "id": s.get("id", ""),
+            "name": s.get("name", ""),
+            "brand": s.get("brand", ""),
+            "buy_link": s.get("buy_link", ""),
+            "properties": s.get("properties", {}),
+            "ingredients": s.get("ingredients", []),
+        }
+        for s in soaps
+    ]
+
+
 @router.get("/soap/{soap_id}")
 def soap_detail(soap_id: str):
     if not os.path.exists(_ENRICHED_FILE):
