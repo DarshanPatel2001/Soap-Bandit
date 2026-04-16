@@ -36,7 +36,6 @@ const HomePage = () => {
 
   const fetchSoaps = useCallback(async (prefs) => {
     setLoading(true);
-
     const skin = prefs?.skinType
       ? prefs.skinType.toLowerCase().split(' / ')[0]
       : '';
@@ -124,42 +123,77 @@ const HomePage = () => {
   const sortedResults = useMemo(() => {
     return recommendations
       .filter((match) => {
-        const s = match.soap;
-        const reasons = match.reasons || [];
-        const avoidList = userPrefs?.avoidIngredients || [];
+        const s = match.soap || {};
 
+        // RENAMED FROM 'props' TO 'metadata' TO FIX ESLINT ERRORS
+        const metadata = match.properties || s.properties || {};
+
+        const avoidList = [
+          ...(userPrefs?.avoidIngredients || []),
+          ...activeFilters.avoid,
+        ];
+
+        // 1. DEEP SCAN ALLERGEN FILTER
         if (avoidList.length > 0) {
-          const allSoapData = JSON.stringify(s).toLowerCase();
-          const allReasons = reasons.join(' ').toLowerCase();
+          const concernIngs = (metadata.concern_ingredients || []).join(' ');
+          const rawIngs = s.ingredients_raw || '';
+          const structuredIngs = (s.ingredients || [])
+            .map((i) => i.name)
+            .join(' ');
+
+          const masterIngredientString =
+            `${concernIngs} ${rawIngs} ${structuredIngs} ${s.name} ${s.brand}`.toLowerCase();
 
           const hasMatch = avoidList.some((avoid) => {
             const term = avoid.toLowerCase().trim();
             if (!term) return false;
-            return allSoapData.includes(term) || allReasons.includes(term);
+            const singular = term.endsWith('s') ? term.slice(0, -1) : term;
+            return (
+              masterIngredientString.includes(term) ||
+              masterIngredientString.includes(singular) ||
+              masterIngredientString.includes('parfum') ||
+              masterIngredientString.includes('perfume')
+            );
           });
 
           if (hasMatch) return false;
         }
 
+        // 2. SEARCH BAR
         const searchStr = locationInput.toLowerCase().trim();
         if (
           searchStr &&
           !s.brand?.toLowerCase().includes(searchStr) &&
           !s.name?.toLowerCase().includes(searchStr)
-        )
+        ) {
           return false;
+        }
 
+        // 3. SKIN TYPE FILTER
         if (activeFilters.skin.length > 0) {
-          const suit = Array.isArray(s.properties?.skin_suitability)
-            ? s.properties.skin_suitability.join(' ')
-            : String(s.properties?.skin_suitability || 'all');
-
+          const soapSkin =
+            metadata.skin_suitability || s.skin_suitability || [];
+          const soapSkinStr = Array.isArray(soapSkin)
+            ? soapSkin.join(' ')
+            : String(soapSkin);
           if (
             !activeFilters.skin.some((f) =>
-              suit.toLowerCase().includes(f.split(' / ')[0].toLowerCase())
+              soapSkinStr
+                .toLowerCase()
+                .includes(f.toLowerCase().split(' / ')[0])
             )
-          )
+          ) {
             return false;
+          }
+        }
+
+        // 4. pH BUCKET FILTER
+        if (activeFilters.phLevel.length > 0) {
+          const phVal = parseFloat(metadata.ph_level || s.ph_level || 9.0);
+          let bucket = 'High (9.1+)';
+          if (phVal <= 8.5) bucket = 'Low (≤8.5)';
+          else if (phVal <= 9.0) bucket = 'Medium (8.6–9.0)';
+          if (!activeFilters.phLevel.includes(bucket)) return false;
         }
 
         return true;
@@ -167,18 +201,18 @@ const HomePage = () => {
       .sort((a, b) => {
         const pA = parseFloat((a.soap?.price || '$0').replace('$', ''));
         const pB = parseFloat((b.soap?.price || '$0').replace('$', ''));
-        return sortBy === 'low-high'
-          ? pA - pB
-          : sortBy === 'high-low'
-            ? pB - pA
-            : 0;
+        if (sortBy === 'low-high') return pA - pB;
+        if (sortBy === 'high-low') return pB - pA;
+        return 0;
       });
   }, [recommendations, locationInput, activeFilters, sortBy, userPrefs]);
 
   return (
     <div className="homepage-wrapper">
       <nav className="nav-bar u-flex u-items-center u-justify-between">
-        <div className="logo-text">Super Soap Search</div>
+        <div className="logo-text">
+          SUPER <span style={{ color: 'var(--ss-gold)' }}>SOAP</span> SEARCH
+        </div>
         <div className="u-flex u-items-center" style={{ gap: '1.5rem' }}>
           <Link to="/science" className="nav-link">
             Soap Science
@@ -186,7 +220,6 @@ const HomePage = () => {
           <Link to="/search" className="nav-link">
             Ingredient Archive
           </Link>
-          {/* NAVIGATION TO ARTISAN PORTAL */}
           <Link to="/submit" className="nav-link-featured">
             Artisan Portal ↗
           </Link>
@@ -202,8 +235,8 @@ const HomePage = () => {
         <div className="hero-content">
           <p className="hero-eyebrow">
             {waterData
-              ? `WATER: ${waterData.hardness?.toUpperCase()} • PH: ${waterData.avgPh} (${waterData.label})`
-              : 'NO MORE GOOEY SOAP'}
+              ? `WATER: ${waterData.hardness?.toUpperCase()} • PH: ${waterData.avgPh}`
+              : 'PRECISION SKINCARE'}
           </p>
           <h1 className="h1-large">Precision Soap Pairing</h1>
           <p className="hero-subtitle">
@@ -229,10 +262,9 @@ const HomePage = () => {
                 </option>
               ))}
             </select>
-
             <label className="form-label-small">Allergens to Avoid</label>
             <select
-              value={formAvoid.length > 0 ? formAvoid[0] : ''}
+              value={formAvoid[0] || ''}
               onChange={(e) => setFormAvoid([e.target.value])}
             >
               <option value="" disabled>
@@ -244,7 +276,6 @@ const HomePage = () => {
                 </option>
               ))}
             </select>
-
             <label className="form-label-small" style={{ marginTop: '1rem' }}>
               Zip Code
             </label>
@@ -260,36 +291,6 @@ const HomePage = () => {
           </form>
         </div>
       </header>
-
-      <section
-        className="info-bar"
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
-        <div style={{ display: 'flex', gap: '2rem' }}>
-          <div className="info-item">
-            <strong>pH Balance:</strong> High pH can be drying in hard water.
-          </div>
-          <div className="info-item">
-            <strong>Goo Factor:</strong> Measures how fast a bar turns to mush.
-          </div>
-        </div>
-        <div className="info-item">
-          <Link
-            to="/science"
-            style={{
-              color: '#3b82f6',
-              textDecoration: 'none',
-              fontWeight: 'bold',
-            }}
-          >
-            Explore the Glossary →
-          </Link>
-        </div>
-      </section>
 
       <div className="top-filter-bar">
         <div className="location-input-wrap">
@@ -346,26 +347,23 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="results-sort-bar u-flex u-justify-between u-items-center">
+      <div
+        className="results-sort-bar u-flex u-justify-between u-items-center"
+        style={{ padding: '1rem 2rem' }}
+      >
         <span className="results-label">
           {sortedResults.length} Personalized Result
           {sortedResults.length !== 1 ? 's' : ''}
         </span>
-        <div
-          className="sort-wrap u-flex u-items-center"
-          style={{ gap: '10px' }}
+        <select
+          className="sort-select"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
         >
-          <span className="sort-label">Sort:</span>
-          <select
-            className="sort-select"
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-          >
-            <option value="default">Best Match</option>
-            <option value="low-high">Price: Low-High</option>
-            <option value="high-low">Price: High-Low</option>
-          </select>
-        </div>
+          <option value="default">Best Match</option>
+          <option value="low-high">Price: Low-High</option>
+          <option value="high-low">Price: High-Low</option>
+        </select>
       </div>
 
       <div className="grid-section">
@@ -388,6 +386,7 @@ const HomePage = () => {
           </div>
         )}
       </div>
+
       <footer className="technical-footer">
         <p>Technical Oversight by JD Graffam</p>
       </footer>

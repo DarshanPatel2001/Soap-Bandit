@@ -20,9 +20,6 @@
   margin: 0;
   padding: 0;
 }
-
-/* ── FONT CONSISTENCY FIX ── */
-/* This forces native inputs/selects to use 'Inter' instead of browser defaults */
 .homepage-wrapper input,
 .homepage-wrapper select,
 .homepage-wrapper button {
@@ -109,8 +106,6 @@
   font-size: 1.25rem;
 }
 
-/* ── THE TWIN FIX: MATCHING SELECTS & DROPDOWNS ── */
-/* We apply the gray background and padding to the 'Select Ingredients' trigger inside the hero box */
 .hero-form-box select,
 .hero-form-box input,
 .hero-form-box .dropdown-trigger {

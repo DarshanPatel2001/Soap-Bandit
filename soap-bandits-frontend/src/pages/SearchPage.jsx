@@ -1,4 +1,4 @@
-// This page may be removed from project
+// This page may be removed from project (it's in our use cases.. so maybe not..)
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SearchPage.css';
@@ -70,9 +70,6 @@ const SearchPage = () => {
           </Link>
           <Link to="/science" className="nav-link">
             Soap Science
-          </Link>
-          <Link to="/" className="nav-link-featured">
-            Personalized Matches ↗
           </Link>
         </div>
       </nav>

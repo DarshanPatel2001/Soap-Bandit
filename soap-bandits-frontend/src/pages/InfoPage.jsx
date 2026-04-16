@@ -28,9 +28,6 @@ const InfoPage = () => {
           Super Soap Search
           <span className="info-nav-sub">Brought to you by SoapStandle®</span>
         </div>
-        <Link to="/submit" className="info-nav-cta">
-          ONLINE SOAP COURSE ↗
-        </Link>
       </nav>
 
       {/* ── BREADCRUMB ── */}
@@ -112,9 +109,6 @@ const InfoPage = () => {
             Contact
           </Link>
         </p>
-        <Link to="/submit" className="info-nav-cta info-footer-cta">
-          ONLINE SOAP COURSE ↗
-        </Link>
       </footer>
     </div>
   );

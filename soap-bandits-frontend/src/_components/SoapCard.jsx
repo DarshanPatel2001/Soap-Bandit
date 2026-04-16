@@ -6,7 +6,6 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
   const soap = match?.soap || {};
   const score = match?.match_score || 0;
 
-  // FIX: Memoize the reasons array so it doesn't create a new reference on every render
   const reasons = useMemo(() => match?.reasons || [], [match?.reasons]);
 
   // Determine if there is an actual allergen
