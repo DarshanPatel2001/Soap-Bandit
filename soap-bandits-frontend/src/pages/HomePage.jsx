@@ -2,25 +2,25 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SoapCard from '../_components/SoapCard';
 import DropdownFilter from '../_components/DropdownFilter';
-import {
-  SKIN_TYPES,
-  COMMON_AVOID,
-  getPhLabel,
-  API_BASE_URL,
-} from '../utils/soapHelpers';
+import { applyHybridFilters } from '../utils/filterLogic';
+import { SKIN_TYPES, COMMON_AVOID, API_BASE_URL } from '../utils/soapHelpers';
 import './HomePage.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
+
+  // DATA STATES
   const [recommendations, setRecommendations] = useState([]);
+  const [allSoaps, setAllSoaps] = useState([]);
   const [loading, setLoading] = useState(false);
   const [waterData, setWaterData] = useState(null);
+
+  // UI STATES
   const [locationInput, setLocationInput] = useState('');
   const [sortBy, setSortBy] = useState('default');
   const [activeFilters, setActiveFilters] = useState({
     skin: [],
     source: [],
-    phLevel: [],
     gooFactor: [],
     avoid: [],
   });
@@ -39,17 +39,14 @@ const HomePage = () => {
     const skin = prefs?.skinType
       ? prefs.skinType.toLowerCase().split(' / ')[0]
       : '';
-    const zip = prefs?.zip || '';
-    const avoid = prefs?.avoidIngredients || [];
-
     try {
       const response = await fetch(`${API_BASE_URL}/recommendations`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          zip_code: zip,
+          zip_code: prefs?.zip || '',
           skin_type: skin,
-          avoid_ingredients: avoid,
+          avoid_ingredients: prefs?.avoidIngredients || [],
           prefer_ingredients: [],
         }),
       });
@@ -57,24 +54,29 @@ const HomePage = () => {
       setRecommendations(data.top_matches || []);
 
       if (data.water_hardness && data.water_hardness !== 'Unknown') {
-        setWaterData({
-          hardness: data.water_hardness,
-          avgPh: data.avg_water_ph || '8.2',
-          label: getPhLabel(data.avg_water_ph || '8.2'),
-        });
-      } else {
-        setWaterData(null);
+        setWaterData({ hardness: data.water_hardness });
       }
     } catch (err) {
-      console.error('API Error:', err);
+      console.error('Match Error:', err);
     } finally {
       setLoading(false);
     }
   }, []);
 
+  const fetchArchive = useCallback(async () => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/recommendations/soaps/all`);
+      const data = await response.json();
+      setAllSoaps(data || []);
+    } catch (err) {
+      console.error('Archive Error:', err);
+    }
+  }, []);
+
   useEffect(() => {
-    fetchSoaps(userPrefs);
-  }, [userPrefs, fetchSoaps]);
+    fetchArchive();
+    if (userPrefs) fetchSoaps(userPrefs);
+  }, [userPrefs, fetchSoaps, fetchArchive]);
 
   const handlePersonalize = (e) => {
     e.preventDefault();
@@ -90,6 +92,7 @@ const HomePage = () => {
   const clearPrefs = () => {
     sessionStorage.removeItem('userPrefs');
     setUserPrefs(null);
+    setRecommendations([]);
     setFormZip('');
     setFormSkin('');
     setFormAvoid([]);
@@ -106,106 +109,26 @@ const HomePage = () => {
 
   const clearAll = () => {
     setLocationInput('');
-    setActiveFilters({
-      skin: [],
-      source: [],
-      phLevel: [],
-      gooFactor: [],
-      avoid: [],
-    });
+    setActiveFilters({ skin: [], source: [], gooFactor: [], avoid: [] });
   };
 
-  const totalActive = Object.values(activeFilters).reduce(
-    (sum, arr) => sum + arr.length,
-    0
-  );
-
   const sortedResults = useMemo(() => {
-    return recommendations
-      .filter((match) => {
-        const s = match.soap || {};
-
-        // RENAMED FROM 'props' TO 'metadata' TO FIX ESLINT ERRORS
-        const metadata = match.properties || s.properties || {};
-
-        const avoidList = [
-          ...(userPrefs?.avoidIngredients || []),
-          ...activeFilters.avoid,
-        ];
-
-        // 1. DEEP SCAN ALLERGEN FILTER
-        if (avoidList.length > 0) {
-          const concernIngs = (metadata.concern_ingredients || []).join(' ');
-          const rawIngs = s.ingredients_raw || '';
-          const structuredIngs = (s.ingredients || [])
-            .map((i) => i.name)
-            .join(' ');
-
-          const masterIngredientString =
-            `${concernIngs} ${rawIngs} ${structuredIngs} ${s.name} ${s.brand}`.toLowerCase();
-
-          const hasMatch = avoidList.some((avoid) => {
-            const term = avoid.toLowerCase().trim();
-            if (!term) return false;
-            const singular = term.endsWith('s') ? term.slice(0, -1) : term;
-            return (
-              masterIngredientString.includes(term) ||
-              masterIngredientString.includes(singular) ||
-              masterIngredientString.includes('parfum') ||
-              masterIngredientString.includes('perfume')
-            );
-          });
-
-          if (hasMatch) return false;
-        }
-
-        // 2. SEARCH BAR
-        const searchStr = locationInput.toLowerCase().trim();
-        if (
-          searchStr &&
-          !s.brand?.toLowerCase().includes(searchStr) &&
-          !s.name?.toLowerCase().includes(searchStr)
-        ) {
-          return false;
-        }
-
-        // 3. SKIN TYPE FILTER
-        if (activeFilters.skin.length > 0) {
-          const soapSkin =
-            metadata.skin_suitability || s.skin_suitability || [];
-          const soapSkinStr = Array.isArray(soapSkin)
-            ? soapSkin.join(' ')
-            : String(soapSkin);
-          if (
-            !activeFilters.skin.some((f) =>
-              soapSkinStr
-                .toLowerCase()
-                .includes(f.toLowerCase().split(' / ')[0])
-            )
-          ) {
-            return false;
-          }
-        }
-
-        // 4. pH BUCKET FILTER
-        if (activeFilters.phLevel.length > 0) {
-          const phVal = parseFloat(metadata.ph_level || s.ph_level || 9.0);
-          let bucket = 'High (9.1+)';
-          if (phVal <= 8.5) bucket = 'Low (≤8.5)';
-          else if (phVal <= 9.0) bucket = 'Medium (8.6–9.0)';
-          if (!activeFilters.phLevel.includes(bucket)) return false;
-        }
-
-        return true;
-      })
-      .sort((a, b) => {
-        const pA = parseFloat((a.soap?.price || '$0').replace('$', ''));
-        const pB = parseFloat((b.soap?.price || '$0').replace('$', ''));
-        if (sortBy === 'low-high') return pA - pB;
-        if (sortBy === 'high-low') return pB - pA;
-        return 0;
-      });
-  }, [recommendations, locationInput, activeFilters, sortBy, userPrefs]);
+    return applyHybridFilters({
+      recommendations,
+      allSoaps,
+      activeFilters,
+      userPrefs,
+      locationInput,
+      sortBy,
+    });
+  }, [
+    recommendations,
+    allSoaps,
+    locationInput,
+    activeFilters,
+    sortBy,
+    userPrefs,
+  ]);
 
   return (
     <div className="homepage-wrapper">
@@ -235,15 +158,14 @@ const HomePage = () => {
         <div className="hero-content">
           <p className="hero-eyebrow">
             {waterData
-              ? `WATER: ${waterData.hardness?.toUpperCase()} • PH: ${waterData.avgPh}`
+              ? `LOCAL WATER: ${waterData.hardness?.toUpperCase()}`
               : 'PRECISION SKINCARE'}
           </p>
           <h1 className="h1-large">Precision Soap Pairing</h1>
           <p className="hero-subtitle">
-            Matching your skin chemistry with local water data.
+            Matching your unique skin chemistry with local water analysis.
           </p>
         </div>
-
         <div className="hero-form-box">
           <h3>{userPrefs ? 'Update Chemistry' : 'Find Your Match'}</h3>
           <form onSubmit={handlePersonalize}>
@@ -304,15 +226,8 @@ const HomePage = () => {
           />
         </div>
         <div className="top-filter-bar-right">
-          <button
-            type="button"
-            className={`all-filters-btn ${totalActive > 0 ? 'has-active' : ''}`}
-            onClick={clearAll}
-          >
-            ≡ All Filters{' '}
-            {totalActive > 0 && (
-              <span className="all-filters-count">{totalActive}</span>
-            )}
+          <button type="button" className="all-filters-btn" onClick={clearAll}>
+            ≡ All Filters
           </button>
           <DropdownFilter
             label="Skin"
@@ -328,15 +243,9 @@ const HomePage = () => {
           />
           <DropdownFilter
             label="Source"
-            options={['Organic', 'Plant-Based', 'Natural']}
+            options={['Plant-based', 'Natural', 'Synthetic']}
             selected={activeFilters.source}
             onToggle={(v) => toggleFilter('source', v)}
-          />
-          <DropdownFilter
-            label="pH"
-            options={['Low (≤8.5)', 'Medium (8.6–9.0)', 'High (9.1+)']}
-            selected={activeFilters.phLevel}
-            onToggle={(v) => toggleFilter('phLevel', v)}
           />
           <DropdownFilter
             label="Goo"
@@ -349,18 +258,26 @@ const HomePage = () => {
 
       <div
         className="results-sort-bar u-flex u-justify-between u-items-center"
-        style={{ padding: '1rem 2rem' }}
+        style={{ padding: '1rem 2.5rem' }}
       >
-        <span className="results-label">
-          {sortedResults.length} Personalized Result
-          {sortedResults.length !== 1 ? 's' : ''}
-        </span>
+        <div className="u-flex u-items-center">
+          <span className="results-label">
+            {sortedResults.length} Results {userPrefs ? '(Personalized)' : ''}
+          </span>
+          <div className="tooltip-wrap">
+            <div className="info-icon">i</div>
+            <span className="tooltip-text">
+              <strong>Scientific Match:</strong> Ranking based on your skin type
+              and preferred ingredients vs. your local water hardness.
+            </span>
+          </div>
+        </div>
         <select
           className="sort-select"
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
         >
-          <option value="default">Best Match</option>
+          <option value="default">Sort: Recommended</option>
           <option value="low-high">Price: Low-High</option>
           <option value="high-low">Price: High-Low</option>
         </select>
@@ -380,7 +297,7 @@ const HomePage = () => {
                 onCardClick={(s) =>
                   navigate('/product', { state: { soap: s } })
                 }
-                isPersonalized={!!userPrefs}
+                isPersonalized={m.match_score !== null}
               />
             ))}
           </div>

@@ -116,7 +116,7 @@
   border-radius: 8px;
   font-size: 0.95rem;
   box-sizing: border-box;
-  background-color: #efefef; /* Gray background from your screenshot */
+  background-color: #efefef;
   color: #111;
   font-weight: 400;
   height: auto;
@@ -387,46 +387,84 @@
   font-weight: 700;
 }
 
-/* ── TOOLTIPS ── */
-.ingredients-section {
-  padding: 0 1.5rem 1.5rem 1.5rem;
-}
+/* ── TOOLTIPS (CIRCLE "i" ENHANCEMENT) ── */
 .tooltip-wrap {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   cursor: help;
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ss-gold); /* Circular background */
+  color: var(--ss-navy); /* Dark "i" contrast */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 900;
+  font-family: serif; /* Serif "i" style */
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.tooltip-wrap:hover .info-icon {
+  transform: scale(1.1);
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 240px;
+  background: var(--ss-navy);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  z-index: 100;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+}
+
+.tooltip-wrap:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Tooltip Arrow */
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--ss-navy) transparent transparent transparent;
+}
+
+/* ── ADDITIONAL STYLES ── */
+.ingredients-section {
+  padding: 0 1.5rem 1.5rem 1.5rem;
 }
 .ing-label {
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-.info-icon {
-  margin-left: 6px;
-  color: var(--ss-gold);
-  font-size: 0.9rem;
-}
-.tooltip-text {
-  visibility: hidden;
-  width: 200px;
-  background: var(--ss-navy);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  position: absolute;
-  bottom: 140%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: 0.3s;
-  font-size: 0.7rem;
-  z-index: 100;
-}
-.tooltip-wrap:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
 }
 .ing-pills {
   display: flex;
@@ -473,6 +511,7 @@
 .u-justify-between {
   justify-content: space-between;
 }
+
 .all-filters-count {
   background: var(--ss-navy);
   color: #fff;

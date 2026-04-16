@@ -5,40 +5,38 @@ import { getScoreColor } from '../utils/soapHelpers';
 const SoapCard = ({ match, onCardClick, isPersonalized }) => {
   const soap = match?.soap || {};
   const score = match?.match_score || 0;
-
+  const metadata = match?.properties || soap?.properties || {};
   const reasons = useMemo(() => match?.reasons || [], [match?.reasons]);
 
-  // Determine if there is an actual allergen
   const hasAllergen = useMemo(() => {
-    // Moved inside the useMemo to prevent reference changes on every render
     const userPrefs = JSON.parse(sessionStorage.getItem('userPrefs') || 'null');
     const userAvoids = userPrefs?.avoidIngredients || [];
-
-    // If no personalized preferences or no avoided ingredients, it can't be an allergen
-    if (!isPersonalized || userAvoids.length === 0) {
-      return false;
-    }
-
-    // Check if the reasons indicate an avoided ingredient is present
+    if (!isPersonalized || userAvoids.length === 0) return false;
     return reasons.some((reason) => {
       const lowerReason = reason.toLowerCase();
-
-      // Explicitly ignore conversational false positives
-      if (lowerReason.includes('0 avoided') || lowerReason.includes('none')) {
+      if (lowerReason.includes('0 avoided') || lowerReason.includes('none'))
         return false;
-      }
-
-      // Check for the word "avoid" in the reason
       return lowerReason.includes('avoid');
     });
   }, [reasons, isPersonalized]);
 
   const scoreColor = getScoreColor(score, hasAllergen);
-
   const productImg =
     soap.image_url ||
     soap.img ||
     'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80';
+
+  const skinLabel = useMemo(() => {
+    const rawSkin = metadata.skin_suitability || soap.skin_suitability;
+    if (Array.isArray(rawSkin))
+      return rawSkin
+        .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+        .join(', ');
+    return rawSkin || 'All Skin Types';
+  }, [metadata.skin_suitability, soap.skin_suitability]);
+
+  const gooeyLabel =
+    metadata.gooeyness_label || soap.gooeyness_label || 'Average';
 
   return (
     <div
@@ -53,8 +51,7 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
         <span className="card-tag tag-artisan">
           {soap.brand?.toUpperCase()}
         </span>
-
-        {isPersonalized && (
+        {isPersonalized && match.match_score !== null && (
           <div className="ph-badge" style={{ background: scoreColor }}>
             <span className="ph-label">{hasAllergen ? 'DANGER' : 'Match'}</span>
             <span
@@ -75,13 +72,11 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
       <div className="stats">
         <div className="stat">
           <span className="stat-label">Skin Type</span>
-          <span className="stat-value">{soap.skin_suitability || 'All'}</span>
+          <span className="stat-value">{skinLabel}</span>
         </div>
         <div className="stat">
           <span className="stat-label">Gooeyness</span>
-          <span className="stat-value">
-            {soap.gooeyness_label || 'Average'}
-          </span>
+          <span className="stat-value">{gooeyLabel}</span>
         </div>
       </div>
 
@@ -90,23 +85,25 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
           className="ing-label"
           style={{ color: hasAllergen ? '#e53e3e' : 'inherit' }}
         >
-          {hasAllergen ? '⚠️ Allergen Alert' : 'Scientific Match'}
+          {hasAllergen
+            ? '⚠️ Allergen Alert'
+            : isPersonalized
+              ? 'Scientific Match'
+              : 'Ingredient Profile'}
         </p>
         <div className="ing-pills">
-          {reasons.slice(0, 2).map((r, i) => {
-            // Apply danger styling only to reasons that actually flag an allergen
-            const isDangerReason =
-              hasAllergen && r.toLowerCase().includes('avoid');
-
-            return (
+          {reasons.length > 0 ? (
+            reasons.slice(0, 2).map((r, i) => (
               <span
                 key={i}
-                className={`ing-pill ${isDangerReason ? 'pill-danger' : ''}`}
+                className={`ing-pill ${hasAllergen && r.toLowerCase().includes('avoid') ? 'pill-danger' : ''}`}
               >
                 {r}
               </span>
-            );
-          })}
+            ))
+          ) : (
+            <span className="ing-pill">Archive Analysis</span>
+          )}
         </div>
       </div>
 
@@ -115,7 +112,7 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
           type="button"
           className={`btn-add ${hasAllergen ? 'btn-danger' : ''}`}
         >
-          View Info
+          View Science
         </button>
       </div>
     </div>
