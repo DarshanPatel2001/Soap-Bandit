@@ -6,32 +6,31 @@ import './HomePage.css';
 
 const API_BASE_URL = 'http://localhost:8000';
 
-const FILTER_GROUPS = [
+const DEFAULT_FILTER_GROUPS = [
   {
     key: 'skin',
     label: 'Skin Type',
-    options: [
-      'All Types',
-      'Oily / Acne',
-      'Sensitive',
-      'Dry / Normal',
-      'Dry / Mature',
-    ],
+    options: [],
   },
   {
     key: 'source',
     label: 'Source',
-    options: ['Organic', 'Plant-Based', 'Natural'],
+    options: [],
   },
   {
     key: 'phLevel',
     label: 'pH Level',
-    options: ['Low (≤8.5)', 'Medium (8.6–9.0)', 'High (9.1+)'],
+    options: [],
   },
   {
     key: 'gooFactor',
     label: 'Goo Factor',
-    options: ['Very Firm', 'Firm', 'Average', 'Gooey', 'Very Gooey'],
+    options: [],
+  },
+  {
+    key: 'longevity',
+    label: 'Longevity',
+    options: [],
   },
 ];
 
@@ -126,7 +125,11 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
         </div>
         <div className="stat">
           <span className="stat-label">Skin</span>
-          <span className="stat-value">{soap.skin_suitability || 'All'}</span>
+          <span className="stat-value">
+            {Array.isArray(soap.skin_suitability)
+              ? soap.skin_suitability.join(' / ') || 'All'
+              : soap.skin_suitability || 'All'}
+          </span>
         </div>
         <div className="stat">
           <span className="stat-label">Gooeyness</span>
@@ -156,12 +159,6 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
       )}
 
       <div className="card-footer" style={{ marginTop: 'auto' }}>
-        <span
-          className="card-price"
-          style={{ fontSize: '1.1rem', fontWeight: '700' }}
-        >
-          {soap.price || '$12.00'}
-        </span>
         <button
           type="button"
           className="btn-add"
@@ -186,13 +183,57 @@ const HomePage = () => {
   const [showPreferences, setShowPreferences] = useState(false);
   const [userPrefs, setUserPrefs] = useState(null);
   const [locationInput, setLocationInput] = useState('');
-  const [sortBy, setSortBy] = useState('default');
+  const [filterGroups, setFilterGroups] = useState(DEFAULT_FILTER_GROUPS);
   const [activeFilters, setActiveFilters] = useState({
     skin: [],
     source: [],
     phLevel: [],
     gooFactor: [],
+    longevity: [],
   });
+  const [filtersLoading, setFiltersLoading] = useState(true);
+
+  // Fetch available filters from backend
+  const fetchFilters = useCallback(async () => {
+    setFiltersLoading(true);
+    try {
+      const response = await fetch(`${API_BASE_URL}/recommendations/filters`);
+      const data = await response.json();
+      if (data.filters) {
+        setFilterGroups([
+          {
+            key: 'skin',
+            label: 'Skin Type',
+            options: data.filters.skin || [],
+          },
+          {
+            key: 'source',
+            label: 'Source',
+            options: data.filters.source || [],
+          },
+          {
+            key: 'phLevel',
+            label: 'pH Level',
+            options: data.filters.phLevel || [],
+          },
+          {
+            key: 'gooFactor',
+            label: 'Goo Factor',
+            options: data.filters.gooFactor || [],
+          },
+          {
+            key: 'longevity',
+            label: 'Longevity',
+            options: data.filters.longevity || [],
+          },
+        ]);
+      }
+    } catch (err) {
+      console.error('Error fetching filters:', err);
+    } finally {
+      setFiltersLoading(false);
+    }
+  }, []);
 
   // API Call Wrapper
   const fetchSoaps = useCallback(async (prefs) => {
@@ -233,6 +274,8 @@ const HomePage = () => {
 
   // Initialization
   useEffect(() => {
+    fetchFilters();
+
     const savedPrefs = sessionStorage.getItem('userPrefs');
     const savedSoaps = sessionStorage.getItem('lastResults');
     const savedWater = sessionStorage.getItem('waterData');
@@ -246,7 +289,7 @@ const HomePage = () => {
       setShowPreferences(true);
       fetchSoaps(null);
     }
-  }, [fetchSoaps]);
+  }, [fetchSoaps, fetchFilters]);
 
   const handleSavePrefs = async (prefs) => {
     if (!prefs) {
@@ -280,8 +323,12 @@ const HomePage = () => {
       if (activeFilters.skin.length > 0) {
         const hasMatch = activeFilters.skin.some((f) => {
           const normF = f.split(' / ')[0].toLowerCase();
-          const suit = s.skin_suitability?.toLowerCase() || 'all';
-          return suit.includes(normF) || suit === 'all';
+          const suitArray = Array.isArray(s.skin_suitability)
+            ? s.skin_suitability.map((x) => x.toLowerCase())
+            : [s.skin_suitability?.toLowerCase() || 'all'];
+          return suitArray.some(
+            (suit) => suit.includes(normF) || suit === 'all'
+          );
         });
         if (!hasMatch) return false;
       }
@@ -308,19 +355,23 @@ const HomePage = () => {
         if (!isMatch) return false;
       }
 
+      // LONGEVITY FILTER
+      if (activeFilters.longevity.length > 0) {
+        const properties = s.properties || {};
+        const soapLongevity = (properties.longevity || 'medium')
+          .toLowerCase()
+          .trim();
+        const isMatch = activeFilters.longevity.some(
+          (f) => f.toLowerCase().trim() === soapLongevity
+        );
+        if (!isMatch) return false;
+      }
+
       return true;
     });
 
-    return [...filtered].sort((a, b) => {
-      const pA = parseFloat((a.soap?.price || '$0').replace('$', ''));
-      const pB = parseFloat((b.soap?.price || '$0').replace('$', ''));
-      return sortBy === 'low-high'
-        ? pA - pB
-        : sortBy === 'high-low'
-          ? pB - pA
-          : 0;
-    });
-  }, [recommendations, locationInput, activeFilters, sortBy]);
+    return filtered;
+  }, [recommendations, locationInput, activeFilters]);
 
   const toggleFilter = (group, value) => {
     setActiveFilters((prev) => ({
@@ -333,7 +384,13 @@ const HomePage = () => {
 
   const clearAll = () => {
     setLocationInput('');
-    setActiveFilters({ skin: [], source: [], phLevel: [], gooFactor: [] });
+    setActiveFilters({
+      skin: [],
+      source: [],
+      phLevel: [],
+      gooFactor: [],
+      longevity: [],
+    });
   };
 
   return (
@@ -405,15 +462,16 @@ const HomePage = () => {
           >
             <span className="all-filters-icon">≡</span> All Filters
           </button>
-          {FILTER_GROUPS.map((group) => (
-            <DropdownFilter
-              key={group.key}
-              label={group.label}
-              options={group.options}
-              selected={activeFilters[group.key]}
-              onToggle={(val) => toggleFilter(group.key, val)}
-            />
-          ))}
+          {!filtersLoading &&
+            filterGroups.map((group) => (
+              <DropdownFilter
+                key={group.key}
+                label={group.label}
+                options={group.options}
+                selected={activeFilters[group.key]}
+                onToggle={(val) => toggleFilter(group.key, val)}
+              />
+            ))}
         </div>
       </div>
 
@@ -429,31 +487,6 @@ const HomePage = () => {
           {userPrefs ? 'Personalized Match' : 'Total Result'}
           {sortedResults.length !== 1 ? 'es' : ''}
         </span>
-        <div
-          className="sort-wrap u-flex u-items-center"
-          style={{ gap: '10px' }}
-        >
-          <span
-            className="sort-label"
-            style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: '700' }}
-          >
-            Sort by:
-          </span>
-          <select
-            className="sort-select"
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            style={{
-              border: '1px solid #eee',
-              padding: '5px 10px',
-              borderRadius: '4px',
-            }}
-          >
-            <option value="default">Best Match</option>
-            <option value="low-high">Price: Low to High</option>
-            <option value="high-low">Price: High to Low</option>
-          </select>
-        </div>
       </div>
 
       <div className="grid-section">
