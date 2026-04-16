@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SearchPage.css';
 
-const LandingPage = () => {
+const SearchPage = () => {
   // --- STATE ---
   const [query, setQuery] = useState('');
   const [result, setResult] = useState(null);
@@ -13,7 +13,7 @@ const LandingPage = () => {
   const [zipQuery, setZipQuery] = useState('');
   const [ratingResult, setRatingResult] = useState(null);
 
-  // 1. Ingredient Search — Hits /ingredients/{name}/full and /safety
+  // 1. Ingredient Search
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!query) return;
@@ -23,7 +23,6 @@ const LandingPage = () => {
     setResult(null);
 
     try {
-      // Fetching both full details and safety hazard score
       const [detailsRes, safetyRes] = await Promise.all([
         fetch(`http://localhost:8000/ingredients/${query}/full`),
         fetch(`http://localhost:8000/ingredients/${query}/safety`),
@@ -43,13 +42,12 @@ const LandingPage = () => {
     }
   };
 
-  // 2. Water Rating — Hits /water/soap-rating
+  // 2. Water Rating
   const handleRatingSearch = async (e) => {
     e.preventDefault();
     if (!zipQuery) return;
 
     try {
-      // Endpoint: GET /water/soap-rating?zip_code=&soap_name=
       const response = await fetch(
         `http://localhost:8000/water/soap-rating?zip_code=${zipQuery}`
       );
@@ -66,18 +64,24 @@ const LandingPage = () => {
         <div className="logo-text">
           SOAP<span style={{ color: 'var(--ss-gold)' }}>STANDLE</span> HUB
         </div>
-        <div className="u-flex" style={{ gap: '2rem' }}>
+        <div className="u-flex" style={{ gap: '2rem', alignItems: 'center' }}>
           <Link to="/" className="nav-link">
             Home
           </Link>
-          <Link to="/submit" className="nav-link-featured">
-            Featured ↗
+          <Link to="/science" className="nav-link">
+            Soap Science
+          </Link>
+          <Link to="/" className="nav-link-featured">
+            Personalized Matches ↗
           </Link>
         </div>
       </nav>
 
       <header className="hero-header">
-        <div className="breadcrumb-container">
+        <div
+          className="breadcrumb-container"
+          style={{ textAlign: 'center', marginBottom: '1rem' }}
+        >
           <Link to="/" className="breadcrumb-parent">
             Soap Search
           </Link>
@@ -87,8 +91,16 @@ const LandingPage = () => {
           </span>
         </div>
 
-        <h1 className="h1">Super Soap Search</h1>
-        <p className="hero-subtitle">Brought to you by SoapStandle®</p>
+        {/* CENTERED HEADER SECTION */}
+        <h1 className="h1" style={{ textAlign: 'center' }}>
+          Super Soap Search
+        </h1>
+        <p
+          className="hero-subtitle"
+          style={{ textAlign: 'center', margin: '0 auto 2rem auto' }}
+        >
+          Brought to you by SoapStandle®
+        </p>
 
         <form className="search-form" onSubmit={handleSearch}>
           <input
@@ -103,7 +115,11 @@ const LandingPage = () => {
           </button>
         </form>
 
-        {error && <p className="error-text">{error}</p>}
+        {error && (
+          <p className="error-text" style={{ textAlign: 'center' }}>
+            {error}
+          </p>
+        )}
 
         {/* --- INGREDIENT RESULT CARD --- */}
         {result && (
@@ -121,11 +137,18 @@ const LandingPage = () => {
                     <strong>Hazard Score:</strong>
                     <span
                       style={{
-                        color: result.safety.hazard_score > 5 ? 'red' : 'green',
+                        color:
+                          (result.safety.hazard_score || 0) > 5
+                            ? 'red'
+                            : 'green',
                         marginLeft: '5px',
+                        fontWeight: 'bold',
                       }}
                     >
-                      {result.safety.hazard_score} / 10
+                      {result.safety.hazard_score !== undefined &&
+                      result.safety.hazard_score !== null
+                        ? `${result.safety.hazard_score} / 10`
+                        : 'N/A'}
                     </span>
                   </p>
                 )}
@@ -253,4 +276,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default SearchPage;

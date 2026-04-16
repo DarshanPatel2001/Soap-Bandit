@@ -1,0 +1,83 @@
+.science-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.science-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.science-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tooltip-badge {
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #475569;
+  cursor: help;
+  border: 1px dashed #cbd5e1;
+}
+
+.interactive-zone {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.slider {
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.result-box {
+  background: white;
+  padding: 1rem;
+  border-left: 4px solid #3b82f6;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.ph-high,
+.goo-high {
+  accent-color: #ef4444;
+}
+.ph-low,
+.goo-low {
+  accent-color: #3b82f6;
+}
+
+.hardness-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.hard-box.danger h3 {
+  color: #ef4444;
+}

@@ -1,190 +1,20 @@
-import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import PreferencesModal from '../_modals/PreferencesModal';
+import SoapCard from '../_components/SoapCard';
+import DropdownFilter from '../_components/DropdownFilter';
+import {
+  SKIN_TYPES,
+  COMMON_AVOID,
+  getPhLabel,
+  API_BASE_URL,
+} from '../utils/soapHelpers';
 import './HomePage.css';
 
-const API_BASE_URL = 'http://localhost:8000';
-
-const FILTER_GROUPS = [
-  {
-    key: 'skin',
-    label: 'Skin Type',
-    options: [
-      'All Types',
-      'Oily / Acne',
-      'Sensitive',
-      'Dry / Normal',
-      'Dry / Mature',
-    ],
-  },
-  {
-    key: 'source',
-    label: 'Source',
-    options: ['Organic', 'Plant-Based', 'Natural'],
-  },
-  {
-    key: 'phLevel',
-    label: 'pH Level',
-    options: ['Low (≤8.5)', 'Medium (8.6–9.0)', 'High (9.1+)'],
-  },
-  {
-    key: 'gooFactor',
-    label: 'Goo Factor',
-    options: ['Very Firm', 'Firm', 'Average', 'Gooey', 'Very Gooey'],
-  },
-];
-
-// ── HELPER: MAP NUMERIC PH TO FILTER LABELS ──────────────────────────────────
-const getPhLabel = (ph) => {
-  const val = parseFloat(ph);
-  if (val <= 8.5) return 'Low (≤8.5)';
-  if (val <= 9.0) return 'Medium (8.6–9.0)';
-  return 'High (9.1+)';
-};
-
-// ── SUB-COMPONENT: SOAP CARD ──────────────────────────────────────────────────
-const SoapCard = ({ match, onCardClick, isPersonalized }) => {
-  const soap = match?.soap || {};
-  const score = match?.match_score;
-  const reasons = match?.reasons || [];
-
-  const shortDesc =
-    soap.desc && soap.desc.length > 100
-      ? soap.desc.slice(0, 100) + '…'
-      : soap.desc || 'No description available.';
-
-  const productImg =
-    soap.image_url ||
-    soap.img ||
-    'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80';
-
-  return (
-    <div className="card" onClick={() => onCardClick(soap)}>
-      <div
-        className="card-img"
-        style={{
-          background: '#ffffff',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <img
-          src={productImg}
-          alt={soap.name || 'Soap'}
-          loading="lazy"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain',
-            padding: '1rem',
-            position: 'relative',
-            zIndex: 1,
-          }}
-        />
-        <span className="card-tag tag-artisan" style={{ zIndex: 2 }}>
-          {soap.brand?.toUpperCase() || 'VERIFIED'}
-        </span>
-
-        {isPersonalized && score && (
-          <div
-            className="ph-badge"
-            style={{ background: '#e7b45c', zIndex: 2 }}
-          >
-            <span className="ph-label" style={{ color: '#283745' }}>
-              Match
-            </span>
-            <span className="ph-value" style={{ color: '#283745' }}>
-              {score}%
-            </span>
-          </div>
-        )}
-      </div>
-
-      <div className="card-body">
-        <p
-          className="card-company"
-          style={{ color: '#64748b', fontSize: '0.75rem', fontWeight: '600' }}
-        >
-          {soap.brand}
-        </p>
-        <h2 className="card-name">{soap.name}</h2>
-        <p className="card-desc">{shortDesc}</p>
-      </div>
-
-      <div
-        className="stats"
-        style={{
-          borderTop: '1px solid #f1f5f9',
-          borderBottom: '1px solid #f1f5f9',
-        }}
-      >
-        <div className="stat">
-          <span className="stat-label">pH Level</span>
-          <span className="stat-value">{soap.ph_level || '9.0'}</span>
-        </div>
-        <div className="stat">
-          <span className="stat-label">Skin</span>
-          <span className="stat-value">{soap.skin_suitability || 'All'}</span>
-        </div>
-        <div className="stat">
-          <span className="stat-label">Gooeyness</span>
-          <span className="stat-value" style={{ fontSize: '0.7rem' }}>
-            {soap.gooeyness_label || 'Average'}
-          </span>
-        </div>
-      </div>
-
-      {reasons.length > 0 && (
-        <div className="ingredients-section" style={{ paddingTop: '12px' }}>
-          <p className="ing-label">
-            {isPersonalized ? 'Scientific Reason' : 'Product Highlights'}
-          </p>
-          <div className="ing-pills">
-            {reasons.slice(0, 2).map((r, i) => (
-              <span
-                key={`${soap.id}-reason-${i}`}
-                className="ing-pill"
-                style={{ background: '#f1f5f9', color: '#475569' }}
-              >
-                {r}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-
-      <div className="card-footer" style={{ marginTop: 'auto' }}>
-        <span
-          className="card-price"
-          style={{ fontSize: '1.1rem', fontWeight: '700' }}
-        >
-          {soap.price || '$12.00'}
-        </span>
-        <button
-          type="button"
-          className="btn-add"
-          onClick={(e) => {
-            e.stopPropagation();
-            onCardClick(soap);
-          }}
-        >
-          View Info
-        </button>
-      </div>
-    </div>
-  );
-};
-
-// ── MAIN HOMEPAGE COMPONENT ───────────────────────────────────────────────────
 const HomePage = () => {
   const navigate = useNavigate();
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
   const [waterData, setWaterData] = useState(null);
-  const [showPreferences, setShowPreferences] = useState(false);
-  const [userPrefs, setUserPrefs] = useState(null);
   const [locationInput, setLocationInput] = useState('');
   const [sortBy, setSortBy] = useState('default');
   const [activeFilters, setActiveFilters] = useState({
@@ -192,37 +22,49 @@ const HomePage = () => {
     source: [],
     phLevel: [],
     gooFactor: [],
+    avoid: [],
   });
 
-  // API Call Wrapper
+  const [userPrefs, setUserPrefs] = useState(() => {
+    const saved = sessionStorage.getItem('userPrefs');
+    return saved ? JSON.parse(saved) : null;
+  });
+
+  const [formZip, setFormZip] = useState(userPrefs?.zip || '');
+  const [formSkin, setFormSkin] = useState(userPrefs?.skinType || '');
+  const [formAvoid, setFormAvoid] = useState(userPrefs?.avoidIngredients || []);
+
   const fetchSoaps = useCallback(async (prefs) => {
     setLoading(true);
-    const normalizedSkin = (prefs?.skinType || 'Normal')
-      .toLowerCase()
-      .split(' / ')[0];
-    const zipCode = prefs?.zip || '37201';
+
+    const skin = prefs?.skinType
+      ? prefs.skinType.toLowerCase().split(' / ')[0]
+      : '';
+    const zip = prefs?.zip || '';
+    const avoid = prefs?.avoidIngredients || [];
 
     try {
       const response = await fetch(`${API_BASE_URL}/recommendations`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          zip_code: zipCode,
-          skin_type: normalizedSkin,
-          avoid_ingredients: [],
+          zip_code: zip,
+          skin_type: skin,
+          avoid_ingredients: avoid,
           prefer_ingredients: [],
         }),
       });
       const data = await response.json();
-      const results = data.top_matches || [];
-      const water = { city: data.user_location, hardness: data.water_hardness };
+      setRecommendations(data.top_matches || []);
 
-      setRecommendations(results);
-      setWaterData(water);
-
-      if (prefs) {
-        sessionStorage.setItem('lastResults', JSON.stringify(results));
-        sessionStorage.setItem('waterData', JSON.stringify(water));
+      if (data.water_hardness && data.water_hardness !== 'Unknown') {
+        setWaterData({
+          hardness: data.water_hardness,
+          avgPh: data.avg_water_ph || '8.2',
+          label: getPhLabel(data.avg_water_ph || '8.2'),
+        });
+      } else {
+        setWaterData(null);
       }
     } catch (err) {
       console.error('API Error:', err);
@@ -231,96 +73,28 @@ const HomePage = () => {
     }
   }, []);
 
-  // Initialization
   useEffect(() => {
-    const savedPrefs = sessionStorage.getItem('userPrefs');
-    const savedSoaps = sessionStorage.getItem('lastResults');
-    const savedWater = sessionStorage.getItem('waterData');
+    fetchSoaps(userPrefs);
+  }, [userPrefs, fetchSoaps]);
 
-    if (savedPrefs && savedPrefs !== 'null') {
-      const parsedPrefs = JSON.parse(savedPrefs);
-      setUserPrefs(parsedPrefs);
-      if (savedSoaps) setRecommendations(JSON.parse(savedSoaps));
-      if (savedWater) setWaterData(JSON.parse(savedWater));
-    } else {
-      setShowPreferences(true);
-      fetchSoaps(null);
-    }
-  }, [fetchSoaps]);
-
-  const handleSavePrefs = async (prefs) => {
-    if (!prefs) {
-      sessionStorage.removeItem('userPrefs');
-      sessionStorage.removeItem('lastResults');
-      sessionStorage.removeItem('waterData');
-      setUserPrefs(null);
-      fetchSoaps(null);
-      return;
-    }
+  const handlePersonalize = (e) => {
+    e.preventDefault();
+    const prefs = {
+      zip: formZip,
+      skinType: formSkin,
+      avoidIngredients: formAvoid,
+    };
     setUserPrefs(prefs);
     sessionStorage.setItem('userPrefs', JSON.stringify(prefs));
-    fetchSoaps(prefs);
   };
 
-  // ── FILTER & SORT ENGINE ──
-  const sortedResults = useMemo(() => {
-    let filtered = recommendations.filter((match) => {
-      const s = match.soap;
-      if (!s) return false;
-
-      const searchStr = locationInput.toLowerCase();
-      if (
-        locationInput.trim() &&
-        !s.brand?.toLowerCase().includes(searchStr) &&
-        !s.name?.toLowerCase().includes(searchStr)
-      )
-        return false;
-
-      // SKIN FILTER
-      if (activeFilters.skin.length > 0) {
-        const hasMatch = activeFilters.skin.some((f) => {
-          const normF = f.split(' / ')[0].toLowerCase();
-          const suit = s.skin_suitability?.toLowerCase() || 'all';
-          return suit.includes(normF) || suit === 'all';
-        });
-        if (!hasMatch) return false;
-      }
-
-      // SOURCE FILTER
-      if (
-        activeFilters.source.length > 0 &&
-        !activeFilters.source.includes(s.source || 'Natural')
-      )
-        return false;
-
-      // PH LEVEL FILTER
-      if (activeFilters.phLevel.length > 0) {
-        const soapPhLabel = getPhLabel(s.ph_level || '9.0');
-        if (!activeFilters.phLevel.includes(soapPhLabel)) return false;
-      }
-
-      // GOOEYNESS FILTER (Case-Insensitive Fix)
-      if (activeFilters.gooFactor.length > 0) {
-        const soapGoo = (s.gooeyness_label || 'Average').toLowerCase().trim();
-        const isMatch = activeFilters.gooFactor.some(
-          (f) => f.toLowerCase().trim() === soapGoo
-        );
-        if (!isMatch) return false;
-      }
-
-      return true;
-    });
-
-    return [...filtered].sort((a, b) => {
-      const pA = parseFloat((a.soap?.price || '$0').replace('$', ''));
-      const pB = parseFloat((b.soap?.price || '$0').replace('$', ''));
-      return sortBy === 'low-high'
-        ? pA - pB
-        : sortBy === 'high-low'
-          ? pB - pA
-          : 0;
-    });
-  }, [recommendations, locationInput, activeFilters, sortBy]);
+  const clearPrefs = () => {
+    sessionStorage.removeItem('userPrefs');
+    setUserPrefs(null);
+    setFormZip('');
+    setFormSkin('');
+    setFormAvoid([]);
+  };
 
   const toggleFilter = (group, value) => {
     setActiveFilters((prev) => ({
@@ -333,125 +107,263 @@ const HomePage = () => {
 
   const clearAll = () => {
     setLocationInput('');
-    setActiveFilters({ skin: [], source: [], phLevel: [], gooFactor: [] });
+    setActiveFilters({
+      skin: [],
+      source: [],
+      phLevel: [],
+      gooFactor: [],
+      avoid: [],
+    });
   };
+
+  const totalActive = Object.values(activeFilters).reduce(
+    (sum, arr) => sum + arr.length,
+    0
+  );
+
+  const sortedResults = useMemo(() => {
+    return recommendations
+      .filter((match) => {
+        const s = match.soap;
+        const reasons = match.reasons || [];
+        const avoidList = userPrefs?.avoidIngredients || [];
+
+        if (avoidList.length > 0) {
+          const allSoapData = JSON.stringify(s).toLowerCase();
+          const allReasons = reasons.join(' ').toLowerCase();
+
+          const hasMatch = avoidList.some((avoid) => {
+            const term = avoid.toLowerCase().trim();
+            if (!term) return false;
+            return allSoapData.includes(term) || allReasons.includes(term);
+          });
+
+          if (hasMatch) return false;
+        }
+
+        const searchStr = locationInput.toLowerCase().trim();
+        if (
+          searchStr &&
+          !s.brand?.toLowerCase().includes(searchStr) &&
+          !s.name?.toLowerCase().includes(searchStr)
+        )
+          return false;
+
+        if (activeFilters.skin.length > 0) {
+          const suit = Array.isArray(s.properties?.skin_suitability)
+            ? s.properties.skin_suitability.join(' ')
+            : String(s.properties?.skin_suitability || 'all');
+
+          if (
+            !activeFilters.skin.some((f) =>
+              suit.toLowerCase().includes(f.split(' / ')[0].toLowerCase())
+            )
+          )
+            return false;
+        }
+
+        return true;
+      })
+      .sort((a, b) => {
+        const pA = parseFloat((a.soap?.price || '$0').replace('$', ''));
+        const pB = parseFloat((b.soap?.price || '$0').replace('$', ''));
+        return sortBy === 'low-high'
+          ? pA - pB
+          : sortBy === 'high-low'
+            ? pB - pA
+            : 0;
+      });
+  }, [recommendations, locationInput, activeFilters, sortBy, userPrefs]);
 
   return (
     <div className="homepage-wrapper">
-      <nav className="nav-bar u-flex u-items-center u-justify-between header-border">
-        <div className="logo-text u-flex u-items-center">
-          Super Soap Search{' '}
-          <span className="logo-attribution">
-            Brought to you by SoapStandle®
-          </span>
-        </div>
+      <nav className="nav-bar u-flex u-items-center u-justify-between">
+        <div className="logo-text">Super Soap Search</div>
         <div className="u-flex u-items-center" style={{ gap: '1.5rem' }}>
-          <button
-            type="button"
-            className="filter-btn"
-            onClick={() => setShowPreferences(true)}
-            style={{
-              fontSize: '0.7rem',
-              padding: '0.3rem 0.8rem',
-              margin: 0,
-              backgroundColor: '#ffffff',
-              color: '#e7b45c',
-              border: '1px solid #e7b45c',
-              fontWeight: '700',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-            }}
-          >
-            {userPrefs ? `Profile: ${userPrefs.skinType}` : 'Personalize Hub'}
-          </button>
-          <div className="breadcrumb-container" style={{ margin: 0 }}>
-            <span className="breadcrumb-active">Home</span>
-            <span className="breadcrumb-separator">›</span>
-            <Link to="/search" className="breadcrumb-parent">
-              Soap Search
-            </Link>
-            <span className="breadcrumb-separator">›</span>
-            <Link to="/submit" className="breadcrumb-parent">
-              Artisan Page
-            </Link>
-          </div>
+          <Link to="/science" className="nav-link">
+            Soap Science
+          </Link>
+          <Link to="/search" className="nav-link">
+            Ingredient Archive
+          </Link>
+          {/* NAVIGATION TO ARTISAN PORTAL */}
+          <Link to="/submit" className="nav-link-featured">
+            Artisan Portal ↗
+          </Link>
+          {userPrefs && (
+            <button type="button" className="clear-link" onClick={clearPrefs}>
+              Reset Profile
+            </button>
+          )}
         </div>
       </nav>
 
-      <header className="hero-header hero-centered">
-        <p className="hero-eyebrow">
-          {waterData
-            ? `LOCAL WATER: ${waterData.hardness?.toUpperCase()}`
-            : 'NO MORE GOOEY, SLIPPERY BAR SOAP'}
-        </p>
-        <h1 className="h1-large">Find the Best Soap for You</h1>
+      <header className="hero-header hero-split">
+        <div className="hero-content">
+          <p className="hero-eyebrow">
+            {waterData
+              ? `WATER: ${waterData.hardness?.toUpperCase()} • PH: ${waterData.avgPh} (${waterData.label})`
+              : 'NO MORE GOOEY SOAP'}
+          </p>
+          <h1 className="h1-large">Precision Soap Pairing</h1>
+          <p className="hero-subtitle">
+            Matching your skin chemistry with local water data.
+          </p>
+        </div>
+
+        <div className="hero-form-box">
+          <h3>{userPrefs ? 'Update Chemistry' : 'Find Your Match'}</h3>
+          <form onSubmit={handlePersonalize}>
+            <label className="form-label-small">Skin Type</label>
+            <select
+              required
+              value={formSkin}
+              onChange={(e) => setFormSkin(e.target.value)}
+            >
+              <option value="" disabled>
+                Select Skin Type
+              </option>
+              {SKIN_TYPES.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
+            </select>
+
+            <label className="form-label-small">Allergens to Avoid</label>
+            <select
+              value={formAvoid.length > 0 ? formAvoid[0] : ''}
+              onChange={(e) => setFormAvoid([e.target.value])}
+            >
+              <option value="" disabled>
+                Select Ingredients
+              </option>
+              {COMMON_AVOID.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
+            </select>
+
+            <label className="form-label-small" style={{ marginTop: '1rem' }}>
+              Zip Code
+            </label>
+            <input
+              type="text"
+              placeholder="Zip Code"
+              value={formZip}
+              onChange={(e) => setFormZip(e.target.value)}
+            />
+            <button type="submit" className="btn-add" style={{ width: '100%' }}>
+              RECALCULATE
+            </button>
+          </form>
+        </div>
       </header>
 
-      <div className="top-filter-bar u-flex u-justify-between">
+      <section
+        className="info-bar"
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <div style={{ display: 'flex', gap: '2rem' }}>
+          <div className="info-item">
+            <strong>pH Balance:</strong> High pH can be drying in hard water.
+          </div>
+          <div className="info-item">
+            <strong>Goo Factor:</strong> Measures how fast a bar turns to mush.
+          </div>
+        </div>
+        <div className="info-item">
+          <Link
+            to="/science"
+            style={{
+              color: '#3b82f6',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+            }}
+          >
+            Explore the Glossary →
+          </Link>
+        </div>
+      </section>
+
+      <div className="top-filter-bar">
         <div className="location-input-wrap">
           <span className="location-icon">🔆</span>
           <input
             className="location-input"
             type="text"
-            placeholder="Search by Brand or Soap Name"
+            placeholder="Filter by Name or Brand"
             value={locationInput}
             onChange={(e) => setLocationInput(e.target.value)}
           />
         </div>
-        <div className="top-filter-bar-right u-flex" style={{ gap: '10px' }}>
+        <div className="top-filter-bar-right">
           <button
             type="button"
-            className={`all-filters-btn ${Object.values(activeFilters).flat().length > 0 ? 'has-active' : ''}`}
+            className={`all-filters-btn ${totalActive > 0 ? 'has-active' : ''}`}
             onClick={clearAll}
           >
-            <span className="all-filters-icon">≡</span> All Filters
+            ≡ All Filters{' '}
+            {totalActive > 0 && (
+              <span className="all-filters-count">{totalActive}</span>
+            )}
           </button>
-          {FILTER_GROUPS.map((group) => (
-            <DropdownFilter
-              key={group.key}
-              label={group.label}
-              options={group.options}
-              selected={activeFilters[group.key]}
-              onToggle={(val) => toggleFilter(group.key, val)}
-            />
-          ))}
+          <DropdownFilter
+            label="Skin"
+            options={SKIN_TYPES}
+            selected={activeFilters.skin}
+            onToggle={(v) => toggleFilter('skin', v)}
+          />
+          <DropdownFilter
+            label="Avoid"
+            options={COMMON_AVOID}
+            selected={activeFilters.avoid}
+            onToggle={(v) => toggleFilter('avoid', v)}
+          />
+          <DropdownFilter
+            label="Source"
+            options={['Organic', 'Plant-Based', 'Natural']}
+            selected={activeFilters.source}
+            onToggle={(v) => toggleFilter('source', v)}
+          />
+          <DropdownFilter
+            label="pH"
+            options={['Low (≤8.5)', 'Medium (8.6–9.0)', 'High (9.1+)']}
+            selected={activeFilters.phLevel}
+            onToggle={(v) => toggleFilter('phLevel', v)}
+          />
+          <DropdownFilter
+            label="Goo"
+            options={['Very Firm', 'Firm', 'Average', 'Gooey', 'Very Gooey']}
+            selected={activeFilters.gooFactor}
+            onToggle={(v) => toggleFilter('gooFactor', v)}
+          />
         </div>
       </div>
 
-      <div
-        className="results-sort-bar u-flex u-justify-between u-items-center"
-        style={{ padding: '0 2.5rem', marginBottom: '1.5rem' }}
-      >
-        <span
-          className="results-label"
-          style={{ color: '#64748b', fontSize: '0.9rem', fontWeight: '600' }}
-        >
-          {sortedResults.length}{' '}
-          {userPrefs ? 'Personalized Match' : 'Total Result'}
-          {sortedResults.length !== 1 ? 'es' : ''}
+      <div className="results-sort-bar u-flex u-justify-between u-items-center">
+        <span className="results-label">
+          {sortedResults.length} Personalized Result
+          {sortedResults.length !== 1 ? 's' : ''}
         </span>
         <div
           className="sort-wrap u-flex u-items-center"
           style={{ gap: '10px' }}
         >
-          <span
-            className="sort-label"
-            style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: '700' }}
-          >
-            Sort by:
-          </span>
+          <span className="sort-label">Sort:</span>
           <select
             className="sort-select"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            style={{
-              border: '1px solid #eee',
-              padding: '5px 10px',
-              borderRadius: '4px',
-            }}
           >
             <option value="default">Best Match</option>
-            <option value="low-high">Price: Low to High</option>
-            <option value="high-low">Price: High to Low</option>
+            <option value="low-high">Price: Low-High</option>
+            <option value="high-low">Price: High-Low</option>
           </select>
         </div>
       </div>
@@ -459,9 +371,9 @@ const HomePage = () => {
       <div className="grid-section">
         {loading ? (
           <div className="no-results">
-            <p style={{ color: '#e7b45c' }}>Analyzing scientific data...</p>
+            <p>Analyzing matches...</p>
           </div>
-        ) : sortedResults.length > 0 ? (
+        ) : (
           <div className="grid">
             {sortedResults.map((m) => (
               <SoapCard
@@ -474,83 +386,13 @@ const HomePage = () => {
               />
             ))}
           </div>
-        ) : (
-          <div className="no-results">
-            <p>No soaps found matching these filters.</p>
-          </div>
         )}
       </div>
-
-      <PreferencesModal
-        isOpen={showPreferences}
-        onClose={() => setShowPreferences(false)}
-        onSave={handleSavePrefs}
-      />
       <footer className="technical-footer">
-        <p className="footer-oversight">
-          Technical Oversight provided by JD Graffam
-        </p>
+        <p>Technical Oversight by JD Graffam</p>
       </footer>
     </div>
   );
-};
-
-// Dropdown Helper
-const DropdownFilter = ({ label, options, selected, onToggle }) => {
-  const [open, setOpen] = useState(false);
-  const ref = useRef(null);
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-  return (
-    <div className="dropdown-filter" ref={ref}>
-      <button
-        type="button"
-        className={`dropdown-trigger ${open || selected.length > 0 ? 'active' : ''}`}
-        onClick={() => setOpen((o) => !o)}
-      >
-        {label}{' '}
-        {selected.length > 0 && (
-          <span className="dropdown-count">{selected.length}</span>
-        )}
-        <span className="dropdown-arrow">▾</span>
-      </button>
-      {open && (
-        <div className="dropdown-panel">
-          {options.map((opt) => (
-            <label
-              key={opt}
-              className="toggle-row"
-              onClick={() => onToggle(opt)}
-            >
-              <span className="toggle-label">{opt}</span>
-              <div
-                className={`toggle-switch ${selected.includes(opt) ? 'on' : ''}`}
-              >
-                <div className="toggle-knob" />
-              </div>
-            </label>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-SoapCard.propTypes = {
-  match: PropTypes.object.isRequired,
-  onCardClick: PropTypes.func.isRequired,
-  isPersonalized: PropTypes.bool.isRequired,
-};
-DropdownFilter.propTypes = {
-  label: PropTypes.string.isRequired,
-  options: PropTypes.array.isRequired,
-  selected: PropTypes.array.isRequired,
-  onToggle: PropTypes.func.isRequired,
 };
 
 export default HomePage;
