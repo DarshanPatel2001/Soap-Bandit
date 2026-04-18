@@ -43,46 +43,82 @@ const getPhLabel = (ph) => {
   return 'High (9.1+)';
 };
 
+// ── HELPER: Generate color from soap ID ──
+const getColorFromId = (id) => {
+  const colors = [
+    '#FFE5D9',
+    '#D9E5FF',
+    '#E5FFD9',
+    '#FFE5FF',
+    '#FFFFE5',
+    '#FFD9E5',
+    '#E5FFFF',
+    '#FFE5CC',
+    '#E5CCF2',
+    '#CCF2E5',
+    '#F2CCE5',
+    '#E5F2CC',
+    '#CCE5F2',
+    '#F2E5CC',
+    '#F2CCCC',
+  ];
+  let hash = 0;
+  for (let i = 0; i < (id || '').length; i++) {
+    hash = (hash << 5) - hash + (id || '').charCodeAt(i);
+    hash = hash & hash;
+  }
+  return colors[Math.abs(hash) % colors.length];
+};
+
 // ── SUB-COMPONENT: SOAP CARD ──────────────────────────────────────────────────
 const SoapCard = ({ match, onCardClick, isPersonalized }) => {
   const soap = match?.soap || {};
   const score = match?.match_score;
   const reasons = match?.reasons || [];
+  const bgColor = getColorFromId(soap.id);
 
   const shortDesc =
     soap.desc && soap.desc.length > 100
       ? soap.desc.slice(0, 100) + '…'
       : soap.desc || 'No description available.';
 
-  const productImg =
-    soap.image_url ||
-    soap.img ||
-    'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80';
-
   return (
     <div className="card" onClick={() => onCardClick(soap)}>
       <div
         className="card-img"
         style={{
-          background: '#ffffff',
+          background: bgColor,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          flexDirection: 'column',
+          gap: '1rem',
         }}
       >
-        <img
-          src={productImg}
-          alt={soap.name || 'Soap'}
-          loading="lazy"
+        <div
           style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain',
+            fontSize: '2.5rem',
+            fontWeight: '700',
+            color: '#1a2b3c',
+            textAlign: 'center',
             padding: '1rem',
-            position: 'relative',
             zIndex: 1,
           }}
-        />
+        >
+          🧼
+        </div>
+        <div
+          style={{
+            fontSize: '0.75rem',
+            fontWeight: '600',
+            color: '#475569',
+            textAlign: 'center',
+            padding: '0 0.5rem',
+            zIndex: 1,
+          }}
+        >
+          {soap.brand}
+        </div>
         <span className="card-tag tag-artisan" style={{ zIndex: 2 }}>
           {soap.brand?.toUpperCase() || 'VERIFIED'}
         </span>
