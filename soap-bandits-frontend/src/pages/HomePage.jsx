@@ -243,7 +243,6 @@ const HomePage = () => {
 
       <div className="top-filter-bar">
         <div className="location-input-wrap">
-          <span className="location-icon">🔆</span>
           <input
             className="location-input"
             type="text"
