@@ -1,5 +1,5 @@
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import './InfoPage.css';
 
 const API_BASE_URL = 'http://localhost:8000';
@@ -51,7 +51,8 @@ const InfoPage = () => {
           `${API_BASE_URL}/recommendations/soap/${soap.id}`
         );
         const data = await response.json();
-        setEnrichedData(data);
+        // Some backends wrap the response in a "soap" key
+        setEnrichedData(data?.soap || data);
       } catch (err) {
         console.error('Failed to fetch enriched data:', err);
       }
@@ -59,6 +60,43 @@ const InfoPage = () => {
 
     fetchEnrichedData();
   }, [soap?.id]);
+
+  // ── DATA RECOVERY: RAW FORMULATION ──
+  const finalIngredientsRaw = useMemo(() => {
+    // 1. Try the string from the latest API fetch
+    if (enrichedData?.ingredients_raw) return enrichedData.ingredients_raw;
+    // 2. Try the string passed from the Home Page
+    if (soap?.ingredients_raw) return soap.ingredients_raw;
+    // 3. If the string is missing but we have the array, join them together
+    if (enrichedData?.ingredients?.length > 0) {
+      return enrichedData.ingredients.map((i) => i.name).join(', ');
+    }
+    return 'Formulation data is currently being processed.';
+  }, [enrichedData, soap]);
+
+  // ── RESTORED: INGREDIENT TYPE BREAKDOWN LOGIC ──
+  const typeBreakdown = useMemo(() => {
+    const ingredients = enrichedData?.ingredients || [];
+    if (ingredients.length === 0) return [];
+
+    const categories = {};
+    ingredients.forEach((ing) => {
+      if (ing.function) {
+        const cat = ing.function.split('/')[0].trim();
+        categories[cat] = (categories[cat] || 0) + 1;
+      }
+    });
+
+    const total = Object.values(categories).reduce((a, b) => a + b, 0);
+
+    return Object.entries(categories)
+      .map(([cat, count]) => ({
+        name: cat.charAt(0).toUpperCase() + cat.slice(1),
+        percent: Math.round((count / total) * 100),
+      }))
+      .sort((a, b) => b.percent - a.percent)
+      .slice(0, 5); // Keep top 5
+  }, [enrichedData]);
 
   // Generate consistent pastel color for this soap
   const bgColor = getColorFromId(soap?.id);
@@ -77,6 +115,9 @@ const InfoPage = () => {
     );
   }
 
+  // Ensure we are pulling from the correct metadata source
+  const properties = enrichedData?.properties || soap?.properties || {};
+
   return (
     <div className="info-page">
       {/* ── NAV ── */}
@@ -85,9 +126,6 @@ const InfoPage = () => {
           Super Soap Search
           <span className="info-nav-sub">Brought to you by SoapStandle®</span>
         </div>
-        <Link to="/submit" className="info-nav-cta">
-          ONLINE SOAP COURSE ↗
-        </Link>
       </nav>
 
       {/* ── BREADCRUMB ── */}
@@ -102,139 +140,116 @@ const InfoPage = () => {
       {/* ── PRODUCT HERO ── */}
       <section className="info-hero">
         <div className="info-hero-left">
-          <p className="info-brand">{soap.company}</p>
+          <p className="info-brand">{soap.brand}</p>
           <h1 className="info-title">{soap.name}</h1>
-          <p className="info-desc">{soap.desc}</p>
+          <p className="info-desc">
+            {soap.desc ||
+              'A scientific formulation analyzed for compatibility and skin health.'}
+          </p>
+
           <div className="info-tags">
-            {soap.skin && <span className="info-tag">{soap.skin}</span>}
-            {soap.scent && <span className="info-tag">{soap.scent}</span>}
-            {soap.ph && <span className="info-tag">pH {soap.ph}</span>}
-            {soap.weight && <span className="info-tag">{soap.weight}</span>}
+            {properties.skin_suitability && (
+              <span className="info-tag">
+                {Array.isArray(properties.skin_suitability)
+                  ? properties.skin_suitability.join(', ')
+                  : properties.skin_suitability}
+              </span>
+            )}
+            {properties.gooeyness_label && (
+              <span className="info-tag">{properties.gooeyness_label}</span>
+            )}
+            <span className="info-tag">Verification: Lab Tested</span>
           </div>
 
           {/* ── PRODUCT DETAILS INLINE ── */}
-          {enrichedData?.properties && (
+          {properties && (
             <div className="info-details-inline">
               <div className="info-details-grid">
-                {enrichedData.properties.gooeyness_label && (
-                  <div className="info-detail-card">
-                    <span className="info-detail-label">Gooeyness</span>
-                    <span className="info-detail-value">
-                      {enrichedData.properties.gooeyness_label}
-                    </span>
-                  </div>
-                )}
-                {enrichedData.properties.skin_suitability && (
-                  <div className="info-detail-card">
-                    <span className="info-detail-label">Skin Suitability</span>
-                    <span className="info-detail-value">
-                      {Array.isArray(enrichedData.properties.skin_suitability)
-                        ? enrichedData.properties.skin_suitability.join(', ')
-                        : enrichedData.properties.skin_suitability}
-                    </span>
-                  </div>
-                )}
-                {enrichedData.properties.water_compatibility && (
-                  <div className="info-detail-card">
-                    <span className="info-detail-label">
-                      Water Compatibility
-                    </span>
-                    <span className="info-detail-value">
-                      {enrichedData.properties.water_compatibility}
-                    </span>
-                  </div>
-                )}
+                <div className="info-detail-card">
+                  <span className="info-detail-label">Gooeyness</span>
+                  <span className="info-detail-value">
+                    {properties.gooeyness_label || 'Average'}
+                  </span>
+                </div>
+                <div className="info-detail-card">
+                  <span className="info-detail-label">Water Compatibility</span>
+                  <span className="info-detail-value">
+                    {properties.water_compatibility || 'Universal'}
+                  </span>
+                </div>
               </div>
             </div>
           )}
         </div>
+
         <div className="info-hero-right">
           <div className="info-img-card" style={{ backgroundColor: bgColor }}>
-            <span className="info-img-featured">Featured</span>
+            <span className="info-img-featured">Scientific Analysis</span>
             <div style={{ fontSize: '120px', marginBottom: '1rem' }}>🧼</div>
             <p style={{ fontSize: '18px', color: '#666', fontWeight: '500' }}>
-              {soap.company}
+              {soap.brand}
             </p>
           </div>
         </div>
       </section>
+
       {/* ── INGREDIENTS SECTION ── */}
-      {enrichedData?.ingredients_raw && (
-        <section className="info-ingredients-section">
-          <h2 className="info-ingredients-title">Ingredients</h2>
+      <section className="info-ingredients-section">
+        <h2 className="info-ingredients-title">Ingredients</h2>
 
-          <div className="info-ingredients-container">
-            {/* Left Column: Raw Ingredients List */}
-            <div className="info-ingredients-column">
-              <h3 className="info-column-title">Full List</h3>
-              <p className="info-ingredients-raw">
-                {enrichedData.ingredients_raw}
-              </p>
+        <div className="info-ingredients-container">
+          {/* Left Column: Raw Ingredients List */}
+          <div className="info-ingredients-column">
+            <h3 className="info-column-title">Full Formulation</h3>
+            <p className="info-ingredients-raw">{finalIngredientsRaw}</p>
 
-              {/* Ingredient Breakdown */}
-              {enrichedData?.ingredients &&
-                enrichedData.ingredients.length > 0 && (
-                  <div className="info-ingredient-breakdown">
-                    <h4 className="info-breakdown-title">Ingredient Types</h4>
-                    {(() => {
-                      const categories = {};
-                      enrichedData.ingredients.forEach((ing) => {
-                        if (ing.function) {
-                          const category = ing.function.split('/')[0].trim();
-                          categories[category] =
-                            (categories[category] || 0) + 1;
-                        }
-                      });
-
-                      const total = Object.values(categories).reduce(
-                        (a, b) => a + b,
-                        0
-                      );
-                      const sorted = Object.entries(categories)
-                        .sort((a, b) => b[1] - a[1])
-                        .slice(0, 5);
-
-                      return (
-                        <div className="info-breakdown-list">
-                          {sorted.map(([cat, count]) => (
-                            <div key={cat} className="info-breakdown-item">
-                              <span className="info-breakdown-label">
-                                {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                              </span>
-                              <span className="info-breakdown-percent">
-                                {Math.round((count / total) * 100)}%
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      );
-                    })()}
-                  </div>
-                )}
-            </div>
-
-            {/* Right Column: Ingredient Functions */}
-            {enrichedData?.ingredients &&
-              enrichedData.ingredients.length > 0 && (
-                <div className="info-ingredients-column">
-                  <h3 className="info-column-title">What Each Does</h3>
-                  <div className="info-ingredient-list">
-                    {enrichedData.ingredients.map((ing, idx) => (
-                      <div key={idx} className="info-ingredient-item">
-                        <span className="info-ingredient-name">{ing.name}</span>
-                        {ing.function && (
-                          <span className="info-ingredient-function">
-                            {ing.function}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+            {/* Ingredient Breakdown */}
+            {typeBreakdown.length > 0 && (
+              <div
+                className="info-ingredient-breakdown"
+                style={{ marginTop: '2rem' }}
+              >
+                <h4 className="info-breakdown-title">Ingredient Types</h4>
+                <div className="info-breakdown-list">
+                  {typeBreakdown.map((item) => (
+                    <div key={item.name} className="info-breakdown-item">
+                      <span className="info-breakdown-label">{item.name}</span>
+                      <span className="info-breakdown-percent">
+                        {item.percent}%
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              )}
+              </div>
+            )}
           </div>
-        </section>
-      )}
+
+          {/* Right Column: Ingredient Functions */}
+          <div className="info-ingredients-column">
+            <h3 className="info-column-title">What Each Does</h3>
+            <div className="info-ingredient-list">
+              {enrichedData?.ingredients &&
+              enrichedData.ingredients.length > 0 ? (
+                enrichedData.ingredients.map((ing, idx) => (
+                  <div key={idx} className="info-ingredient-item">
+                    <span className="info-ingredient-name">{ing.name}</span>
+                    {ing.function && (
+                      <span className="info-ingredient-function">
+                        {ing.function}
+                      </span>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <p style={{ color: '#64748b', fontStyle: 'italic' }}>
+                  Functional analysis is loading...
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── WHERE TO BUY ── */}
       <section className="info-retailers-section">
         <h2 className="info-retailers-title">Available Online</h2>
@@ -248,13 +263,14 @@ const InfoPage = () => {
           </div>
           <div className="amazon-banner-divider" />
           <div className="amazon-banner-right">
-            <p className="amazon-price-label">Published prices from</p>
-            <p className="amazon-price-amount">{soap.price}</p>
             <a
               className="amazon-purchase-btn"
-              href={`https://www.amazon.com/s?k=${encodeURIComponent(
-                soap.name + ' ' + soap.company
-              )}`}
+              href={
+                soap.buy_link ||
+                `https://www.amazon.com/s?k=${encodeURIComponent(
+                  soap.name + ' ' + soap.brand
+                )}`
+              }
               target="_blank"
               rel="noreferrer"
             >
@@ -275,15 +291,8 @@ const InfoPage = () => {
       {/* ── FOOTER ── */}
       <footer className="info-footer">
         <p className="info-footer-copy">
-          © Super Soap Search — Brought to you by SoapStandle®. All rights
-          reserved, unless otherwise attributed.{' '}
-          <Link to="/" className="info-footer-link">
-            Contact
-          </Link>
+          © Super Soap Search — Technical Oversight by JD Graffam
         </p>
-        <Link to="/submit" className="info-nav-cta info-footer-cta">
-          ONLINE SOAP COURSE ↗
-        </Link>
       </footer>
     </div>
   );

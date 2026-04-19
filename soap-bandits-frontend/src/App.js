@@ -3,6 +3,8 @@ import LandingPage from './pages/SearchPage';
 import ArtisanPage from './pages/ArtisanPage';
 import HomePage from './pages/HomePage';
 import InfoPage from './pages/InfoPage';
+// NEW: Import the Soap Science page!
+import SoapScience from './pages/SoapScience';
 import './App.css';
 
 function App() {
@@ -21,6 +23,9 @@ function App() {
 
           {/* PRODUCT INFO PAGE */}
           <Route path="/product" element={<InfoPage />} />
+
+          {/* NEW: SOAP SCIENCE GLOSSARY */}
+          <Route path="/science" element={<SoapScience />} />
         </Routes>
       </div>
     </Router>

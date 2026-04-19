@@ -1,15 +1,17 @@
 {
-  "exported_at": "2026-04-09T18:54:21.257571+00:00",
+  "exported_at": "2026-04-19T17:59:11.113020+00:00",
   "ingredient": {
     "inci_name": "WATER",
     "source_db": "ewg",
-    "safety_score": 1,
-    "safety_concerns": [],
+    "safety_score": null,
+    "safety_concerns": [
+      "not_found"
+    ],
     "regulatory_status": "unknown",
     "regulatory_region": "US",
     "function": null,
     "origin": null,
-    "last_updated": "2026-04-09T18:54:19.215101+00:00",
-    "raw_url": "https://www.ewg.org/skindeep/search/?search=water"
+    "last_updated": "2026-04-19T17:59:08.118894+00:00",
+    "raw_url": "https://www.ewg.org/skindeep/search/?search=Water"
   }
 }
