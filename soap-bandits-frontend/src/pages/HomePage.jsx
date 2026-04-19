@@ -6,16 +6,33 @@ import { applyHybridFilters } from '../utils/filterLogic';
 import { SKIN_TYPES, COMMON_AVOID, API_BASE_URL } from '../utils/soapHelpers';
 import './HomePage.css';
 
+// ── FILTER CONFIGURATION ──
+// Adding this back allows us to loop through filters in the UI.
+const FILTER_GROUPS = [
+  { key: 'skin', label: 'Skin', options: SKIN_TYPES },
+  { key: 'avoid', label: 'Avoid', options: COMMON_AVOID },
+  {
+    key: 'source',
+    label: 'Source',
+    options: ['Plant-based', 'Natural', 'Synthetic'],
+  },
+  {
+    key: 'gooFactor',
+    label: 'Goo',
+    options: ['Very Firm', 'Firm', 'Average', 'Gooey', 'Very Gooey'],
+  },
+];
+
 const HomePage = () => {
   const navigate = useNavigate();
 
-  // DATA STATES
+  // --- DATA STATES ---
   const [recommendations, setRecommendations] = useState([]);
   const [allSoaps, setAllSoaps] = useState([]);
   const [loading, setLoading] = useState(false);
   const [waterData, setWaterData] = useState(null);
 
-  // UI STATES
+  // --- UI & FILTER STATES ---
   const [locationInput, setLocationInput] = useState('');
   const [sortBy, setSortBy] = useState('default');
   const [activeFilters, setActiveFilters] = useState({
@@ -25,6 +42,7 @@ const HomePage = () => {
     avoid: [],
   });
 
+  // --- USER PREFERENCES ---
   const [userPrefs, setUserPrefs] = useState(() => {
     const saved = sessionStorage.getItem('userPrefs');
     return saved ? JSON.parse(saved) : null;
@@ -34,9 +52,11 @@ const HomePage = () => {
   const [formSkin, setFormSkin] = useState(userPrefs?.skinType || '');
   const [formAvoid, setFormAvoid] = useState(userPrefs?.avoidIngredients || []);
 
+  // --- API FETCHERS ---
   const fetchSoaps = useCallback(async (prefs) => {
+    if (!prefs) return;
     setLoading(true);
-    const skin = prefs?.skinType
+    const skin = prefs.skinType
       ? prefs.skinType.toLowerCase().split(' / ')[0]
       : '';
     try {
@@ -44,20 +64,19 @@ const HomePage = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          zip_code: prefs?.zip || '',
+          zip_code: prefs.zip || '',
           skin_type: skin,
-          avoid_ingredients: prefs?.avoidIngredients || [],
+          avoid_ingredients: prefs.avoidIngredients || [],
           prefer_ingredients: [],
         }),
       });
       const data = await response.json();
       setRecommendations(data.top_matches || []);
-
       if (data.water_hardness && data.water_hardness !== 'Unknown') {
         setWaterData({ hardness: data.water_hardness });
       }
     } catch (err) {
-      console.error('Match Error:', err);
+      console.error('Match Fetch Error:', err);
     } finally {
       setLoading(false);
     }
@@ -69,7 +88,7 @@ const HomePage = () => {
       const data = await response.json();
       setAllSoaps(data || []);
     } catch (err) {
-      console.error('Archive Error:', err);
+      console.error('Archive Fetch Error:', err);
     }
   }, []);
 
@@ -78,6 +97,7 @@ const HomePage = () => {
     if (userPrefs) fetchSoaps(userPrefs);
   }, [userPrefs, fetchSoaps, fetchArchive]);
 
+  // --- HANDLERS ---
   const handlePersonalize = (e) => {
     e.preventDefault();
     const prefs = {
@@ -112,6 +132,12 @@ const HomePage = () => {
     setActiveFilters({ skin: [], source: [], gooFactor: [], avoid: [] });
   };
 
+  const totalActive = Object.values(activeFilters).reduce(
+    (sum, arr) => sum + arr.length,
+    0
+  );
+
+  // --- FILTERING ENGINE ---
   const sortedResults = useMemo(() => {
     return applyHybridFilters({
       recommendations,
@@ -166,6 +192,7 @@ const HomePage = () => {
             Matching your unique skin chemistry with local water analysis.
           </p>
         </div>
+
         <div className="hero-form-box">
           <h3>{userPrefs ? 'Update Chemistry' : 'Find Your Match'}</h3>
           <form onSubmit={handlePersonalize}>
@@ -226,33 +253,27 @@ const HomePage = () => {
           />
         </div>
         <div className="top-filter-bar-right">
-          <button type="button" className="all-filters-btn" onClick={clearAll}>
-            ≡ All Filters
+          <button
+            type="button"
+            className={`all-filters-btn ${totalActive > 0 ? 'has-active' : ''}`}
+            onClick={clearAll}
+          >
+            ≡ All Filters{' '}
+            {totalActive > 0 && (
+              <span className="all-filters-count">{totalActive}</span>
+            )}
           </button>
-          <DropdownFilter
-            label="Skin"
-            options={SKIN_TYPES}
-            selected={activeFilters.skin}
-            onToggle={(v) => toggleFilter('skin', v)}
-          />
-          <DropdownFilter
-            label="Avoid"
-            options={COMMON_AVOID}
-            selected={activeFilters.avoid}
-            onToggle={(v) => toggleFilter('avoid', v)}
-          />
-          <DropdownFilter
-            label="Source"
-            options={['Plant-based', 'Natural', 'Synthetic']}
-            selected={activeFilters.source}
-            onToggle={(v) => toggleFilter('source', v)}
-          />
-          <DropdownFilter
-            label="Goo"
-            options={['Very Firm', 'Firm', 'Average', 'Gooey', 'Very Gooey']}
-            selected={activeFilters.gooFactor}
-            onToggle={(v) => toggleFilter('gooFactor', v)}
-          />
+
+          {/* ── DYNAMIC FILTER RENDERING ── */}
+          {FILTER_GROUPS.map((group) => (
+            <DropdownFilter
+              key={group.key}
+              label={group.label}
+              options={group.options}
+              selected={activeFilters[group.key]}
+              onToggle={(value) => toggleFilter(group.key, value)}
+            />
+          ))}
         </div>
       </div>
 
@@ -262,13 +283,14 @@ const HomePage = () => {
       >
         <div className="u-flex u-items-center">
           <span className="results-label">
-            {sortedResults.length} Results {userPrefs ? '(Personalized)' : ''}
+            {sortedResults.length} Result{sortedResults.length !== 1 ? 's' : ''}{' '}
+            {userPrefs ? '(Personalized)' : ''}
           </span>
           <div className="tooltip-wrap">
             <div className="info-icon">i</div>
             <span className="tooltip-text">
               <strong>Scientific Match:</strong> Ranking based on your skin type
-              and preferred ingredients vs. your local water hardness.
+              and allergen profile vs. local water hardness.
             </span>
           </div>
         </div>

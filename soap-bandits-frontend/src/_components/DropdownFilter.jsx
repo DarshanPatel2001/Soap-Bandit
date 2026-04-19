@@ -11,6 +11,7 @@ const DropdownFilter = ({
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false);
@@ -19,34 +20,45 @@ const DropdownFilter = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Format the trigger text to be more helpful
+  const getTriggerText = () => {
+    if (selected.length === 0) return label;
+    if (selected.length === 1) return `${label}: ${selected[0]}`;
+    return `${label}: ${selected.length}`;
+  };
+
   return (
     <div className={`dropdown-filter ${fullWidth ? 'u-w-full' : ''}`} ref={ref}>
       <button
         type="button"
+        aria-expanded={open}
+        aria-haspopup="listbox"
         className={`dropdown-trigger ${open || selected.length > 0 ? 'active' : ''} ${fullWidth ? 'u-w-full' : ''}`}
         onClick={() => setOpen((o) => !o)}
       >
-        <span className="u-truncate">
-          {selected.length > 0 ? `${label}: ${selected.length}` : label}
-        </span>
-        <span className="dropdown-arrow">▾</span>
+        <span className="u-truncate">{getTriggerText()}</span>
+        <span className={`dropdown-arrow ${open ? 'open' : ''}`}>▾</span>
       </button>
+
       {open && (
-        <div className="dropdown-panel">
-          {options.map((opt) => (
-            <label
-              key={opt}
-              className="toggle-row"
-              onClick={() => onToggle(opt)}
-            >
-              <span className="toggle-label">{opt}</span>
+        <div className="dropdown-panel" role="listbox">
+          {options.map((opt) => {
+            const isChecked = selected.includes(opt);
+            return (
               <div
-                className={`toggle-switch ${selected.includes(opt) ? 'on' : ''}`}
+                key={opt}
+                role="option"
+                aria-selected={isChecked}
+                className="toggle-row"
+                onClick={() => onToggle(opt)}
               >
-                <div className="toggle-knob" />
+                <span className="toggle-label">{opt}</span>
+                <div className={`toggle-switch ${isChecked ? 'on' : ''}`}>
+                  <div className="toggle-knob" />
+                </div>
               </div>
-            </label>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>
@@ -54,10 +66,10 @@ const DropdownFilter = ({
 };
 
 DropdownFilter.propTypes = {
-  label: PropTypes.string,
-  options: PropTypes.array,
-  selected: PropTypes.array,
-  onToggle: PropTypes.func,
+  label: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
+  selected: PropTypes.array.isRequired,
+  onToggle: PropTypes.func.isRequired,
   fullWidth: PropTypes.bool,
 };
 

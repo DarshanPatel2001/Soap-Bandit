@@ -2,29 +2,44 @@ import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { getScoreColor } from '../utils/soapHelpers';
 
+// ── HELPER: Generate consistent pastel color from soap ID ──
+const getColorFromId = (id) => {
+  const colors = [
+    '#FFE5D9',
+    '#D9E5FF',
+    '#E5FFD9',
+    '#FFE5FF',
+    '#FFFFE5',
+    '#FFD9E5',
+    '#E5FFFF',
+    '#FFE5CC',
+    '#E5CCF2',
+    '#CCF2E5',
+    '#F2CCE5',
+    '#E5F2CC',
+    '#CCE5F2',
+    '#F2E5CC',
+    '#F2CCCC',
+  ];
+  let hash = 0;
+  if (!id) return colors[0];
+  for (let i = 0; i < id.length; i++) {
+    hash = (hash << 5) - hash + id.charCodeAt(i);
+    hash = hash & hash;
+  }
+  return colors[Math.abs(hash) % colors.length];
+};
+
 const SoapCard = ({ match, onCardClick, isPersonalized }) => {
   const soap = match?.soap || {};
   const score = match?.match_score || 0;
   const metadata = match?.properties || soap?.properties || {};
   const reasons = useMemo(() => match?.reasons || [], [match?.reasons]);
 
-  const hasAllergen = useMemo(() => {
-    const userPrefs = JSON.parse(sessionStorage.getItem('userPrefs') || 'null');
-    const userAvoids = userPrefs?.avoidIngredients || [];
-    if (!isPersonalized || userAvoids.length === 0) return false;
-    return reasons.some((reason) => {
-      const lowerReason = reason.toLowerCase();
-      if (lowerReason.includes('0 avoided') || lowerReason.includes('none'))
-        return false;
-      return lowerReason.includes('avoid');
-    });
-  }, [reasons, isPersonalized]);
+  const bgColor = useMemo(() => getColorFromId(soap.id), [soap.id]);
 
-  const scoreColor = getScoreColor(score, hasAllergen);
-  const productImg =
-    soap.image_url ||
-    soap.img ||
-    'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=600&q=80';
+  // Since filters remove allergens, we assume every soap reaching this point is safe.
+  const scoreColor = getScoreColor(score, false);
 
   const skinLabel = useMemo(() => {
     const rawSkin = metadata.skin_suitability || soap.skin_suitability;
@@ -35,28 +50,40 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
     return rawSkin || 'All Skin Types';
   }, [metadata.skin_suitability, soap.skin_suitability]);
 
-  const gooeyLabel =
-    metadata.gooeyness_label || soap.gooeyness_label || 'Average';
-
   return (
-    <div
-      className={`card ${hasAllergen ? 'card-danger' : ''}`}
-      onClick={() => onCardClick(soap)}
-    >
-      <div className="card-img">
-        <img src={productImg} alt={soap.name} loading="lazy" />
-        {isPersonalized && hasAllergen && (
-          <div className="allergen-overlay">ALLERGEN DETECTED</div>
-        )}
-        <span className="card-tag tag-artisan">
-          {soap.brand?.toUpperCase()}
-        </span>
+    <div className="card" onClick={() => onCardClick(soap)}>
+      {/* ── IMAGE AREA ── */}
+      <div
+        className="card-img"
+        style={{
+          backgroundColor: bgColor,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '200px',
+        }}
+      >
+        <div style={{ fontSize: '60px', marginBottom: '0.5rem' }}>🧼</div>
+        <div
+          style={{
+            fontSize: '0.75rem',
+            fontWeight: '600',
+            color: '#475569',
+            textTransform: 'uppercase',
+            letterSpacing: '0.05em',
+          }}
+        >
+          {soap.brand}
+        </div>
+
+        {/* Personalized Match Badge */}
         {isPersonalized && match.match_score !== null && (
           <div className="ph-badge" style={{ background: scoreColor }}>
-            <span className="ph-label">{hasAllergen ? 'DANGER' : 'Match'}</span>
+            <span className="ph-label">Match</span>
             <span
               className="ph-value"
-              style={{ color: score < 75 || hasAllergen ? '#fff' : 'inherit' }}
+              style={{ color: score < 75 ? '#fff' : '#283745' }}
             >
               {score}%
             </span>
@@ -76,42 +103,31 @@ const SoapCard = ({ match, onCardClick, isPersonalized }) => {
         </div>
         <div className="stat">
           <span className="stat-label">Gooeyness</span>
-          <span className="stat-value">{gooeyLabel}</span>
+          <span className="stat-value">
+            {metadata.gooeyness_label || soap.gooeyness_label || 'Average'}
+          </span>
         </div>
       </div>
 
       <div className="ingredients-section">
-        <p
-          className="ing-label"
-          style={{ color: hasAllergen ? '#e53e3e' : 'inherit' }}
-        >
-          {hasAllergen
-            ? '⚠️ Allergen Alert'
-            : isPersonalized
-              ? 'Scientific Match'
-              : 'Ingredient Profile'}
+        <p className="ing-label">
+          {isPersonalized ? 'Scientific Match' : 'Ingredient Profile'}
         </p>
         <div className="ing-pills">
           {reasons.length > 0 ? (
             reasons.slice(0, 2).map((r, i) => (
-              <span
-                key={i}
-                className={`ing-pill ${hasAllergen && r.toLowerCase().includes('avoid') ? 'pill-danger' : ''}`}
-              >
+              <span key={i} className="ing-pill">
                 {r}
               </span>
             ))
           ) : (
-            <span className="ing-pill">Archive Analysis</span>
+            <span className="ing-pill">Archive Data</span>
           )}
         </div>
       </div>
 
       <div className="card-footer">
-        <button
-          type="button"
-          className={`btn-add ${hasAllergen ? 'btn-danger' : ''}`}
-        >
+        <button type="button" className="btn-add">
           View Science
         </button>
       </div>
