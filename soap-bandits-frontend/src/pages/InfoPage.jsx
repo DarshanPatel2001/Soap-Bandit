@@ -1,10 +1,67 @@
 import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import './InfoPage.css';
+
+const API_BASE_URL = 'http://localhost:8000';
+
+// Helper function to generate consistent pastel color from soap ID
+const getColorFromId = (id) => {
+  const colors = [
+    '#FFE5D9',
+    '#D9E5FF',
+    '#E5FFD9',
+    '#FFE5FF',
+    '#FFFFE5',
+    '#FFD9E5',
+    '#E5FFFF',
+    '#FFE5CC',
+    '#E5CCF2',
+    '#CCF2E5',
+    '#F2CCE5',
+    '#E5F2CC',
+    '#CCE5F2',
+    '#F2E5CC',
+    '#F2CCCC',
+  ];
+
+  let hash = 0;
+  if (!id) return colors[0];
+
+  for (let i = 0; i < id.length; i++) {
+    hash = (hash << 5) - hash + id.charCodeAt(i);
+    hash = hash & hash;
+  }
+
+  return colors[Math.abs(hash) % colors.length];
+};
 
 const InfoPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const soap = location.state?.soap;
+  const [enrichedData, setEnrichedData] = useState(null);
+
+  // Fetch enriched soap data (ingredients, etc.)
+  useEffect(() => {
+    if (!soap?.id) return;
+
+    const fetchEnrichedData = async () => {
+      try {
+        const response = await fetch(
+          `${API_BASE_URL}/recommendations/soap/${soap.id}`
+        );
+        const data = await response.json();
+        setEnrichedData(data);
+      } catch (err) {
+        console.error('Failed to fetch enriched data:', err);
+      }
+    };
+
+    fetchEnrichedData();
+  }, [soap?.id]);
+
+  // Generate consistent pastel color for this soap
+  const bgColor = getColorFromId(soap?.id);
 
   // If no soap data was passed, redirect home
   if (!soap) {
@@ -48,24 +105,136 @@ const InfoPage = () => {
           <p className="info-brand">{soap.company}</p>
           <h1 className="info-title">{soap.name}</h1>
           <p className="info-desc">{soap.desc}</p>
-          <p className="info-price-label">
-            Published prices from <strong>{soap.price}</strong>
-          </p>
           <div className="info-tags">
             {soap.skin && <span className="info-tag">{soap.skin}</span>}
             {soap.scent && <span className="info-tag">{soap.scent}</span>}
             {soap.ph && <span className="info-tag">pH {soap.ph}</span>}
             {soap.weight && <span className="info-tag">{soap.weight}</span>}
           </div>
+
+          {/* ── PRODUCT DETAILS INLINE ── */}
+          {enrichedData?.properties && (
+            <div className="info-details-inline">
+              <div className="info-details-grid">
+                {enrichedData.properties.gooeyness_label && (
+                  <div className="info-detail-card">
+                    <span className="info-detail-label">Gooeyness</span>
+                    <span className="info-detail-value">
+                      {enrichedData.properties.gooeyness_label}
+                    </span>
+                  </div>
+                )}
+                {enrichedData.properties.skin_suitability && (
+                  <div className="info-detail-card">
+                    <span className="info-detail-label">Skin Suitability</span>
+                    <span className="info-detail-value">
+                      {Array.isArray(enrichedData.properties.skin_suitability)
+                        ? enrichedData.properties.skin_suitability.join(', ')
+                        : enrichedData.properties.skin_suitability}
+                    </span>
+                  </div>
+                )}
+                {enrichedData.properties.water_compatibility && (
+                  <div className="info-detail-card">
+                    <span className="info-detail-label">
+                      Water Compatibility
+                    </span>
+                    <span className="info-detail-value">
+                      {enrichedData.properties.water_compatibility}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
         <div className="info-hero-right">
-          <div className="info-img-card">
+          <div className="info-img-card" style={{ backgroundColor: bgColor }}>
             <span className="info-img-featured">Featured</span>
-            <img src={soap.img} alt={soap.name} className="info-img" />
+            <div style={{ fontSize: '120px', marginBottom: '1rem' }}>🧼</div>
+            <p style={{ fontSize: '18px', color: '#666', fontWeight: '500' }}>
+              {soap.company}
+            </p>
           </div>
         </div>
       </section>
+      {/* ── INGREDIENTS SECTION ── */}
+      {enrichedData?.ingredients_raw && (
+        <section className="info-ingredients-section">
+          <h2 className="info-ingredients-title">Ingredients</h2>
 
+          <div className="info-ingredients-container">
+            {/* Left Column: Raw Ingredients List */}
+            <div className="info-ingredients-column">
+              <h3 className="info-column-title">Full List</h3>
+              <p className="info-ingredients-raw">
+                {enrichedData.ingredients_raw}
+              </p>
+
+              {/* Ingredient Breakdown */}
+              {enrichedData?.ingredients &&
+                enrichedData.ingredients.length > 0 && (
+                  <div className="info-ingredient-breakdown">
+                    <h4 className="info-breakdown-title">Ingredient Types</h4>
+                    {(() => {
+                      const categories = {};
+                      enrichedData.ingredients.forEach((ing) => {
+                        if (ing.function) {
+                          const category = ing.function.split('/')[0].trim();
+                          categories[category] =
+                            (categories[category] || 0) + 1;
+                        }
+                      });
+
+                      const total = Object.values(categories).reduce(
+                        (a, b) => a + b,
+                        0
+                      );
+                      const sorted = Object.entries(categories)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 5);
+
+                      return (
+                        <div className="info-breakdown-list">
+                          {sorted.map(([cat, count]) => (
+                            <div key={cat} className="info-breakdown-item">
+                              <span className="info-breakdown-label">
+                                {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                              </span>
+                              <span className="info-breakdown-percent">
+                                {Math.round((count / total) * 100)}%
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                )}
+            </div>
+
+            {/* Right Column: Ingredient Functions */}
+            {enrichedData?.ingredients &&
+              enrichedData.ingredients.length > 0 && (
+                <div className="info-ingredients-column">
+                  <h3 className="info-column-title">What Each Does</h3>
+                  <div className="info-ingredient-list">
+                    {enrichedData.ingredients.map((ing, idx) => (
+                      <div key={idx} className="info-ingredient-item">
+                        <span className="info-ingredient-name">{ing.name}</span>
+                        {ing.function && (
+                          <span className="info-ingredient-function">
+                            {ing.function}
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+          </div>
+        </section>
+      )}
       {/* ── WHERE TO BUY ── */}
       <section className="info-retailers-section">
         <h2 className="info-retailers-title">Available Online</h2>

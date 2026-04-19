@@ -1,6 +1,7 @@
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from apscheduler.schedulers.background import BackgroundScheduler
 
 from SERVICES.enrichment_service import run_enrichment_if_stale
@@ -21,6 +22,15 @@ async def lifespan(app: FastAPI):
 
 #increase life sspa to 30
 app = FastAPI(lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 #AROUTES here
 app.include_router(soap_router, prefix="/soap")
 app.include_router(ingredients_router, prefix="/ingredients")
