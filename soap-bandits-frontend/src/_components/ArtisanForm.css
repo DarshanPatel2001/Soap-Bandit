@@ -18,7 +18,7 @@
   margin-bottom: 1rem;
 }
 
-/* Uses your soap-steel for a professional label look */
+/* Uses soap-steel for a professional label look */
 .form-group label {
   font-size: 0.75rem;
   font-weight: bold;
@@ -34,14 +34,14 @@
   border: 1px solid #e5e7eb;
   border-radius: 4px;
   background-color: #f9fafb;
-  color: #1f3447; /* Dark text to match your card p tags */
+  color: #1f3447; /* Dark text to match card p tags */
   font-size: 1rem;
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
 }
 
-/* Gold ring effect on focus to match your search bar */
+/* Gold ring effect on focus to match search bar */
 .input-field:focus {
   border-color: var(--soap-gold);
   box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);

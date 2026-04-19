@@ -1,4 +1,3 @@
-// This page may be removed from project (it's in our use cases.. so maybe not..)
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SearchPage.css';

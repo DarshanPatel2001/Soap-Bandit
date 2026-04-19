@@ -149,7 +149,6 @@
   color: var(--ss-navy);
 }
 
-/* ── THE FILTER BAR FIX ── */
 .top-filter-bar {
   padding: 1.5rem 2.5rem;
   background: var(--ss-white);
